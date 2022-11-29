@@ -7,6 +7,8 @@ function mostrar()
 }
 
 /* 
+APUNTES: 
+
 alert genera una ventana emergente
 
 Cuales son los datos de entrada de la funcion alert? 

@@ -12,6 +12,9 @@ alert genera una ventana emergente
 Cuales son los datos de entrada de la funcion alert? 
 rta: el texto entre parentesis ( ) estan para recibir los datos de la funcion para cumplir la sentencia 
 
+Para que uso las comillas ? 
+Es una cadena de caracteres 
+
 como crear una funcion?
 1 paso: Declarar una funcion
 2 paso: Darle un nombre

@@ -6,3 +6,4 @@ function mostrar()
 	alert("Esto funciona de maravilla");
 }
 
+/* alert genera una ventana emergente*/

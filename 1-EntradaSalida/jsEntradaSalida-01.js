@@ -9,6 +9,8 @@ function mostrar()
 /* 
 APUNTES: 
 
+con f12 nos fijamos que es lo que esta mal, en consola, hasta incluso te muestra el archivo y el numero de linea. Importante saber eso porque cuando no funcione algun ejercicio 
+
 alert genera una ventana emergente
 
 Cuales son los datos de entrada de la funcion alert? 

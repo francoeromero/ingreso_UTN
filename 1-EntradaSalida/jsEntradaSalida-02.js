@@ -7,3 +7,10 @@ function mostrar()
 	alert('Bienvenido ' + nombre);
 }
 
+/*
+Como tomo un dato y donde se guarda? 
+el dato se va a guardad en la memoria ram
+espacio de informacion 
+
+
+*/

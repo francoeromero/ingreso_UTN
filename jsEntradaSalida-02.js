@@ -13,6 +13,8 @@ el dato se va a guardad en la memoria ram
 espacio de informacion 
 
 Que es prompt ? 
-es un metodo que se usa para mostrar una entrada para que el usuario escriba un dato 
+es un metodo que se usa para mostrar una entrada para que el usuario escriba un dato
+
+Los nombres de las variables tienen que ser coherentes 
 
 */

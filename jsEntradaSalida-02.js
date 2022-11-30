@@ -29,7 +29,7 @@ ahora se utiliza let y const para las constantes que el valor nunca cambia
 
 ejemplo: 
 
-let nombre; //declaro una variable  
+let nombre; //declaro una variable para asignar un espacio de memoria dentro de esa variable 
 
 nombre = "juan"; // asigno una cadena ala variable llamada juan
 

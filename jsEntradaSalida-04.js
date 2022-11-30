@@ -9,3 +9,6 @@ function mostrar()
 
 }
 
+/*
+APUNTES:
+*/

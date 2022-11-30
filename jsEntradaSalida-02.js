@@ -16,5 +16,7 @@ Que es prompt ?
 es un metodo que se usa para mostrar una entrada para que el usuario escriba un dato
 
 Los nombres de las variables tienen que ser coherentes 
+nunca puede empezar con un numero
+
 
 */

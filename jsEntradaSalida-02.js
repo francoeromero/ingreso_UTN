@@ -35,5 +35,13 @@ nombre = "juan"; // asigno una cadena ala variable llamada juan
 
 alert(nombre); // asigno una alerta que llame a la variable nombre 
 
+se puede cambiar el let pero el const no 
+
+let nombre = "jose";
+alert(nombre);
+let nombre = "fran";
+alert(nombre);
+
+
 
 */

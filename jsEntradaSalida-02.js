@@ -27,4 +27,13 @@ var let const
 
 ahora se utiliza let y const para las constantes que el valor nunca cambia 
 
+ejemplo: 
+
+let nombre; //declaro una variable  
+
+nombre = "juan"; // asigno una cadena ala variable llamada juan
+
+alert(nombre); // asigno una alerta que llame a la variable nombre 
+
+
 */

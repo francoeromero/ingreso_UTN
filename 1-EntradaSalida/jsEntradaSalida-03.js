@@ -21,5 +21,6 @@ Codigo de standard americano para intercambio de informacion
 
 y lo que hace es asociar un numero a un caracter
 
+string "1" number 1 (no confundir)
 
 */

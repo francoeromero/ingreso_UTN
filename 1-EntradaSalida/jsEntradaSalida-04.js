@@ -29,5 +29,12 @@ lo segundo es pedirle al nombre al usuario a traves de la funcion promnt, osea e
 
 2- variable = prompnt("valor");
 
+ahora que ya tenemos el valor si es que el usuario le dio aceptar, tenemos que meter esa informacion al input.
+Osea que la variable con su respectivo valor va a ser a asignado al input, como llamamos al input? con el id.
+
+3- variable = NombreIDinput.value ; 
+3- document.getElementById("NombreIDinput").vallue = variable;
+
+
 
 */

@@ -11,4 +11,8 @@ function mostrar()
 
 /*
 APUNTES:
+renombramos el id de un elemento de html y terminamos con .value
+
+
+
 */

@@ -29,5 +29,11 @@ Si yo quiero capturar la informacion que el usuario coloca en un input de html, 
 2- asignamos el valor que se coloque llamando al id del input y poniendo ".value"
 3- Ese valor tiene que meterse en el espacio de memoria que creamos que seria la variable entonces ponemos variable = infoinput.value; 
 
+Profe:
+
+Como hago para asignar una variable algo que esta escrito en otro archivo?
+
+
+
 
 */

@@ -17,7 +17,9 @@ el id de un elemento input
 
 Codigo ASCII : Una forma de escribir letras en binario
 
+Codigo de standard americano para intercambio de informacion
 
+y lo que hace es asociar un numero a un caracter
 
 
 */

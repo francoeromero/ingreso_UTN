@@ -15,5 +15,9 @@ renombramos el id de un elemento de html y terminamos con .value
 
 el id de un elemento input 
 
+Codigo ASCII : Una forma de escribir letras en binario
+
+
+
 
 */

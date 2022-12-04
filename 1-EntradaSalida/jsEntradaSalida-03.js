@@ -35,7 +35,18 @@ Como hago para asignar una variable algo que esta escrito en otro archivo?
 
 cuando ponemos "document." te va a aparecer muchas elecciones que podemos hacer con el documento de html vinculado con js 
 
-"document.getElementById" : Tomar un elemento por su identificador
+"document.getElementById" : Tomar un elemento por su identificador. Con esto toma el id de un elemento html por ejemplo el input y agarra el valor de lo que el usuario coloque 
+
+1- Creamo una variable (espacio de memoria)
+2- asignamos ala variable un valor
+3- llamamos al nombre del id del elemento html document.getElementById("nombredelID")
+4- Cuando agregamos un punto podemos crear mas cosas, me va a aparecer diferentes elecciones que puedo hacer con el input.
+Pero que es lo que necesito? es el valor que van a escribir adentro del input entonces agrego
+.value
+quedaria asi:
+
+document.getElementById("nombredelID").value;
+
 
 
 

@@ -33,7 +33,15 @@ Profe:
 
 Como hago para asignar una variable algo que esta escrito en otro archivo?
 
+cuando ponemos "document." te va a aparecer muchas elecciones que podemos hacer con el documento de html vinculado con js 
 
+"document.getElementById" : Tomar un elemento por su identificador
+
+
+
+let nombre;
+
+nombre = document.getElementById
 
 
 */

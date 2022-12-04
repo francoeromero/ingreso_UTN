@@ -47,12 +47,12 @@ quedaria asi:
 
 document.getElementById("nombredelID").value;
 
+5- Ahora llamamos ala variable con un alert para mostrar el valor 
 
-
-
-let nombre;
-
-nombre = document.getElementById
-
+function(mostrar) {
+	let nombre;
+	nombre = document.getElementById("nombreID").value;
+	alert(nombre);
+}
 
 */

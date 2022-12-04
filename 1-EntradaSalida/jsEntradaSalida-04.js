@@ -11,4 +11,12 @@ function mostrar()
 
 /*
 APUNTES:
+
+Por que no se escribe en el input ? 
+
+porque en el html el elemento input, tiene como propiedad "readonly". Esta pensada para que solo se lea y no se modifique
+
+vamos a reemplazar el alert por el input para mostrarse el resultado
+
+
 */

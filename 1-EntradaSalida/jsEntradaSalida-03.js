@@ -4,8 +4,10 @@ y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
 	var nombreIngresado;
-	nombreIngresado=txtIdNombre.value;
+	// nombreIngresado=txtIdNombre.value;
+	nombreIngresado = document.getElementById("txtIdNombre").value;
 	alert(nombreIngresado);
+	document.getElementById("txtIdNombre").value = ""; //asigno cadena vacio para borrar la caja de texto 
 
 }
 
@@ -54,5 +56,17 @@ function(mostrar) {
 	nombre = document.getElementById("nombreID").value;
 	alert(nombre);
 }
+
+Otra alternativa:
+
+let nombre;
+nombre = nombreID.value;
+aler(nombre);
+
+Otra casa:
+
+si agregamos: document.getElementById("txtIdNombre").value = "";
+
+asignamos una cadena vacia para que se borre lo que esta escrito para volverse a usar
 
 */

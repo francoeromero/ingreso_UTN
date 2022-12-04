@@ -4,8 +4,15 @@ y lo muestro por 'ID' al presionar el botón 'mostrar'
 */
 function mostrar()
 {
-	let nombre = prompt('hola, cual es tu nombre?');
-	txtIdNombre.value = nombre;
+	//  let nombre = prompt('hola, cual es tu nombre?');
+	// txtIdNombre.value = nombre;
+
+	// //reservo espacio en memoria para guardar el nombre del usuario
+	let nombre;
+	// //guardo en la variable nombre el texto que escribio el usuario dentro de la ventana prompt
+	nombre = prompt("Ingrese su nombre");
+	// //copio el nombre que tengo guardado en la variable input 
+ 	document.getElementById("txtIdNombre").value = nombre;
 
 }
 
@@ -27,7 +34,7 @@ lo primero hay que pedir un espacio de memoria, para que el dato que quiero se a
 
 lo segundo es pedirle al nombre al usuario a traves de la funcion promnt, osea establecer un valor al prompt para que sea asignado ala variable
 
-2- variable = prompnt("valor");
+2- variable = prompt("valor");
 
 ahora que ya tenemos el valor si es que el usuario le dio aceptar, tenemos que meter esa informacion al input.
 Osea que la variable con su respectivo valor va a ser a asignado al input, como llamamos al input? con el id.

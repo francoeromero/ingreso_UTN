@@ -63,5 +63,13 @@ no se suman
 	errores de logica 
 	el programa esta perfectamente escrito, pero el programador no supo secuenciar de manera correcta para resolver un problema
 
+NaN:  Not a number  / no es un numero
+
+orden secuencial:
+
+1-Pido espacio de memoria
+2-Cargo las variables
+3- Opero las variables
+4- Muestro el resultado
 
 */

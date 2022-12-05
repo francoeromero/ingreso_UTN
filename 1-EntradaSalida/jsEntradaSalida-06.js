@@ -55,5 +55,13 @@ no se suman
 
 	Siempre acordarse que el algoritmo es una receta de cocina, y hay que dar esas instrucciones en cada linea y en orden
 
+	En programacion hay dos tipos de errores: 
+	
+	errores de sintaxis
+	olvidarte algun signo del lenguaje
+
+	errores de logica 
+	el programa esta perfectamente escrito, pero el programador no supo secuenciar de manera correcta para resolver un problema
+
 
 */

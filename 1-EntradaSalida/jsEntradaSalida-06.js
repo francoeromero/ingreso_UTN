@@ -37,5 +37,23 @@ no se suman
 	string + number = string
 	number + string = string
 	number + number = number
+	ç
+
+
+	que pasa si pongo esto?
+
+	let num1;
+	let num2;
+	let resultado;
+	
+	num1 = document.getElemenbyId("txtNumeroUno").value;
+	num2 = document.getElemenbyId("txtNumeroDos").value;
+
+	resultado = num1 + num2;
+
+	alert("la suma es " resultado);
+
+	Siempre acordarse que el algoritmo es una receta de cocina, y hay que dar esas instrucciones en cada linea y en orden
+
 
 */

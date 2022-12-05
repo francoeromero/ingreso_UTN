@@ -27,4 +27,8 @@ Que es lo que tenemos que lo primero?
 1-Conseguir espacio de memoria osea crear variable
 2-Copiar lo que escribio el usuario en los input
 3-Pegar los datos y que se muestre en la alerta
+
+// back tik: ´´¨
+
+
 */

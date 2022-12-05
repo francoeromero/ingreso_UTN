@@ -40,7 +40,7 @@ no se suman
 	ç
 
 
-	que pasa si pongo esto?
+	que pasa si pongo esto? ojo poner en orden cada linea tiene un orden secuencial 
 
 	let num1;
 	let num2;

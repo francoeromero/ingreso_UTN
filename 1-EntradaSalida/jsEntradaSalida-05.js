@@ -32,7 +32,7 @@ Que es lo que tenemos que lo primero?
 
 otra opcion:
 
-alert("Usted se llama $(nombre) y tiene $(edad) de años")
+alert("Usted se llama $(nombre) y tiene $(edad) de años");
 
 
 */

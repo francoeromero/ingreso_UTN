@@ -83,4 +83,14 @@ Parsear: convertir en dato string a numero
 
 Castear: convertir dato numerico en otro tipo de dato numerico
 
+en programacion se resuelve de derecha a izquierda osea:
+x = num1 + num2;
+primero opera y luego asigna a x
+
+ParseInt y ParseFloat
+
+let x = "20";
+x = parseInt(x);
+
+
 */

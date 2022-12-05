@@ -28,7 +28,11 @@ Que es lo que tenemos que lo primero?
 2-Copiar lo que escribio el usuario en los input
 3-Pegar los datos y que se muestre en la alerta
 
-// back tik: ´´¨
+// back tik: ´´
+
+otra opcion:
+
+alert("Usted se llama $(nombre) y tiene $(edad) de años")
 
 
 */

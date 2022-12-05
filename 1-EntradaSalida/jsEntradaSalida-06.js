@@ -72,4 +72,15 @@ orden secuencial:
 3- Opero las variables
 4- Muestro el resultado
 
+
+Porque no me los suma y los concatena?
+porque el input es de tipo texto y todo lo que escribas siempre lo va a tomar como un string "20" "30"
+
+ParseInt : convertir algo que es de tipo no numerico en numero
+convertir string en number
+
+Parsear: convertir en dato string a numero
+
+Castear: convertir dato numerico en otro tipo de dato numerico
+
 */

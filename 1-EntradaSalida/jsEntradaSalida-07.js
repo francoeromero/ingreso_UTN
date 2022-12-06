@@ -90,5 +90,34 @@ function dividir()
 	//limpio las entradas para una nueva operacion
 	document.getElementById("txtIdNumeroUno").value = "";
 	document.getElementById("txtIdNumeroDos").value = "";
+	
 }
 
+/*
+APUNTES: 
+
+dentro de una funcion no es visible afuera, las variables se pueden repetir 
+
+scote global: Es el espacio de codigo que esta fuera de cualquier funcion
+
+Por ejemplo todos los ejercicios hasta ahora el scote global esta vacio, no se ejecuta nada a menos que apretes un boton.
+Porque las funciones se activan cuando le des click a uno de los botones sumar restar multiplicar dividir
+
+type of: para saber que tipo es el valor, si es un string o es un number ejemplo:
+alert(typeof resultado);
+
+
+operadores:  
+			Aritmeticos: 
+						- suma
+						- resta
+						- multiplicacion
+						-division
+						-modulo % (el resto de la division)
+			Relacionales:
+			Logicos: 
+
+
+
+
+*/

@@ -5,7 +5,12 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	alert("ok");	
+	//pido espacio de memoria
+	let num1;
+	let num2;
+	let resultado;
+
+	
 }
 
 function restar()

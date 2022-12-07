@@ -32,6 +32,7 @@ function mostrarAumento()
 
 	document.getElementById("txtIdResultado").value = nuevosueldo;
 
+
 }
 
 /*

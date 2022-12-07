@@ -19,17 +19,30 @@ function mostrarAumento()
 	let sueldo;
 	let resultado;
 	//paso el valor a la variable sueldo y cambio de string a number
-	sueldo = parseInt(document.getElementById("txtIdSueldo").value);
+	sueldo = parseFloat(document.getElementById("txtIdSueldo").value);
 	//hago la operacion y lo meto en la variable aumento
-	resultado =  10 * sueldo / 100;
+	resultado =  10 * sueldo / 100; //otra forma de sacar porcentaje es sueldo * 0.1 que seria el 10%
 	
 
-	resultado = parseInt(document.getElementById("txtIdResultado").value);
+	resultado = parseFloat(document.getElementById("txtIdResultado").value);
 	
 }
 
 /*
 APUNTES:
+
+esta bueno agregar todas las variables que necesitas o demas no importa 
+
+let sueldo;
+let nuevosueldo;
+let aumento;
+//para calcular el nuevo sueldo deberia sumarle al original el aumento
+//para calcular un porcentaje el calculo de porcentaje lo consigo multiplicando el valor del porcentaje y lo divido por 100 
+
+IMPORTANTE prestar atencion a que tipo de valores van a arrogar en una variable, un sueldo el valor sera en decimales por ejemplo 70.400 
+ahora no usemos parseint, el valor de sueldo son flotantes porque trabaja con decimales
+
+sueldo = parseFloat(document.getElementById("txtIdSueldo").value);
 
 
 */

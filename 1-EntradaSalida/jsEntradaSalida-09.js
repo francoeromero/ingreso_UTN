@@ -17,15 +17,21 @@ function mostrarAumento()
 	// alert("El resultado es " + resultado);
 
 	let sueldo;
-	let resultado;
+	let aumento;
+	let nuevosueldo;
 	//paso el valor a la variable sueldo y cambio de string a number
 	sueldo = parseFloat(document.getElementById("txtIdSueldo").value);
 	//hago la operacion y lo meto en la variable aumento
-	resultado =  10 * sueldo / 100; //otra forma de sacar porcentaje es sueldo * 0.1 que seria el 10%
-	
+	aumento =  10 * sueldo / 100; //otra forma de sacar porcentaje es sueldo * 0.1 que seria el 10%
+	//se lo agregamos al sueldo
+	nuevosueldo = aumento + sueldo;
+	//ahora lo mostramos en pantalla el resultado, en la entrada de txtIdResultado
+	// nuevosueldo = parseFloat(document.getElementById("txtIdResultado").value);
+	// document.getElementById("txtIdResultado").value = nuevosueldo;
+	// nuevosueldo = document.getElementById("txtIdResultado").value;  CORRECCION: ACORDATE QUE SE LEE DE DERECHA A IZQUIERDA
 
-	resultado = parseFloat(document.getElementById("txtIdResultado").value);
-	
+	document.getElementById("txtIdResultado").value = nuevosueldo;
+
 }
 
 /*
@@ -43,6 +49,16 @@ IMPORTANTE prestar atencion a que tipo de valores van a arrogar en una variable,
 ahora no usemos parseint, el valor de sueldo son flotantes porque trabaja con decimales
 
 sueldo = parseFloat(document.getElementById("txtIdSueldo").value);
+
+ahora que ya pasamos el sueldo en decimales osea en un flotante tenemos que hacer el calculo
+sacamos el valor del 10%
+
+aumento = sueldo * 0.1;
+
+y ahora le sumamos al nuevo sueldo aumentado
+
+nuevosueldo = aumento + sueldo;
+
 
 
 */

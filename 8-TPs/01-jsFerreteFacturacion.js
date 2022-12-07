@@ -25,7 +25,23 @@ function Sumar ()
 }
 function Promedio () 
 {
-	
+    let preciouno;
+    let preciodos;
+    let preciotres;
+    let promedio;
+
+    preciouno = parseInt(document.getElementById("txtIdPrecioUno").value);
+    preciodos = parseInt(document.getElementById("txtIdPrecioDos").value);
+    preciotres = parseInt(document.getElementById("txtIdPrecioTres").value);
+
+    promedio = (preciouno + preciodos + preciotres) / 3;
+
+    alert ("EL promedio es de " + promedio);
+
+    document.getElementById("txtIdPrecioTres").value = "";
+    document.getElementById("txtIdPrecioDos").value = "";
+    document.getElementById("txtIdPrecioUno").value = "";
+
 }
 function PrecioFinal () 
 {

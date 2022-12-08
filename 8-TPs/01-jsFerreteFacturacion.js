@@ -47,19 +47,20 @@ function Promedio ()
 }
 function PrecioFinal () 
 {
+    //pido espacio de memoria 
 	let preciouno;
     let preciodos;
     let preciotres;
     let preciofinal;
-
+    //cambio las entradas a tipo number y le asigno a cada variable
     preciouno = parseInt(document.getElementById("txtIdPrecioUno").value);
     preciodos = parseInt(document.getElementById("txtIdPrecioDos").value);
     preciotres = parseInt(document.getElementById("txtIdPrecioTres").value);
-
+    //hacemos la operacion 
     preciofinal = (preciouno + preciodos + preciotres) * 0.21;
-
+    //muestro el resultado en la alerta
     alert("el precio final es " + preciofinal);
-
+    //limpio las entradas para una nueva operacion
     document.getElementById("txtIdPrecioTres").value = "";
     document.getElementById("txtIdPrecioDos").value = "";
     document.getElementById("txtIdPrecioUno").value = "";

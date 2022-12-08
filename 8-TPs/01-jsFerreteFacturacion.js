@@ -26,19 +26,20 @@ function Sumar ()
 }
 function Promedio () 
 {
+    //pido espacio de memoria
     let preciouno;
     let preciodos;
     let preciotres;
     let promedio;
-
+    //ahora cambio las entradas de tipo texto a number
     preciouno = parseInt(document.getElementById("txtIdPrecioUno").value);
     preciodos = parseInt(document.getElementById("txtIdPrecioDos").value);
     preciotres = parseInt(document.getElementById("txtIdPrecioTres").value);
-
+    //hago la operacion para sacar el promedio
     promedio = (preciouno + preciodos + preciotres) / 3;
-
+    //muestro el resultado en la alerta
     alert ("EL promedio es de " + promedio);
-
+    //ahora limpiamos las entradas para nueva operacion
     document.getElementById("txtIdPrecioTres").value = "";
     document.getElementById("txtIdPrecioDos").value = "";
     document.getElementById("txtIdPrecioUno").value = "";

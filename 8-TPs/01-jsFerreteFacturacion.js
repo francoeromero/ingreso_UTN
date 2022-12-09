@@ -68,6 +68,7 @@ function Promedio ()
 
     suma = precio1 + precio2 + precio3;
     promedio = suma / 3;
+    promedio = promedio.toFixed(2); // .toFixed(2) = redondeamos 2 decimales 
     alert("El promedio es de " + promedio);
 
 
@@ -83,9 +84,9 @@ function PrecioFinal ()
 
     // //cambio las entradas a tipo number y le asigno a cada variable
 
-    preciouno = parseInt(document.getElementById("txtIdPrecioUno").value);
-    preciodos = parseInt(document.getElementById("txtIdPrecioDos").value);
-    preciotres = parseInt(document.getElementById("txtIdPrecioTres").value);
+    preciouno = parseFloat(document.getElementById("txtIdPrecioUno").value);
+    preciodos = parseFloat(document.getElementById("txtIdPrecioDos").value);
+    preciotres = parseFloat(document.getElementById("txtIdPrecioTres").value);
 
     // //hacemos la operacion 
 
@@ -96,7 +97,7 @@ function PrecioFinal ()
 
     // //muestro el resultado en la alerta
 
-    alert("el precio final es " + preciofinal);
+    alert("el precio final es " + preciofinal.toFixed(2)); //para redondear con 2 decimales o tambien se agrega antes preciofinal = preciofinal.toFixed(2);
 
     // //limpio las entradas para una nueva operacion
 

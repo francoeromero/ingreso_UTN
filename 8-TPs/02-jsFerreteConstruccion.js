@@ -21,7 +21,7 @@ function Rectangulo ()
     alambre = 3 * perimetro; 
 
     //mostramos en la pantalla 
-    alert("la cantidad de alambre es de " + alambre);
+    alert("la cantidad de alambre es de " + alambre + " metros lineales");
 
 }
 function Circulo () 
@@ -36,9 +36,26 @@ function Circulo ()
     perimetro = 3.14 * radio^2;
     alambre = 3 * perimetro;
 
-    alert("la cantidad de alambre de un circulo es de " + alambre);
+    alert("la cantidad de alambre de un circulo es de " + alambre + " metros lineales");
 }
 function Materiales () 
 {
-	
+	//pido espacio de memoria 
+
+    let ancho;
+    let largo;
+    let metrocuadrado;
+    let bolsascemento;
+    let bolsascal;
+
+    ancho = parseFloat(document.getElementById("txtIdLargo").value);
+    largo = parseFloat(document.getElementById("txtIdAncho").value);
+
+    metrocuadrado = ancho * largo;
+    bolsascemento = metrocuadrado * 2;
+    bolsascal = metrocuadrado * 3;
+
+    alert("Voy a necesitar " + bolsascemento + " bolsas de cemento" + " Y voy a necesitar " + bolsascal + " bolsas de cal");
+
+    
 }

@@ -27,6 +27,16 @@ function Rectangulo ()
 function Circulo () 
 {
 	
+    let radio;
+    let perimetro;
+    let alambre;
+
+    radio = parseFloat(document.getElementById("txtIdRadio").value);
+
+    perimetro = 3.14 * radio^2;
+    alambre = 3 * perimetro;
+
+    alert("la cantidad de alambre de un circulo es de " + alambre);
 }
 function Materiales () 
 {

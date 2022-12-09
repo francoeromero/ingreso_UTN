@@ -17,7 +17,7 @@ function Rectangulo ()
     largo = parseFloat(document.getElementById("txtIdAncho").value);
 
     //opero que es lo que necesito? saber el largo de todo el cable que rodea el terreno entonces el perimetro y luego lo multiplico por 3 porque va a rodear 3 veces el terreno
-    perimetro = 2 * ancho + 2 * largo;
+    perimetro = 2 * ancho + 2 * largo; // (ancho + largo) * 2
     alambre = 3 * perimetro; 
 
     //mostramos en la pantalla 
@@ -33,11 +33,16 @@ function Circulo ()
 
     radio = parseFloat(document.getElementById("txtIdRadio").value);
 
-    perimetro = 3.14 * radio^2;
+    perimetro = 2 * 3.14 * radio;
     alambre = 3 * perimetro;
 
     alert("la cantidad de alambre de un circulo es de " + alambre + " metros lineales");
 }
+
+/*
+otra forma de representar un valor que nunca va a cambiar como el PI
+const = PI = 3.14  
+*/
 function Materiales () 
 {
 	//pido espacio de memoria 

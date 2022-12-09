@@ -61,6 +61,7 @@ function Materiales ()
     bolsascal = metrocuadrado * 3;
 
     alert("Voy a necesitar " + bolsascemento + " bolsas de cemento" + " Y voy a necesitar " + bolsascal + " bolsas de cal");
+    //alert('Para un contrapiso de ${metrocuadrado} m2 necesito comprar ${bolsascemento} bolsas de cemento y ${bolsascal} bolsas de cal');
 
     
 }

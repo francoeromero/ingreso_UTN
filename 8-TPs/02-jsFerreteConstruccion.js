@@ -74,5 +74,15 @@ function Materiales ()
     alert("Voy a necesitar " + bolsascemento + " bolsas de cemento" + " Y voy a necesitar " + bolsascal + " bolsas de cal");
     //alert('Para un contrapiso de ${metrocuadrado} m2 necesito comprar ${bolsascemento} bolsas de cemento y ${bolsascal} bolsas de cal');
 
+    /*
+    Otra cosa importante:
+    Si ya sabemos que la cantidad de cemento y de cal, son valores que nunca van a cambiar, entonces hay que darle una variable CONSTANTE, es sumamente importante, todo lo que sea un valor que nunca cambiara mejor asignarle en una variable constante 
+
+    const CEMENTO_X_METRO = 2;
+    const CAL_X_METRO = 3; 
+
+    Y SIEMPRE EN MAYUSCULA Y SEPARAR CON _ 
+    */
+
     
 }

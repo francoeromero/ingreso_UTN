@@ -15,8 +15,8 @@ function Rectangulo ()
     let alambre;
 
     //paso los valores a flotantes
-    ancho = parseFloat(document.getElementById("txtIdLargo").value);
-    largo = parseFloat(document.getElementById("txtIdAncho").value);
+    ancho = parseFloat(document.getElementById("txtIdAncho").value);
+    largo = parseFloat(document.getElementById("txtIdLargo").value);
 
     //opero que es lo que necesito? saber el largo de todo el cable que rodea el terreno entonces el perimetro y luego lo multiplico por 3 porque va a rodear 3 veces el terreno
     perimetro = 2 * ancho + 2 * largo; // (ancho + largo) * 2

@@ -100,6 +100,7 @@ function PrecioFinal ()
     alert("el precio final es " + preciofinal.toFixed(2)); //para redondear con 2 decimales o tambien se agrega antes preciofinal = preciofinal.toFixed(2);
 
     // //limpio las entradas para una nueva operacion
+    
 
     document.getElementById("txtIdPrecioTres").value = "";
     document.getElementById("txtIdPrecioDos").value = "";

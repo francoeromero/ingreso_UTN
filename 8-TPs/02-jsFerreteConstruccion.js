@@ -57,9 +57,9 @@ function Materiales ()
 	//pido espacio de memoria 
     let ancho;
     let largo;
-    let metrocuadrado;
-    let bolsascemento;
-    let bolsascal;
+    let metrocuadrado;//area
+    let bolsascemento;// let cemento = 2; (otra alternativa)
+    let bolsascal; // let cal = 3;  (otra alternativa)
 
     //cambio las entradas a number
     ancho = parseFloat(document.getElementById("txtIdLargo").value);
@@ -67,8 +67,8 @@ function Materiales ()
 
     //hago el calculo, primero el area de m2 del terreno, luego asigno a cemento y cal, lo multiplico por la cant de bolsas por m2 para saber cuantas bolsas necesita
     metrocuadrado = ancho * largo;
-    bolsascemento = metrocuadrado * 2;
-    bolsascal = metrocuadrado * 3;
+    bolsascemento = metrocuadrado * 2; // area * cemento (otra alternativa)
+    bolsascal = metrocuadrado * 3; // area * cal (otra alternativa)
 
     //Muestro el resultado en pantalla
     alert("Voy a necesitar " + bolsascemento + " bolsas de cemento" + " Y voy a necesitar " + bolsascal + " bolsas de cal");

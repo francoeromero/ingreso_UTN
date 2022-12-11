@@ -24,18 +24,21 @@ function Rectangulo ()
 
     //mostramos en la pantalla 
     alert("la cantidad de alambre es de " + alambre + " metros lineales");
-
 }
+/*
+bien, solo que hay que pensar mejor en la operacion y utilizar los parentesis
+pregunta: parseInt y parsefloat que colocar para cada uno? */
 function Circulo () 
 {
 	
     let radio;
     let perimetro;
     let alambre;
+    const PI = 3.14;
 
     radio = parseFloat(document.getElementById("txtIdRadio").value);
 
-    perimetro = 2 * 3.14 * radio;
+    perimetro = 2 * PI * radio;
     alambre = 3 * perimetro;
 
     alert("la cantidad de alambre de un circulo es de " + alambre + " metros lineales");
@@ -44,24 +47,30 @@ function Circulo ()
 /*
 otra forma de representar un valor que nunca va a cambiar como el PI
 const = PI = 3.14  
+LAS VARIABLES CONSTANTES SE AGREGAN EL VALOR EN LA MISMA LINEA 
+
+Math.variableconstante = para saber el valor exacto 
+
 */
 function Materiales () 
 {
 	//pido espacio de memoria 
-
     let ancho;
     let largo;
     let metrocuadrado;
     let bolsascemento;
     let bolsascal;
 
+    //cambio las entradas a number
     ancho = parseFloat(document.getElementById("txtIdLargo").value);
     largo = parseFloat(document.getElementById("txtIdAncho").value);
 
+    //hago el calculo, primero el area de m2 del terreno, luego asigno a cemento y cal, lo multiplico por la cant de bolsas por m2 para saber cuantas bolsas necesita
     metrocuadrado = ancho * largo;
     bolsascemento = metrocuadrado * 2;
     bolsascal = metrocuadrado * 3;
 
+    //Muestro el resultado en pantalla
     alert("Voy a necesitar " + bolsascemento + " bolsas de cemento" + " Y voy a necesitar " + bolsascal + " bolsas de cal");
     //alert('Para un contrapiso de ${metrocuadrado} m2 necesito comprar ${bolsascemento} bolsas de cemento y ${bolsascal} bolsas de cal');
 

@@ -5,14 +5,21 @@ B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en
 */
 function FahrenheitCentigrados() 
 {
+    //pido espacio de memoria para dos valores f y c
     let Fahrenheit;
     let centigrados;
 
+    //paso a valor numerico flotante porque se trabaja en decimales
     Fahrenheit = parseFloat(document.getElementById("txtIdTemperatura").value);
 
-    centigrados = (Fahrenheit - 32) * 5 / 9;    
+    //hago el calculo del valor x con el dato que me da el usuario, en este caso seria fahrenheit
+    centigrados = (Fahrenheit - 32) * 5 / 9;    // (Fahrenheit -32)
     
-    alert(centigrados + " °C");
+    //muestro el resultado redondeando con 2 decimales
+    alert(centigrados.toFixed(2) + " °C");
+
+    //limpio la entrada para una nueva operacion
+    document.getElementById("txtIdTemperatura").value = "";
 
 }
 
@@ -23,11 +30,16 @@ function CentigradosFahrenheit()
       let Fahrenheit;
       let centigrados;
       
-      centigrados = parseInt(document.getElementById("txtIdTemperatura").value);
+      //paso a valor flotante
+      centigrados = parseFloat(document.getElementById("txtIdTemperatura").value);
   
+      //calculo de f a c, utilizando el dato que el usuario escribe
       Fahrenheit = (centigrados * 1.8) + 32;
   
-      alert(Fahrenheit + " °F");
+      //muestro el resultado en la alerta
+      alert(Fahrenheit.toFixed(2) + " °F");
+
+      document.getElementById("txtIdTemperatura").value = "";
 }
 
 

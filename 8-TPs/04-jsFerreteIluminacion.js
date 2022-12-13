@@ -22,7 +22,7 @@ function CalcularPrecio ()
     let ArgentinaLuz;
     let FelipeLamparas;
     
-    //
+    //hago la condicional
  	if(cantLamparas > 6){
         descuento = cantLamparas * 0.5;
         preciofinal = precio - descuento;

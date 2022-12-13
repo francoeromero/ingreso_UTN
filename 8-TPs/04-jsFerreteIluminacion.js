@@ -30,6 +30,8 @@ function CalcularPrecio ()
         document.getElementById("txtIdprecioDescuento").value = preciofinal;
     } if else (cantLamparas = 5){
 
+    } if else {
+        
     }
     
 }

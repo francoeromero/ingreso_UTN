@@ -31,7 +31,10 @@ function CalcularPrecio ()
     } if else (cantLamparas = 5){
 
     } if else {
-        
+
+    }
+    else {
+
     }
     
 }

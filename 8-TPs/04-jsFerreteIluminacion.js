@@ -28,7 +28,7 @@ function CalcularPrecio ()
         descuento = cantLamparas * 0.5;
         preciofinal = precio - descuento;
         document.getElementById("txtIdprecioDescuento").value = preciofinal;
-    } if else (cantLamparas = 5){
+    } if else (cantLamparas = 5)it add{
 
     }
     

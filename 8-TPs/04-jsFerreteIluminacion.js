@@ -25,7 +25,8 @@ function CalcularPrecio ()
     //
  	if(cantLamparas > 6){
         descuento = cantLamparas * 0.5;
-        preciofinal = 
+        preciofinal = precio - descuento;
+        document.getElementById("txtIdprecioDescuento").value = preciofinal;
     } 
     
 }

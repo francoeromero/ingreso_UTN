@@ -14,12 +14,11 @@ function mostrar()
 	//asigno esta variable al input donde el usuario escribira el valor
 	edad = parseInt(document.getElementById("txtIdEdad").value);
 
-	if(true) {
-		alert("Niña bonita")
+	if(edad == 15) {
+		alert("Niña bonita");
 	}
-	alert{"Fin de la funcion"}
-
-}//FIN DE LA FUNCIÓN
+	alert("fin");
+}
 
 /*
  Asignacion  --->  = 

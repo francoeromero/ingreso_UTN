@@ -15,7 +15,4 @@ function mostrar()
 	} else if (edad <= 13){
 		alert("niño");
 	}
-
-
-
 }//FIN DE LA FUNCIÓN

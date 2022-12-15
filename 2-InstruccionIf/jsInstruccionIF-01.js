@@ -26,7 +26,7 @@ if solo una vez luego if else pueden ser infinitas y else es la sobra, si no es 
 se compone por 3 bloques if, if else y else
 
 if {}  si 
-if else {}  sino es 
+else if {}  sino es 
 else{} sino cumple con ninguno
 
 ejemplo:

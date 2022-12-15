@@ -8,19 +8,27 @@ function mostrar()
 	edad = parseInt(document.getElementById("txtIdEdad").value);
 
 	//hago las sentencias
-	if(edad >= 13 && edad <= 17){
-		alert("Adolescente");
+
+	if(edad < 13){
+		alert("niño")
 	}
-	if(edad > 17){
-		alert("Adulto");
-	}
-	if(edad <13){
-		alert("Niño");
-	} 
+		else if (edad < 18){
+			alert("adolescente");
+		}
+
+		else if (edad < 65){
+			alert("Adulto")
+		}
+	
+		else {
+			alert("Anciano");
+		}
+	
+	
+
 }
 
 /*
-
 1- mayor de edad
 2- adolescente
 3- niño
@@ -34,7 +42,8 @@ if (edad >= 18){
 		alert("niño");
 	}
 
-segunda solucion:
+
+segunda solucion: 
 
 if(edad >= 13 && edad <= 17){
 		alert("Adolescente");
@@ -46,7 +55,57 @@ if(edad <13){
 		alert("Niño");
 	} 
 
+tercera solucion:
+
+if(edad >= 13 && edad <= 17){
+		alert("Adolescente");
+	}
+	else if(edad > 17){
+		alert("Adulto");
+	}
+	else{
+		alert("Niño");
+	} 
+}
+
+cuarta solucion:
+
+if(edad >= 13 && edad <= 17){
+		alert("Adolescente");
+	}
+	if (!  (edad >= 13 && edad <= 17)  ){
+		alert("Fuera de rango");
+	}
 
 
+solucion del profe: 
+
+if(edad < 13){
+		alert("Es niño");
+	}
+		else{
+				if(edad < 18){
+				alert("Es adolescente");
+				}
+				else {
+					alert("Es Adulto")
+				}
+			}
+
+Lo que hizo el profe es, meter un if  y un else, dentro del else agrego un if mas y un else 
+
+Los else no pueden ir condicional entonces dentro del else puso un if, lo que me parece mejor colocar un else if para dar condicional como la primera solucion y el else de ultima opcion para el resto. 
+Lo que quiere demostrar el profe es el surgimiento de else if, que nace de ahi  por eso se unen :
+
+if(edad < 13){
+	alert("niño")
+}
+	else if (edad < 18){
+		alert("adolescente");
+	}
+
+	else {
+		alert("Adulto");
+	}
 
 */

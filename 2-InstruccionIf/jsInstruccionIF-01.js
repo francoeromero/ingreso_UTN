@@ -1,11 +1,23 @@
 function mostrar()
 {
-	let edad;
-	if(edad === 15){
-		alert("Niña bonita");
-	} else {
-		alert("mayor de edad")
+	// let edad;
+	// if(edad === 15){
+	// 	alert("Niña bonita");
+	// } else {
+	// 	alert("mayor de edad")
+	// }
+
+
+	//pido espacio de memoria para declarar 
+	let = edad;
+
+	//asigno esta variable al input donde el usuario escribira el valor
+	edad = parseInt(document.getElementById("txtIdEdad").value);
+
+	if(true) {
+		alert("Niña bonita")
 	}
+	alert{"Fin de la funcion"}
 
 }//FIN DE LA FUNCIÓN
 

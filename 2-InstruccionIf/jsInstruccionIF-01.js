@@ -42,6 +42,17 @@ alert("estoy despues del bloque if")
 Condicional son operadores booleanos
 
 1) declaro una variable para pedir espacio de memoria
-2) setenencia if, y la condicional sea una declaracion con una variable
-3) else if o else, en caso de que no se cumpla la primera condicional
+2) asigno el valor de la variable al id del input donde se escribira el valor
+3) setenencia if, y la condicional sea una declaracion con una variable
+4) else if o else, en caso de que no se cumpla la primera condicional
+
+15 == !5 true
+"15" == 15 true
+"15" == "15" true
+15 == "15" true
+
+15 === 15 true
+"15" === "15" true
+"15" === 15 false
+15 === "15" false
 */

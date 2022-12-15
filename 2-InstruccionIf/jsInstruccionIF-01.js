@@ -1,8 +1,7 @@
 function mostrar()
 {
 	let edad;
-	if(edad == 15){
-		
+	if(edad === 15){
 		alert("Niña bonita");
 	} else {
 		alert("mayor de edad")
@@ -15,4 +14,5 @@ Condicional son operadores booleanos
 
 1) declaro una variable para pedir espacio de memoria
 2) setenencia if, y la condicional sea una declaracion con una variable
+3) else if o else, en caso de que no se cumpla la primera condicional
 */

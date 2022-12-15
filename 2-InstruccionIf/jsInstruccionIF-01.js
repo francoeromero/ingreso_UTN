@@ -5,7 +5,7 @@ function mostrar()
 	let edad;
 
 	//asigno esta variable al input donde el usuario escribira el valor
-	edad = parseInt(document.getElementById("txtIdEdad").value); //pongo parseint porque las edades son numeros redondos, nada de comas
+	edad = parseInt(document.getElementById("txtIdEdad").value); //pongo parseint porque las edades son numeros redondos, nada de comas y tambien porque hay que transformar los valores de string a number, pero de todas formas si fuese string "15" == 15, esto da true 
 
 	//Ahora hago la sentencia, si edad es igual a 15 entonces se escriba niña bonita 
 	if(edad == 15) {

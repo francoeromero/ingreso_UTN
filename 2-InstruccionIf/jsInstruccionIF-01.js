@@ -5,7 +5,7 @@ function mostrar()
 	let edad;
 
 	//asigno esta variable al input donde el usuario escribira el valor
-	edad = parseInt(document.getElementById("txtIdEdad").value);
+	edad = parseInt(document.getElementById("txtIdEdad").value); //pongo parseint porque las edades son numeros redondos, nada de comas
 
 	//Ahora hago la sentencia, si edad es igual a 15 entonces se escriba niña bonita 
 	if(edad == 15) {

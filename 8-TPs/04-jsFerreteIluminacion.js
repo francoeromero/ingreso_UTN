@@ -38,3 +38,15 @@ function CalcularPrecio ()
     }
     
 }
+ /*
+ Asignacion  --->  = 
+
+CONDICIONALES 
+if solo una vez luego if else pueden ser infinitas y else es la sobra, si no es ninguno de todos los que escribiste
+
+if {}  si 
+if else {}  sino es 
+else{} sino cumple con ninguno
+
+
+ */

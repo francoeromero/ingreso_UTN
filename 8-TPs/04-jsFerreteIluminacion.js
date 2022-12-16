@@ -64,6 +64,13 @@ function CalcularPrecio ()
         preciofinal = precio - descuento;
         alert("descuento 20 %  - el precio es de:  $ " + preciofinal );
     }
+    //D
+    else if (cantlamparas == 3 && marca == "ArgentinaLuz"){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.15;
+        preciofinal = precio - descuento;
+        alert("descuento 15 %  - el precio es de:  $ " + preciofinal );
+    }
     
     
 

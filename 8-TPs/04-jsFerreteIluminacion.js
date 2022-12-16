@@ -46,18 +46,25 @@ function CalcularPrecio ()
         alert("descuento 30 %  - el precio es de:  $ " + preciofinal );
     }
     //C
-    else if (cantlamparas == 4 || marca == "ArgentinaLuz" || marca == FelipeLamparas){
+    else if (cantlamparas == 4 && marca == "ArgentinaLuz"){
         let precio = cantlamparas * 35;
         let descuento = precio * 0.25;
         preciofinal = precio - descuento;
-        alert("descuento 30 %  - el precio es de:  $ " + preciofinal );
+        alert("descuento 25 %  - el precio es de:  $ " + preciofinal );
+    } 
+    else if (cantlamparas == 4 && marca == "FelipeLamparas"){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.25;
+        preciofinal = precio - descuento;
+        alert("descuento 25 %  - el precio es de:  $ " + preciofinal );
     }
-    else if (cantlamparas == 4 || marca != "ArgentinaLuz" || marca != FelipeLamparas){
+    else if (cantlamparas == 4 || marca != "ArgentinaLuz" || marca != "FelipeLamparas"){
         let precio = cantlamparas * 35;
         let descuento = precio * 0.20;
         preciofinal = precio - descuento;
-        alert("descuento 30 %  - el precio es de:  $ " + preciofinal );
+        alert("descuento 20 %  - el precio es de:  $ " + preciofinal );
     }
+    
     
 
 

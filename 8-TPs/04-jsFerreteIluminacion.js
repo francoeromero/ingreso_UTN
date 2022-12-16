@@ -30,6 +30,8 @@ function CalcularPrecio()
         preciofinal = precio - descuento;
         alert("Descuento 50 % - el precio es de:  $ " + preciofinal );
     }
+
+    //-------------------------- B ------------------------------------
     //B - Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 %
     else if (cantlamparas == 5 && marca == "ArgentinaLuz"){
         let precio = cantlamparas * 35;
@@ -44,6 +46,9 @@ function CalcularPrecio()
         preciofinal = precio - descuento;
         alert("descuento 30 %  - el precio es de:  $ " + preciofinal );
     }
+
+
+    //-------------------------- C ------------------------------------
     //C - si compro 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” se hace un descuento del 25 % 
     else if (cantlamparas == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas") ){
         let precio = cantlamparas * 35;
@@ -58,6 +63,34 @@ function CalcularPrecio()
         preciofinal = precio - descuento;
         alert("descuento 20 %  - el precio es de:  $ " + preciofinal );
     }
+
+
+    //-------------------------- D ------------------------------------
+    //D - Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%
+    else if(cantlamparas == 3 && marca == "ArgentinaLuz"){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.15;
+        preciofinal = precio - descuento;
+        alert("descuento 15 %  - el precio es de:  $ " + preciofinal );
+    }
+    //D - si es  “FelipeLamparas” se hace un descuento del 10 % 
+    else if(cantlamparas == 3 && marca == "FelipeLamparas"){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.10;
+        preciofinal = precio - descuento;
+        alert("descuento 10 %  - el precio es de:  $ " + preciofinal );
+    }
+    //D - y si es de otra marca un 5%.
+    else if(cantlamparas == 3 && (marca != "ArgentinaLuz" || marca != "FelipeLamparas")){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.05;
+        preciofinal = precio - descuento;
+        alert("descuento 5 %  - el precio es de:  $ " + preciofinal );
+    }
+
+
+     //-------------------------- E ------------------------------------
+    
 }
 
 /*

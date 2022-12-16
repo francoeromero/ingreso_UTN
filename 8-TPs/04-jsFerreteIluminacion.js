@@ -15,28 +15,40 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-    //pido espacio de memoria 
-    const = UNIDAD = 35;
-    let cantLamparas;
-    let descuento;
-    let preciofinal;
-    let ArgentinaLuz;
-    let FelipeLamparas;
+    // let cantlamparas;
     
-    //hago la condicional
- 	if(cantLamparas > 6){
-        descuento = cantLamparas * 0.5;
+    // let precio = cantlamparas * 35;
+    // let descuento = precio * 0.5;
+    // let preciofinal;
+
+    cantlamparas = parseInt(document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
+
+    //  A
+    if(cantlamparas >= 6){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.5;
         preciofinal = precio - descuento;
-        document.getElementById("txtIdprecioDescuento").value = preciofinal;
-    } if else (cantLamparas = 5){
-
-    } if else {
-
+        alert("descuento 50 % - el precio es de:  $ " + preciofinal );
     }
-    else {
 
+    // B
+    else if (cantlamparas == 5 && marca == "ArgentinaLuz"){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.4;
+        preciofinal = precio - descuento;
+        alert("descuento 40 %  - el precio es de:  $ " + preciofinal );
+    }
+    else if (cantlamparas == 5 && marca != "ArgentinaLuz"){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.3;
+        preciofinal = precio - descuento;
+        alert("descuento 30 %  - el precio es de:  $ " + preciofinal );
     }
     
+
+
+ 
 }
  /*
  Asignacion  --->  = 

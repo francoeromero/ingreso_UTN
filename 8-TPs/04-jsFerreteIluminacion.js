@@ -13,7 +13,55 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
+function CalcularPrecio()
+{
+    //Creo variables para retener informacion que me sirve para calcularlo
+    let cantlamparas;
+    let marca;
+
+    //la informacion de las entradas las agrego a estas variables
+    cantlamparas = parseInt(document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
+
+    //A
+    if(cantlamparas >= 6){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.5;
+        preciofinal = precio - descuento;
+        alert("Descuento 50 % - el precio es de:  $ " + preciofinal );
+    }
+    //B - Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 %
+    else if (cantlamparas == 5 && marca == "ArgentinaLuz"){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.4;
+        preciofinal = precio - descuento;
+        alert("Descuento 40 % - el precio es de:  $ " + preciofinal );
+    }
+    //B - y si es de otra marca el descuento es del 30%
+    else if (cantlamparas == 5 && marca != "ArgentinaLuz"){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.3;
+        preciofinal = precio - descuento;
+        alert("descuento 30 %  - el precio es de:  $ " + preciofinal );
+    }
+    //C - si compro 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” se hace un descuento del 25 % 
+    else if (cantlamparas == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas") ){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.25;
+        preciofinal = precio - descuento;
+        alert("descuento 25 %  - el precio es de:  $ " + preciofinal );
+    }
+    // C  - si es de otra marca el descuento es del 20%.
+    else if (cantlamparas == 4 && (marca != "ArgentinaLuz" || marca != "FelipeLamparas") ){
+        let precio = cantlamparas * 35;
+        let descuento = precio * 0.20;
+        preciofinal = precio - descuento;
+        alert("descuento 20 %  - el precio es de:  $ " + preciofinal );
+    }
+}
+
+/*
+function Loquehice () 
 {
     // let cantlamparas;
     
@@ -89,6 +137,10 @@ function CalcularPrecio ()
 
  
 }
+
+*/
+
+
  /*
  Asignacion  --->  = 
 

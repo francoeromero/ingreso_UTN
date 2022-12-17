@@ -5,4 +5,18 @@ function mostrar()
 	
 	alert(hora);
 
+	switch(hora) {
+		case :
+		alert("");
+		break;
+
+		case :
+		alert("");
+		break;
+
+		case :
+		alert("");
+		break;
+	}
+
 }

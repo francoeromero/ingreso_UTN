@@ -1,6 +1,9 @@
 function mostrar()
 {
-	let estacionIngresada =txtIdEstacion.value;
-	alert(estacionIngresada);
+	let txtIdEstacion = document.getElementById("txtIdEstacion").value;
+	let txtIdDestino = document.getElementById("txtIdDestino").value;
+	
+
+	
 
 }

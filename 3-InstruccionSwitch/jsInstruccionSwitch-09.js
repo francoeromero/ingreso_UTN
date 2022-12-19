@@ -1,6 +1,6 @@
 function mostrar()
 {
-	var estacionIngresada =txtIdEstacion.value;
+	let estacionIngresada =txtIdEstacion.value;
 	alert(estacionIngresada);
 
-}//FIN DE LA FUNCIÓN
+}

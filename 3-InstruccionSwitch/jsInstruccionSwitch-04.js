@@ -4,6 +4,11 @@ function mostrar()
 
 
 	switch(mes){
+
+		case "Febrero":
+			alert("Tiene 28 dias");
+			break;
+
 		case "Enero":
 		case "Abril":
 		case "Junio":
@@ -11,11 +16,7 @@ function mostrar()
 		case "Noviembre":
 			alert("Tiene 30 dias");
 			break;
-
-		case "Febrero":
-			alert("Tiene 28 dias");
-			break;
-
+			
 		default:
 			alert("Tiene 31 dias");
 			break;

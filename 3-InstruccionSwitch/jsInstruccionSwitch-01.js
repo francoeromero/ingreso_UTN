@@ -5,9 +5,9 @@ function mostrar()
 	
 
 	switch(mes){
-		case "Enero" : 
-			alert("Que comiences bien el año!!!");
-			break;
+		case "Enero" : // condicional mes == "Enero" 
+			alert("Que comiences bien el año!!!"); //Instrucciones
+			break;//finalizar bloque
 		case "Marzo" :
 			alert("A clases!!");
 			break;

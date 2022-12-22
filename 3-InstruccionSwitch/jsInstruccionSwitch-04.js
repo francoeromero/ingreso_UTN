@@ -29,8 +29,6 @@ function mostrar()
 		// 	alert("Tiene 31 dias");
 		// 	break;
 
-	
-
 	}
 
 	// switch (mes){

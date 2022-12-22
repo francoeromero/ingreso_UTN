@@ -28,5 +28,8 @@ function mostrar()
 }
 
 /*
+Aca aprendemos a que podemos dar agrupar case para una sola instruccion 
+
+
 
 */

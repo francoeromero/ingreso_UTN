@@ -4,16 +4,16 @@ function mostrar()
 	
 	switch (txtIdDestino) {
 		case "Bariloche":
-			alert("Bariloche tiene 41°09′S 71°18′O﻿ de coordenadas");
+			alert("Bariloche esta en el Oeste");
 			break;
 		case "Cataratas":
-			alert("Cataratas tiene 25°41′43″S 54°26′12″O de coordenadas");
+			alert("Cataratas esta en el Norte");
 			break;
 		case "Mar del plata":
-		alert("Mar del plata tiene 38°00′S 57°33′O de coordenadas");
+		alert("Mar del plata esta en el Este");
 		break;
 		case "Ushuaia":
-			alert("Ushuaia tiene 54°48′58″S 68°19′25″O de coordenas");
+			alert("Ushuaia esta en el Sur");
 			break;
 	}
 

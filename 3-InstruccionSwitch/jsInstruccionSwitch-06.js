@@ -69,6 +69,11 @@ function mostrar()
  
 en el DEFAULT no es necesario finalizar con BREAK
 
+Cuando en la condicional se usa AND y OR, EL AND se agrupa entre parentesis y luego el OR termina la operacion 
+
+(a && b) || (a && b)
+	V   ||  F  = V 
+
 
 
 */

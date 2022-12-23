@@ -1,36 +1,46 @@
 function mostrar()
 {
+	const PRECIO = 15000;
+	let preciofinal;
+
 	let estacion = document.getElementById("txtIdEstacion").value;
 	let destino = document.getElementById("txtIdDestino").value;
 
 	// Invierno
 	if(estacion == "Invierno" && destino == "Bariloche"){
-		alert("En Bariloche hay un aumento del 20% ");
+		preciofinal = (PRECIO * 0.2) + PRECIO;
+		alert("El precio es " + preciofinal + " con su aumento del 20% Bariloche");
 	}
 	else if (estacion == "Invierno" && (destino == "Cataratas" || destino == "Cordoba") ){
-		alert("En Cataratas o Cordoba hay un aumento del 10%");
+		preciofinal = (PRECIO * 0.1) + PRECIO;
+		alert("El precio es " + preciofinal + " con su aumento del 10% Cataratas Cordoba");
 	}
 	else if (estacion == "Invierno" && destino == "Mar del plata"){
-		alert("En Mar del plata hay un descuento del 20%");
+		preciofinal = PRECIO - (PRECIO * 0.2) ;
+		alert("El precio es " + preciofinal + " con su descuento del 20% incluido Mar del plata");
 	}
 
 	//Verano
 	else if(estacion == "Verano" && destino == "Bariloche" ){
-		alert("En Bariloche hay un descuento del 20%");
+		preciofinal = PRECIO - (PRECIO * 0.2);
+		alert("El precio es " + preciofinal + " con su descuento del 20%");
 	}
 	else if (estacion == "Verano" && (destino == "Cataratas" || destino == "Cordoba")){
-		alert("En Cataratas y Cordoba hay un descuento del 10%")
+		preciofinal = PRECIO - (PRECIO * 0.1);
+		alert("El precio es " + preciofinal + " con su descuento del 10%")
 	}
 	else if(estacion == "Verano" && destino == "Mar del plata"){
-		alert("En Mar del plata hay un aumento del 20%");
+		preciofinal = PRECIO + (PRECIO * 0.2);
+		alert("El precio es " + preciofinal + " con su aumento del 20%");
 	}
 
 	//Otoño y Primavera
 	else if((estacion == "Otoño" || estacion == "Primavera") && (destino == "Cataratas" || destino == "Mar del plata")){
-		alert("En Cataratas y Mar del plata tiene un aumento del 10%");
+		preciofinal = PRECIO + (PRECIO * 0.1);
+		alert("El precio es " + preciofinal + " con su aumento del 10%");
 	}
 	else {
-		alert("Cordoba tiene el precio sin descuento");
+		alert("El precio es " + PRECIO +  " sin descuento");
 	}
 
 

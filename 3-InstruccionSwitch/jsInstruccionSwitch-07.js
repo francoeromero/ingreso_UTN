@@ -1,8 +1,22 @@
 function mostrar()
 {
-	let txtIdDestino = document.getElementById("txtIdDestino").value;
+	let Destino = document.getElementById("txtIdDestino").value;
+
+
+	// if(Destino == "Bariloche"){
+	// 	alert("Bariloche esta en el Oeste");
+	// }
+	// else if (Destino == "Cataratas"){
+	// 	alert("Cataratas esta en el Norte");
+	// }
+	// else if (Destino == "Mar del plata"){
+	// 	alert("Mar del plata esta en el Este");
+	// }
+	// else{
+	// 	alert("Ushuaia esta en el Sur");
+	// }
 	
-	switch (txtIdDestino) {
+	switch (Destino) {
 		case "Bariloche":
 			alert("Bariloche esta en el Oeste");
 			break;

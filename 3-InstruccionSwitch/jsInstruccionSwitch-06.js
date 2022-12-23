@@ -21,14 +21,23 @@ function mostrar()
 		case 19:
 		result = alert("Es de tarde");
 		break;
-		case 20:
-		case 21:
-		case 22:
-		case 23:
-		case 24:
-		result = alert("La hora no existe");
-		break;
+
+		default:
+			result = alert("La hora no existe");
+		// case 20:
+		// case 21:
+		// case 22:
+		// case 23:
+		// case 24:
+		// result = alert("La hora no existe");
+		// break;
 
 	}
 
 }
+
+/*
+ 
+en el DEFAULT no es necesario finalizar con BREAK
+
+*/

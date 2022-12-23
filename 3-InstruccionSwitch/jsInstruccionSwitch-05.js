@@ -1,7 +1,7 @@
 function mostrar()
 {
 	let hora = parseInt(document.getElementById("txtIdHora").value); 
-	
+
 	switch (hora){
 		case 7:
 		case 8:
@@ -13,10 +13,9 @@ function mostrar()
 	}
 	
 	// switch (hora) {
-	// 	case 7 :
-	// 		alert("Es de mañana.");
+	// 	case 7 :ee
 	// 	break;
-
+w
 	// 	case 8 :
 	// 		alert("Es de mañana.");
 	// 	break;

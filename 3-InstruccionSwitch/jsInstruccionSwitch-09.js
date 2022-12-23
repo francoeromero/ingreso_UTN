@@ -43,44 +43,70 @@ function mostrar()
 		alert("El precio es " + PRECIO +  " sin descuento");
 	}
 
+/* correccion: esta bien, otra forma hubiera sido poner las variables descuento y aumento como variables y darles el valor 0
+	let descuento = 0;
+	let aumento = 0;
+*/
 
+	switch(estacion){
+		case "Invierno":
+		break;
 
-	
-	// switch (txtIdEstacion){
-	// 	case "Invierno":
-	// 		alert("");
-	// 		break;
+		case "Verano":
+		break;
 
-	// 	case "Verano":
-	// 		alert("");
-	// 		break;
-
-	// 	case "Otoño":
-	// 		alert("");
-	// 		break;
-
-	// 	case "Primavera":
-	// 		alert("");
-	// 		break;
-	// }
-
-	// switch(txtIdDestino){
-	// 	case "Bariloche":
-	// 		alert("");
-	// 		break;
-
-	// 	case "Cataratas":
-	// 		alert("");
-	// 		break;
-
-	// 	case "Mar del plata":
-	// 		alert("");
-	// 		break;
-
-	// 	case "Cordoba":
-	// 		alert("");
-	// 		break;
-	// }
-
-
+		case "Otoño":
+		case "Primavera":
+		break;
+		}
 }
+
+/*
+Lo que hago con switch al tener mas de una variable se hace asi: 
+
+switch(estacion){
+		case "Invierno":
+			instrucciones
+		break;
+
+		case "Verano":
+			instrucciones
+		break;
+
+		case "Otoño":
+		case "Primavera":
+			instrucciones
+		break;
+		}
+
+Usamos primero la variable estacion, y lo dividimos en 3 bloques, Otoño y primavera estan juntas porque tienen el mismo resultado como dice el anuncio. Solo ahora nos falta agregar las instrucciones, de ahi aplicamos if, y le agregamos la otra variable destino
+
+
+switch(estacion){
+		case "Invierno":
+
+			if(destino == ""){} 
+			else if (){}
+			else {}
+
+		break;
+
+		case "Verano":
+
+			if(destino == ""){} 
+			else if (){}
+			else {}
+
+		break;
+
+		case "Otoño":
+		case "Primavera":
+
+			if(destino == ""){} 
+			else if (){}
+			else {}
+			
+		break;
+		}
+
+*/

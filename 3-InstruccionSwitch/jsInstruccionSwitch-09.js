@@ -103,6 +103,14 @@ preciofinal = PRECIO + aumento;
 descuento = PRECIO * 0.2;
 preciofinal = PRECIO - descuento;
 
+
+Tambien hay otra forma de resolverlo mas facil usan != 
+
+if (aumento != 0){
+	preciofinal = PRECIO + (PRECIO * 0.1)
+}
+
+
 */
 /*
 Lo que hago con switch al tener mas de una variable se hace asi: 

@@ -4,7 +4,7 @@ con números ASCENDENTE, desde el 1 al 10.*/
 function mostrar()
 {
 	alert('iteración while');
-}//FIN DE LA FUNCIÓN
+}
 
 /*
 SENTENCIAS SECUENCIALES
@@ -15,11 +15,41 @@ SENTENCIAS CONDICIONALES (TRUE OR FALSE)
 
 Las sentencias condicionales son aquellas que se ejecutan solo si se cumple cierta condición. Por ejemplo, una sentencia "if" (si) permite ejecutar un bloque de código solo si se cumple una determinada condición.
 
-INSTRUCCIONES ITERATIVAS  O REPETITIVAS 
+INSTRUCCIONES ITERATIVAS  O REPETITIVAS (BUCLE)
 
 Las sentencias iterativas, también conocidas como bucles o ciclos, permiten ejecutar un bloque de código varias veces de manera consecutiva. Por ejemplo, un bucle "for" (para) permite ejecutar un bloque de código un número determinado de veces.
 
 RESUMEN
 las sentencias secuenciales son aquellas que se ejecutan en orden una detrás de otra, las sentencias condicionales son aquellas que se ejecutan solo si se cumple una condición, y las sentencias iterativas son aquellas que permiten ejecutar un bloque de código varias veces de manera consecutiva.
 
+estructura de if
+
+if(condicion 1)
+{
+	instrucciones/sentencias 1
+}
+if else (condicion 2)
+{
+	instrucciones/sentencias 2
+}
+else 
+{
+	resto : instrucciones/sentencias 
+}
+
+estructura switch
+
+swith (variable)
+{
+	case valor:
+		instrucciones/sentencias 1
+		break; 
+}
+
+estructura while
+
+while(condicion) 
+{
+	instrucciones/sentencias
+}
 */

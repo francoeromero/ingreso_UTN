@@ -46,10 +46,13 @@ swith (variable)
 		break; 
 }
 
-estructura while
+estructura while  
+
+la diferencia entre if y while es que While vuelve a evaluar la condicion, osea vuelve para atras, en cambio el if no vuelve para atras sino que continua leyendo las instrucciones
 
 while(condicion) 
 {
 	instrucciones/sentencias
 }
+
 */

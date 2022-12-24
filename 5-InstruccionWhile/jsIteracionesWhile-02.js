@@ -10,4 +10,4 @@ function mostrar()
 		i--;
 	} 
 
-}//FIN DE LA FUNCIÓN
+}

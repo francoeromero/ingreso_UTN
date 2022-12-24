@@ -19,6 +19,7 @@ INSTRUCCIONES ITERATIVAS  O REPETITIVAS
 
 Las sentencias iterativas, también conocidas como bucles o ciclos, permiten ejecutar un bloque de código varias veces de manera consecutiva. Por ejemplo, un bucle "for" (para) permite ejecutar un bloque de código un número determinado de veces.
 
-
+RESUMEN
+las sentencias secuenciales son aquellas que se ejecutan en orden una detrás de otra, las sentencias condicionales son aquellas que se ejecutan solo si se cumple una condición, y las sentencias iterativas son aquellas que permiten ejecutar un bloque de código varias veces de manera consecutiva.
 
 */

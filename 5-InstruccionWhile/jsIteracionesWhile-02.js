@@ -9,5 +9,4 @@ function mostrar()
 		alert(i);
 		i--;
 	} 
-
 }

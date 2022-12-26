@@ -8,11 +8,13 @@ function mostrar()
 	// si 1 es menor a 10, se va a sumar 1 (i++)
 	while(i <= 10){
 		alert(i);
-		i ++;
+		i ++; // i = i + 1;
 	}
 }
 
 /*
+
+
 SENTENCIAS SECUENCIALES
 
 Las sentencias secuenciales son aquellas que se ejecutan en orden, una detrás de otra. Es decir, se ejecutan de manera secuencial, de la primera a la última.

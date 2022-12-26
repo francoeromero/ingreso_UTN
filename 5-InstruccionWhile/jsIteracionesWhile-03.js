@@ -9,10 +9,10 @@ function mostrar()
 
 	//uso while para generar un bucle, de no ser correcta la clave entonces que la vuelva a escribir
 	while(claveIngresada != CLAVECORRECTA){ 
-		alert("INCORRECTO");
+		alert("INCORRECTO"); //instrucciones si no es igual ala clave correcta
 		claveIngresada = prompt("vuelva a ingresar");
 	}
 
-	alert("CORRECTO!!!!");
+	alert("CORRECTO!!!!"); // instruccion si llega a ser igual, va a saltar esta instruccion
 	
 }

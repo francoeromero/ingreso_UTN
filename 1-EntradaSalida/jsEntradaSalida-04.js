@@ -11,7 +11,7 @@ function mostrar()
 	let nombre;
 	// //guardo en la variable nombre el texto que escribio el usuario dentro de la ventana prompt
 	nombre = prompt("Ingrese su nombre");
-	// //copio el nombre que tengo guardado en la variable input 
+	// //copio el nombre que tengo guardado en la variable input  SIEMPRE LA VARIABLE AL FINAL SINO NO FUNCIONA
  	document.getElementById("txtIdNombre").value = nombre;
 
 }

@@ -8,9 +8,10 @@ function mostrar()
 
 	
 	while(sexoIngresado == "f" || sexoIngresado == "m"){
-	 alert("pedir otro sexo");
+	 alert("sexo elegido");
 	 sexoIngresado = prompt("vuelve a pedir otro sexo");
 	}
+
 	alert("incorrecto");
 
 

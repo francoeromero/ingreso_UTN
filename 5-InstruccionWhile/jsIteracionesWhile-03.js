@@ -24,5 +24,4 @@ TIP
 la primera instruccion tiene que ser la fasla, porque sino no se hace el BUCLE
 El bucle se genera cuando el usuario se equivoca y tiene que volver a escribir
 y luego la instruccion correcta y finaliza 
-
-*/
+dd	*/

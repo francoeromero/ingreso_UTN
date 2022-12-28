@@ -7,7 +7,7 @@ function mostrar()
 	let i = 1;
 	// si 1 es menor a 10, se va a sumar 1 (i++)
 	while(i <= 10){
-		alert(i);
+		console.log(i)// alert(i);
 		i ++; // i = i + 1;
 	}
 }

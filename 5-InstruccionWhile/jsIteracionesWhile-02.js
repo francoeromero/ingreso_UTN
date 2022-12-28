@@ -7,7 +7,7 @@ function mostrar()
 	let i = 10;
 	//si 10 es mayor a 1 que se reste 1 (i--)  
 	while(i >= 1){
-		alert(i);
+		console.log(i)// alert(i);
 		i--;
 	} 
 }

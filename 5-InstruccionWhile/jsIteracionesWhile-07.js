@@ -5,26 +5,25 @@ e informar la suma acumulada y el promedio.
 function mostrar()
 {
 	//creamos los espacios de memoria
-	let num;
-	let suma;
+	let num = 0;
 	let promedio;
 	let acumulador = 0;
 	let i = 0;
 	
 	//calculo segun los numeros que puso el usuario
 	
-	while(num < 5){ 
-		num = parseInt(prompt("Ingrese el numero : "));
+	while(num < 5){  // 5 vueltas del bucle
+		num = parseInt(prompt("Ingrese el numero : ")); // pido al usuario un valor numerico 
 
-		acumulador = acumulador + num;
+		acumulador = acumulador + num; // el acumulador acumula los valores que coloca el usuario para no ser perdidos durante el bucle
 
-		i++;
+		i++; //contador  cuenta las veces que va girando el bucle
 	}
 
-	promedio = acumulador / 5; // el promedio lo pongo afuera porque solo una vez se calcula el promedio
+	promedio = acumulador / 5; // y luego de las 5 vuelta, el valor del acumulador lo divido por 5 para dar un promedio
 
 	//muestro el resultado en las entradas
-	document.getElementById("txtIdSuma").value = suma;
+	document.getElementById("txtIdSuma").value = acumulador;
 	document.getElementById("txtIdPromedio").value = promedio;
 
 	

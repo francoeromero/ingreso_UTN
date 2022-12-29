@@ -8,14 +8,21 @@ function mostrar()
 	let num;
 	let suma;
 	let promedio;
+	let acumulador = 0;
 	//solicito numeros al usuario 
 	num = prompt("ingrese numero")
 
 	//calculo segun los numeros que puso el usuario
 	
 	while(num < 0){
-		prompt("Ingrese el numero : ");
+		num = parseInt(prompt("Ingrese el numero : "));
+
+		acumulador = acumulador + num;
+
+		i++;
 	}
+
+	promedio = acumulador / 5;
 
 	//muestro el resultado en las entradas
 	document.getElementById("txtIdSuma").value = suma;

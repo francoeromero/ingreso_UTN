@@ -1,15 +1,33 @@
 /*
 al presionar el botón mostrar 10 repeticiones 
 con números ASCENDENTE, desde el 1 al 10.*/
+
+
+// function mostrar()
+// {
+// 	//pido espacio de memoria
+// 	let i = 1;
+// 	// si 1 es menor a 10, se va a sumar 1 (i++)
+// 	while(i <= 10){
+// 		console.log(i)// alert(i);
+// 		i ++; // i = i + 1;
+// 	}
+// }
+
+
+//ejemplo
+
 function mostrar()
 {
-	//pido espacio de memoria
-	let i = 1;
-	// si 1 es menor a 10, se va a sumar 1 (i++)
-	while(i <= 10){
-		console.log(i)// alert(i);
-		i ++; // i = i + 1;
-	}
+let i = 0; //declaracion e inicializacion de la variable de control
+
+while (  i  <= 2  ) { // variable de control, la cantidad de repeticiones va a depender de la condicion
+	alert("Hola");
+	//modificacion de la variable de control
+
+	i = i + 1; // le sumo 1 
+
+}
 }
 
 /*

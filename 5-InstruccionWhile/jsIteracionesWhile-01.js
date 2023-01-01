@@ -21,13 +21,19 @@ function mostrar()
 {
 let i = 0; //declaracion e inicializacion de la variable de control
 
-while (  i  <= 2  ) { // variable de control, la cantidad de repeticiones va a depender de la condicion
-	alert("Hola");
-	//modificacion de la variable de control
+while (  i  < 3  ) { // variable de control, la cantidad de repeticiones va a depender de la condicion 
 
-	i = i + 1; // le sumo 1 
+	alert("Hola"); // instruccion verdadera del while, se repetira 3 veces, hasta que se haga falsa y sale del while
 
+	//ahora la modificacion de la variable de control
+	i = i + 1; // valor del incrmento
+
+	//resumen entonces tenemos 3 valores: 
+	//valor inicial (i=0) valor condicionales(3) y valor del incremento (i = i + 1) 
+	//Podemos controlar y jugar con esos 3 valores 
 }
+	alert("estoy despues del while"); // despues de las 3 vueltas sale del while y continua ejecutando las instrucciones
+
 }
 
 /*

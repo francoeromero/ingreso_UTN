@@ -1,92 +1,87 @@
-/*
-Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
-e informar la suma acumulada y el promedio.
-*/
-// function mostrar()
-// {
-// 	//creamos los espacios de memoria
-// 	let num = 0; // cero como valor inicial 
-// 	let promedio; 
-// 	let acumulador = 0; 
-// 	let i = 0;
-	
-// 	//calculo segun los numeros que puso el usuario
-	
-// 	while(num < 5){  // 5 vueltas del bucle
-// 		num = parseInt(prompt("Ingrese el numero : ")); // pido al usuario un valor numerico 
 
-// 		acumulador = acumulador + num; // el acumulador acumula los valores que coloca el usuario para no ser perdidos durante el bucle
-
-// 		i++; //contador  cuenta las veces que va girando el bucle
-// 	}
-
-// 	promedio = acumulador / 5; // y luego de las 5 vuelta, el valor del acumulador lo divido por 5 para dar un promedio
-
-// 	//muestro el resultado en las entradas
-// 	document.getElementById("txtIdSuma").value = acumulador;
-// 	document.getElementById("txtIdPromedio").value = promedio;
-
-	
-// }
+//Al presionar el botón pedir números hasta que el USUARIO QUIERA e informar la suma acumulada y el promedio.
 
 function mostrar() {
+
+	let preguntar = 'si';
 	let num = 0;
-	let i = 0;
+
+	while (preguntar == 'si'){
+
+		//acumulo con la misma variable para que los valores anteriores no se pierda por cada bucle 
+		num = num + parseInt(prompt("ingresa un numero: "));
+
+		//con esto hago que el usuario eliga si el bucle va a dar una vuelta o no, porque la variable preguntar es igual a 'si' 
+	 	preguntar = prompt("Quiere volver a ingresar otro numero?");
+	
+	}
+		//saco el promedio con el acumulador
+		promedio =  num / 5; 
+
+		//muestro en pantalla en los inputs
+		document.getElementById("txtIdSuma").value = num;
+		document.getElementById("txtIdPromedio").value = promedio;
+
+}
+
+/*
+Primera forma de resolverlo:
+
+function mostrar() {
+
+	let preguntar = 'si';
+	let num = 0;
 	let acumulador = 0;
-	let promedio ; 
 
-	while( i < 3) 
-	{
+	while (preguntar == 'si'){
+
 		num = parseInt(prompt("ingresa un numero: "));
-
-		acumulador = acumulador + num; // el acumulador es una variable que se aparta del bucle para recordar el num anterior y sumarlo al que viene num + num + num ... 
-
-		i++; // el contador, una variable auxiliar que ayuda a controlar las repeticiones del bucle 
+		acumulador = acumulador + num;
+	 	preguntar = prompt("Quiere volver a ingresar otro numero?");
+	
 	}
 
-		promedio = acumulador / 5;
+		promedio =  acumulador / 5; 
 
 		document.getElementById("txtIdSuma").value = acumulador;
 		document.getElementById("txtIdPromedio").value = promedio;
 
-	
 }
+
+
+*/
+
+
+
+
 
 /*
 
-.....
-let numero;
-let i = 0;
+ejemplo simple para aplicar al ejercicio 
 
-while(i < 5){
-	numero = parseInt(prompt("Ingrese un numero: ")); 
-	i++; 
+function mostrar() {
+
+	let seguir = 'si';  //variable de control del while, osea el i pero no es i 
+	
+	while (seguir == 'si') { // pongo el mismo valor inicial de la variable de control para que entre al while
+
+		alert("Hola"); //instruccion 
+
+		seguir = prompt("Quiere que lo vuelva a saludar?"); // si el usuario vuelve a poner el valor de la condicional entonces entra al bucle sino sale del bucle.
+	}
+
+	//Recordemos que while dentro es la intruccion verdadera y afuera de while seria la instruccion falsa
+	alert("Entonces ya no lo saludo mas .. ");
+
 }
 
-Esto lo que va a suceder que cada que escriba un numero el usuario, lo va a pisar por cada vuelta que da, para evitar eso hay que guardarlo en otra variable
 
-let numero;
-let i = 0;
-let acumulador = 0;
-
-while(i < 5){
-	numero = parseInt(prompt("Ingrese un numero: ")); 
-	acumulador = acumulador + numero; (se guarda el numero que ingreso anterior para sumar al nuevo)
-	i++; (i = i + 1)
-}
-
-Entonces hace esto: 
-
-1- pido el numero al usuario 
-2- hago el calculo que el numero del usuario que escribio se sume con el acumulador que empieza de cero
-3- le sumo 1 a la variable i
-4- pido de nuevo otro numero al usuario
-5- 
-
-Cual es la diferencia entre el acumulador y el contador i ? 
-porq al acumulador se suma una variable = a otra variable + otra variable  
-encambio el contador es una variable + un valor constante (1)
+*/
 
 
+/*
+
+'p' esto se representa en js como un caracter nada mas no es string 
+"p" esto es un string de un caracter, una cadena que representa un solo caracter
 
 */

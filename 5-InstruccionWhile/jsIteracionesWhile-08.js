@@ -15,23 +15,23 @@ function mostrar()
 
 	// txtIdSuma.value=sumaPositivos;
 	// txtIdProducto.value=multiplicacionNegativos;
-
+	
 	let num = 0;
 	let i = 0;
-	let a = 0;
+	let preguntar;
 
-	while (i < ) {
-		
-		num = parseInt(prompt("Ingrese un número: "));
+	do {
 
-		a = a + num;
+		num = num + parseInt(prompt("Ingrese un número: "));
+
+		preguntar = prompt("Quieres escribir otro numero?");
 
 		i = i + 1;
 
-	}
+	}while (preguntar == 's');
 
-	document.getElementById("txtIdSuma").value = a ;
-	document.getElementById("txtIdProducto").value = ;
+	document.getElementById("txtIdSuma").value = num ;
+	// document.getElementById("txtIdProducto").value = ;
 
 }
 

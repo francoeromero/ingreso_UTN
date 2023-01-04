@@ -19,8 +19,8 @@ function mostrar()
 	let num = 0;
 	let i = 0;
 	let preguntar;
-	let sumapositivos = 0;
-	let multnegativos = 0;
+	let sumapositivos = 0; //aca pongo 0 como inicializacion porque se suman 
+	let multnegativos = 1; // puse 1 como inicializacion porque si pondria 0, al multiplicarse con cualquier num daria 0 siempre
 
 	do {
 
@@ -34,12 +34,11 @@ function mostrar()
 
 		preguntar = prompt("Quieres escribir otro numero?");
 
-		// i = i + 1;
 
 	}while (preguntar == 's');
 
 	document.getElementById("txtIdSuma").value = sumapositivos ;
-	 document.getElementById("txtIdProducto").value = multnegativos ;
+	document.getElementById("txtIdProducto").value = multnegativos ;
 
 }
 /*

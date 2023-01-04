@@ -53,7 +53,7 @@ function mostrar() {
 	//finalmente sacamos el promedio
 	let promedio ; 
 
-	while( i < 5) 
+	while( i < 5) // 5 vueltas
 	{
 		//pedir numero
 		num = parseInt(prompt("ingresa un numero: "));
@@ -71,7 +71,23 @@ function mostrar() {
 	
 }
 
+/*
+ESTRUCTURA
 
+1 - variable numeros 
+2 - variable contador 
+3 - variable acumulador
+
+while (i < numVueltas) {
+
+	num = parseInt(prompt("ingresa un numero: "));
+
+	acumulador = acumulador + num; (acumulo)
+
+	contador = contador + 1  (cuento)
+}
+
+*/
 
 
 /*

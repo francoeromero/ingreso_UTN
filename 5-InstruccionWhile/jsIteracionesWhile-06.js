@@ -43,13 +43,19 @@
 
 
 function mostrar() {
+	//los numeros que agregara el usuario
 	let num = 0;
+	//el contador de vueltas del bucle
 	let i = 0;
+	//variable de memoria, almacena todos los numeros que agregó y los sumo
 	let acumulador = 0;
+
+	//finalmente sacamos el promedio
 	let promedio ; 
 
 	while( i < 5) 
 	{
+		//pedir numero
 		num = parseInt(prompt("ingresa un numero: "));
 
 		acumulador = acumulador + num; // el acumulador es una variable de memoria para recordar el num anterior y sumarlo al que viene num + num + num ... , le suma a otra variable con un valor que puede variar
@@ -59,6 +65,7 @@ function mostrar() {
 
 		promedio = acumulador / 5; //el promedio se pone fuera porque se calcula una sola vez el promedio
 
+		//muestro los resultados en la pantalla 
 		document.getElementById("txtIdSuma").value = acumulador;
 		document.getElementById("txtIdPromedio").value = promedio;
 	

@@ -24,19 +24,21 @@ function mostrar()
 
 	do {
 
-		num = parseInt(prompt("Ingrese un número: "));
+		num = parseInt(prompt("Ingrese un número: ")); // le pido que ingrese numero al usuario
 
-		if (num >= 0) {
+		if (num >= 0) {  // utilizo if si es mayor o igual a 0 , que se acumule sumandose 	
 			sumapositivos = sumapositivos + num;
 		} else {
-			multnegativos = multnegativos * num;
+			multnegativos = multnegativos * num; // de ser negativo entonces que se multiplique
 		}
 
-		preguntar = prompt("Quieres escribir otro numero?");
+		preguntar = prompt("Quieres escribir otro numero?"); // ahora le pregunto al usuario si quiere que agrege otro numero
 
 
-	}while (preguntar == 's');
+	}while (preguntar == 's'); // de poner 's' que representa el si, entonces que continue el bucle 
 
+	
+ // muestro en pantalla los resultados 
 	document.getElementById("txtIdSuma").value = sumapositivos ;
 	document.getElementById("txtIdProducto").value = multnegativos ;
 

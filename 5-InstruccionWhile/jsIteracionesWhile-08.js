@@ -19,10 +19,14 @@ function mostrar()
 	let num = 0;
 	let i = 0;
 	let preguntar;
+	let sumapositivos = 0;
+	let multnegativos = 0;
 
 	do {
 
-		num = num + parseInt(prompt("Ingrese un número: "));
+		num = parseInt(prompt("Ingrese un número: "));
+
+		sumapositivos = num
 
 		preguntar = prompt("Quieres escribir otro numero?");
 

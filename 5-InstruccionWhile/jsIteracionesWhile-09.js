@@ -38,34 +38,38 @@ function mostrar()
 
 	// }while(preguntar == 's');
 
+
+
+// NO hay que inicializar a max y min por 0, porque en el if siempre dara verdadero en maximo y en minimo nunca ejecutará
 	let num;
-	let max;
-	let min;
+	let max; // NO se inicializa con 0
+	let min; // Tampoco inicializar con 0 porque cuando utilizemos el if siempre dara verdadero en la primera instruccion 
 	let preguntar;
 	let flag = 0;
 
 	do {
-		//pido numero al usuario
-		num = parseInt (prompt("Ingrese el numero: "));
-		//reconozco si es la primera vez que pido 
-		if(flag == 0){
-			//si es asi inicializo max y min
-			max = num;
-			min = num;
-			flag = 1;
-		} 
+		num = parseInt(prompt("Escribe un numero: "));
 
-		else if(num > max){
-			max = num;
+		if (flag == 0){
+			//igualamos el numero que puso el usuario, lo colocamos en max y min
+			max = num; 
+			min = num;
+			flag = 1; // para que no vuelva a pasar por aca SOLO UNA VEZ 
 		}
 
-		else if(num < min) {
+		if(num > max){
+			max = num;
+		}
+		else if (num < min){
 			min = num;
 		}
 
 		preguntar = prompt("Quiere escribir otro numero?");
+
 	}while(preguntar == 's');
-	
+
+	document.getElementById("txtIdMaximo").value = max;
+	document.getElementById("txtIdMinimo").value = min;
 }
 
 /*

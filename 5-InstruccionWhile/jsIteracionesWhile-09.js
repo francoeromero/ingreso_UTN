@@ -2,23 +2,7 @@
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar()
-{	// declarar variables
-	// var banderaDelPrimero;
-	// var numeroIngresado;
-	// var numeroMaximo;
-	// var numeroMinimo;
-	// var respuesta;
-	// //iniciar variables
-	// banderaDelPrimero="es el primero";
-	// respuesta='si';
-	// while(respuesta=="si")
-	// {
-		
-	// 	respuesta=prompt("desea continuar?");
-	// }
-	// txtIdMaximo.value=numeroMaximo;
-	// txtIdMinimmo.value=numeroMinimo;
-
+{	
 	// let preguntar;
 	// let num;
 	// let maximo = 0;
@@ -74,6 +58,28 @@ function mostrar()
 
 /*
 
+//Otra forma de resolverlo:
+
+	//hacemos 2 codicionales lo que es flag == 0 la segunda vuelta dara falso
+	// sin flag no arranca el bucle por eso es importante ponerlo y luego solo queda las dos condicionales que nos importan: num > max 
+					  num < min 
+do {
+
+	if(flag == 0 || num > max){  
+		max = num;
+	}
+
+	if(flag == 0 || numero < minimo){
+		min = num;
+		flag = 1; 
+	}
+	preguntar = prompt('Quieres escribir otro numero?);
+
+}while (seguir == 's');
+
+
+
+//INDICE
 // Declaramos las variables 
 
 let num;

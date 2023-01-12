@@ -58,6 +58,10 @@ function mostrar()
 
 /*
 
+estructura for :
+
+for (valor inicial; condicion ; incremento o decremento){}
+
 //Otra forma de resolverlo:
 
 	//hacemos 2 codicionales lo que es flag == 0 la segunda vuelta dara falso

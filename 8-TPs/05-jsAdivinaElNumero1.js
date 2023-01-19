@@ -13,8 +13,27 @@ const comenzar = () =>{
 }
 
 const verificar = () =>{
+  let i = 0;
+  let a = 0;
+  let seguir; 
+  let num;
+  let flag = 0;
   
-  let num = parseInt(document.getElementById("txtIdNumero").value);
+  do {
+    if (flag == 0){   
+      num = parseInt(document.getElementById("txtIdNumero").value);
+      if(num === numSecreto){
+        alert (`su numero es ${num} y el numero secreto es ${numSecreto} USTED ES EL GANADOR`);
+      }
+      else{
+        alert(`su numero es  ${num} y el numero secreto es ${numSecreto} PERDIÓ`)
+      }
+      
+      a = a + i;
+      i++;
+      flag = 1;
+    }
+  num = parseInt(prompt("Ingrese un numero del 1 al 100"));
   
   if(num === numSecreto){
     alert (`su numero es ${num} y el numero secreto es ${numSecreto} USTED ES EL GANADOR`);
@@ -22,8 +41,17 @@ const verificar = () =>{
   else{
     alert(`su numero es  ${num} y el numero secreto es ${numSecreto} PERDIÓ`)
   }
+  
+  a = a + i;
+  i++;
+  
+  seguir = prompt("Quieres seguir intentando?");
+  }while(seguir == 's');
 
-  document.getElementById("txtIdNumero").value = ""; 
+  document.getElementById("txtIdIntentos").value = i;
+  document.getElementById("txtIdNumero").value = num;
+
+ 
 
 }
 

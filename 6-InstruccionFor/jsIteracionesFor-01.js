@@ -1,4 +1,4 @@
 function mostrar()
 {
-	alert("ok");
+	
 }

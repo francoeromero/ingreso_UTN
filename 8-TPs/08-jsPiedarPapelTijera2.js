@@ -3,11 +3,17 @@ let ContadorDeEmpates=0;
 let ContadorDeGanadas=0;
 let ContadorDePerdidas=0;
 
+
+//__________________________________________________________
+//__________________________________________________________
+
 // Funcion para generar un numero random que sera la eleccion de la maquina
 const comenzar = () => {
-  eleccionMaquina = Math.floor(Math.random() * 3);
+  eleccionMaquina = Math.floor(Math.random() * (3 - 1 + 1)) + 1;;
 }
 
+//__________________________________________________________
+//__________________________________________________________
 // Funcion para cuando se elige piedra
 const piedra = () => {
   if (eleccionMaquina === 0) {
@@ -22,8 +28,11 @@ const piedra = () => {
     ContadorDeGanadas++;//aumenta en ganadas
     alert("Ganaste!");
   }
-  actualizarContadores();// llamo a la funcion que deposita los valores a las entradas
+  actualizarContadores();// llamo a la funcion que deposita los valores a las entradas(inputs)
 }
+
+//__________________________________________________________
+//__________________________________________________________
 
 const papel = () => {
   if (eleccionMaquina === 0) {
@@ -41,6 +50,9 @@ const papel = () => {
   actualizarContadores();
 }
 
+//__________________________________________________________
+//__________________________________________________________
+
 const tijera = () => {
   if (eleccionMaquina === 0) {
     ContadorDePerdidas++;
@@ -56,6 +68,9 @@ const tijera = () => {
   }
   actualizarContadores();
 }
+
+//__________________________________________________________
+//__________________________________________________________
 
 const actualizarContadores = () => {
   document.getElementById("txtIdGanadas").value = ContadorDeGanadas;

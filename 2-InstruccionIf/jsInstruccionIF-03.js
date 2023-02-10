@@ -2,19 +2,19 @@ function mostrar()
 {
 	//pido espacio de memoria
 	let edad;
-
+	let edadIngresada;
 	//asigno al input
-	edad = parseInt(document.getElementById("txtIdEdad").value);
-
+	edadIngresada = document.getElementById("txtIdEdad").value;
+	edad = parseInt(edadIngresada);
 	//condicional 
-	if (edad >= 18){
-		alert("Sos mayor de edad");
+	if (edad > 17){
+		alert(`Usted tiene ${edad} entonces es mayor de edad`);
 	} 
-	
 	else {
-		alert("Sos menor de edad");
+		alert(`Usted tiene ${edad} entonces es menor de edad`);
 	}
-
+	//limpio la entrada para usarse de nuevo
+	document.getElementById("txtIdEdad").value = "";
 }
 
 /*

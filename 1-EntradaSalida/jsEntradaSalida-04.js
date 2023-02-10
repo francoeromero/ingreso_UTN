@@ -4,17 +4,19 @@ y lo muestro por 'ID' al presionar el botón 'mostrar'
 */
 function mostrar()
 {
-	//  let nombre = prompt('hola, cual es tu nombre?');
-	// txtIdNombre.value = nombre;
-
-	// //reservo espacio en memoria para guardar el nombre del usuario
+	//pido espacio en memoria para guardar el nombre del usuario con una variable llamada 'nombre'
 	let nombre;
-	// //guardo en la variable nombre el texto que escribio el usuario dentro de la ventana prompt
+	//guardo en la variable 'nombre' el texto que escribió el usuario dentro de la ventana prompt
 	nombre = prompt("Ingrese su nombre");
-	// //copio el nombre que tengo guardado en la variable input  SIEMPRE LA VARIABLE AL FINAL SINO NO FUNCIONA
- 	document.getElementById("txtIdNombre").value = nombre;
+	//para mostrar el resultado, asigno el dato de la variable 'nombre' a la entrada, de derecha a izquierda
+	document.getElementById("txtIdNombre").value = nombre;
 
 }
+
+
+
+	// //copio el nombre que tengo guardado en la variable input  SIEMPRE LA VARIABLE AL FINAL SINO NO FUNCIONA
+ 	// document.getElementById("txtIdNombre").value = nombre;
 
 /*
 APUNTES:

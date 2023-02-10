@@ -1,9 +1,10 @@
 function mostrar()
 {
 	//tomo el mes
-	let mes = document.getElementById("txtIdMes").value; // var mesDelAño =txtIdMes.value;
-	
-
+	let mes; 
+	//asigno el valor del id a la variable
+	mes = document.getElementById("txtIdMes").value; 
+	//bucle
 	switch(mes){
 		case "Enero" : // condicional mes == "Enero" 
 			alert("Que comiences bien el año!!!"); //Instrucciones

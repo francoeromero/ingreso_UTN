@@ -3,11 +3,16 @@ Debemos lograr tomar un dato por 'ID'
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-	var nombreIngresado;
-	// nombreIngresado=txtIdNombre.value;
+	//Declaro una variable
+	let nombreIngresado;
+
+	// asigno el valor que ingrese el usuario de la entrada a la variable nombreIngresado
 	nombreIngresado = document.getElementById("txtIdNombre").value;
-	alert(nombreIngresado);
-	document.getElementById("txtIdNombre").value = ""; //asigno cadena vacio para borrar la caja de texto 
+
+	//muestro el dato concatenando con un string
+	alert("Bienvenido "+nombreIngresado);
+	//limpio la entrada para que usarse nuevamente
+	document.getElementById("txtIdNombre").value = "";
 
 }
 

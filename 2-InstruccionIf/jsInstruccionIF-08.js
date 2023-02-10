@@ -2,20 +2,43 @@ function mostrar()
 {
 	//pedimos espacio de memoria para las variables
 	let edad;
+	let edadIngresada;
 	let estadocivil;
-
-	edad = parseInt(document.getElementById("txtIdEdad").value);
+	let mensaje;
+	//asigno el id a la variable
+	edadIngresada = document.getElementById("txtIdEdad").value;
 	estadocivil = document.getElementById("estadoCivil").value;
+	//convierto en numeros enteros porque son edades
+	edad = parseInt(edadIngresada);
+	//sentencias
 
 	if(estadocivil == "Soltero" &&  edad >= 18){
-		alert("Es soltero y no es menor");
-	} 
-	else{
-		alert("NO HACER NADA"); //chiste jaja  xD
-	}
+			mensaje = "Es soltero y No es menor";
+		} 
+	
+		alert(mensaje);
+
+
+	// if(estadocivil == "Soltero"){
+	// 	if(edad > 17){
+	// 		mensaje = "Es soltero y No es menor";
+	// 	}
+	// 	else{
+	// 		mensaje = "ok";
+	// 	}
+	// }
+	// else{
+	// 	mensaje = "ok";
+	// }
+	// alert(mensaje);
+
+
+
+
+
+
 
 	
-
 }
 
 /*

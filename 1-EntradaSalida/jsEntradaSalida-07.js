@@ -5,92 +5,94 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	//pido espacio de memoria
-	let num1;
-	let num2;
+	//pido espacio de memoria creando variables
+	let numUno;
+	let numDos;
+	let numUnoIngresado;
+	let numDosIngresado;
 	let resultado;
-
-	//asigno el valor alas variables y transformo de string a number
-	num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-
+	//asigno el valor de las entradas alas variables
+	numUnoIngresado = document.getElementById("txtIdNumeroUno").value;
+	numDosIngresado = document.getElementById("txtIdNumeroDos").value;
+	//transformo de string a number
+	numUno = parseInt(numUnoIngresado);
+	numDos = parseInt(numDosIngresado);
 	//Ahora hago la operacion y asigno el valor a la variable resultado
-	resultado = num1 + num2;
-
+	resultado = numUno + numDos;
 	//muestro el valor en pantalla
-
-	alert("El resultado es " + resultado);
-
+	alert(`El resultado por medio de la suma entre ${numUno} y ${numDos} es : \n ${resultado}`);
 	//limpio las entradas para una nueva operacion
 	document.getElementById("txtIdNumeroUno").value = "";
 	document.getElementById("txtIdNumeroDos").value = "";
-
-
 }
 
 function restar()
 {
 	//pido espacio de memoria
-	let num1;
-	let num2;
+	let numUno;
+	let numDos;
+	let numUnoIngresado;
+	let numDosIngresado;
 	let resultado;
-
-	//Asigno el valor de las entradas alas variables y cambio de string a number
-	num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-
+	//asigno el valor de las entradas alas variables
+	numUnoIngresado = document.getElementById("txtIdNumeroUno").value;
+	numDosIngresado = document.getElementById("txtIdNumeroDos").value;
+	//transformo de string a number
+	numUno = parseInt(numUnoIngresado);
+	numDos = parseInt(numDosIngresado);
 	//operacion
-	resultado = num1 - num2;
-
+	resultado = numUno - numDos;
 	//muestro en resultado en la pantalla
-	alert("El resultado es " + resultado)
-
+	alert(`El resultado por medio de la resta entre ${numUno} y ${numDos} es : \n ${resultado}`);
 	//limpio las entradas para una nueva operacion
 	document.getElementById("txtIdNumeroUno").value = "";
 	document.getElementById("txtIdNumeroDos").value = "";
-
 }
 
 function multiplicar()
 { 
-	let num1;
-	let num2;
+	//pido espacio de memoria creando variables
+	let numUno;
+	let numDos;
+	let numUnoIngresado;
+	let numDosIngresado;
 	let resultado;
-
-	//Asigno el valor de las entradas alas variables y cambio de string a number
-	num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-
+	//asigno el valor de las entradas alas variables
+	numUnoIngresado = document.getElementById("txtIdNumeroUno").value;
+	numDosIngresado = document.getElementById("txtIdNumeroDos").value;
+	//transformo de string a number
+	numUno = parseInt(numUnoIngresado);
+	numDos = parseInt(numDosIngresado);
 	//operacion
-	resultado = num1 * num2;
-
+	resultado = numUno * numDos;
 	//muestro en resultado en la pantalla
-	alert("El resultado es " + resultado)
+	alert(`El resultado por medio del producto entre ${numUno} y ${numDos} es : \n ${resultado}`);
 	//limpio las entradas para una nueva operacion
 	document.getElementById("txtIdNumeroUno").value = "";
 	document.getElementById("txtIdNumeroDos").value = "";
-	
 }
 
 function dividir()
 {
-	let num1;
-	let num2;
+	//pido espacio de memoria creando variables
+	let numUno;
+	let numDos;
+	let numUnoIngresado;
+	let numDosIngresado;
 	let resultado;
-
-	//Asigno el valor de las entradas alas variables y cambio de string a number
-	num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-
+	//asigno el valor de las entradas alas variables
+	numUnoIngresado = document.getElementById("txtIdNumeroUno").value;
+	numDosIngresado = document.getElementById("txtIdNumeroDos").value;
+	//transformo de string a number
+	numUno = parseInt(numUnoIngresado);
+	numDos = parseInt(numDosIngresado);
 	//operacion
-	resultado = num1 / num2;
-
+	resultado = numUno / numDos;
 	//muestro en resultado en la pantalla
-	alert("El resultado es " + resultado)
+	alert(`El resultado por medio de la division entre ${numUno} y ${numDos} es : \n ${resultado}`);
 	//limpio las entradas para una nueva operacion
 	document.getElementById("txtIdNumeroUno").value = "";
 	document.getElementById("txtIdNumeroDos").value = "";
-	
 }
 
 /*

@@ -3,38 +3,63 @@ Debemos lograr tomar el importe por ID ,
 transformarlo a entero (parseInt), luego
 mostrar el importe con un aumento del 10 %
 en el cuadro de texto "RESULTADO".*/
+
 function mostrarAumento()
 {
-
-	// let sueldo;
-	// let resultado;
-
-	// sueldo = parseInt(document.getElementById("txtIdSueldo").value);
-
-	// resultado = 10 * sueldo / 100;
-	
-	// resultado = document.getElementById("txtIdResultado").value;
-	// alert("El resultado es " + resultado);
-
+	//pido espacio de memoria declarando variables
 	let sueldo;
+	let sueldoIngresado;
 	let aumento;
-	let nuevosueldo;
-	//paso el valor a la variable sueldo y cambio de string a number
-	sueldo = parseFloat(document.getElementById("txtIdSueldo").value);
-	//hago la operacion y lo meto en la variable aumento
-	aumento =  10 * sueldo / 100; //otra forma de sacar porcentaje es sueldo * 0.1 que seria el 10%
-	//se lo agregamos al sueldo
-	nuevosueldo = aumento + sueldo;
-	//ahora lo mostramos en pantalla el resultado, en la entrada de txtIdResultado
-	// nuevosueldo = parseFloat(document.getElementById("txtIdResultado").value);
-	// document.getElementById("txtIdResultado").value = nuevosueldo;
-	// nuevosueldo = document.getElementById("txtIdResultado").value;  CORRECCION: ACORDATE QUE SE LEE DE DERECHA A IZQUIERDA
-
-	document.getElementById("txtIdResultado").value = nuevosueldo;
-
-
+	const PORCENTAJE = 0.1;
+	let nuevoSueldo;
+	//asigno el id a la variable
+	sueldoIngresado = document.getElementById("txtIdSueldo").value;
+	//como se trata de dinero, voy a convertirlo en numeros decimales
+	sueldo = parseFloat(sueldoIngresado);
+	//saco el 10% del sueldo y lo almaceno en la variable 'aumento'
+	aumento =  sueldo*PORCENTAJE; 
+	//hago la operacion y lo asigno a la variable 'nuevoSueldo'
+	nuevoSueldo = sueldo+aumento;
+	//ahora muestro el resultado en la segunda entrada 
+	document.getElementById("txtIdResultado").value = nuevoSueldo;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//document.getElementById("txtIdResultado").value = nuevoSueldo;
+	// nuevoSueldo = document.getElementById("txtIdResultado").value;  
+	// document.getElementById("txtIdResultado").value = nuevoSueldo;
+
+//CORRECCION: ACORDATE QUE SE LEE DE DERECHA A IZQUIERDA
+//otra forma de sacar porcentaje es sueldo * 0.1 que seria el 10% 10 * sueldo / 100
 /*
 APUNTES:
 

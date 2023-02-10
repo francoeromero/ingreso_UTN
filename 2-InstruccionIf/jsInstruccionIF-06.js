@@ -1,32 +1,43 @@
 function mostrar()
 {
 	//pido espacio de memoria 
-
 	let edad;
-
+	let edadIngresada;
+	let mensaje;
 	//asigno al id input
-	edad = parseInt(document.getElementById("txtIdEdad").value);
-
-	//hago las sentencias
-
-	if(edad < 13){
-		alert("niño")
+	edadIngresada = document.getElementById("txtIdEdad").value;
+	//convierto en numeros enteros
+	edad = parseInt(edadIngresada);
+	//valido si el dato ingresado cumple con la siguiente condicional
+	if(edad > 17 ){
+		mensaje = "Usted es mayor de edad";
+	}else {
+		if(edad < 13){
+			mensaje = "Usted es niño";
+		}
+		else{
+			mensaje = "Usted es adolescente";
+		}
 	}
-		else if (edad < 18){
-			alert("adolescente");
-		}
-
-		else if (edad < 65){
-			alert("Adulto")
-		}
-	
-		else {
-			alert("Anciano");
-		}
-	
-	
-
+	alert(mensaje);
+	//limpio la entrada para usarse de nuevo
+	document.getElementById("txtIdEdad").value = "";
 }
+
+		// if(edad < 12){
+		// alert("Usted es niño");
+		// }
+		// else if (edad < 18){
+		// 	alert("Usted es adolescente");
+		// }
+		// else if (edad < 64){
+		// 	alert("Usted es Adulto");
+		// }	
+		// else {
+		// 	alert("Usted es Anciano");
+		// }
+	
+
 
 /*
 1- mayor de edad

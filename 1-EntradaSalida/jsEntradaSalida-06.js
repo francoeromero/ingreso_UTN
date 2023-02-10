@@ -4,30 +4,25 @@ transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
-	// let uno = txtIdNumeroUno.value;
-	// let dos = txtIdNumeroDos.value;
-	// alert(uno + dos);
-
 	//pido espacio de memoria
-	let num1;
-	let num2;
+	let numUno;
+	let numUnoIngresado;
+	let numDos;
+	let numDosIngresado;
 	let resultado;
-
-	//paso de string a number el valor de la entrada de las dos cadenas
-	num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-
+	//asigno los valores del id a las variables
+	numUnoIngresado = document.getElementById("txtIdNumeroUno").value;
+	numDosIngresado = document.getElementById("txtIdNumeroDos").value;
+	//convierto los strings a number en los valores de las entradas 
+	numUno = parseInt(numUnoIngresado);
+	numDos = parseInt(numDosIngresado);
 	//hago la operacion sumando los dos valores numericos
-	resultado = num1 + num2;
-
+	resultado = numUno + numDos;
 	//muestro el resultado en pantalla
-	alert("El resultado es " + resultado);
-
+	alert(`La suma entre ${numUno} y ${numDos} es : \n ${resultado}`);
 	//limpio las entradas para una nueva operacion		
 	document.getElementById("txtIdNumeroUno").value = "";
 	document.getElementById("txtIdNumeroDos").value = "";
-
-
 }
 
 /*

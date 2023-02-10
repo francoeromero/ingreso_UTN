@@ -1,16 +1,20 @@
 function mostrar()
 {
+	//declaro variables
 	let edad;
-
-	edad = parseInt(document.getElementById("txtIdEdad").value);
-
+	let edadIngresada;
+	//asigno el valor del id a una varibale
+	edadIngresada = document.getElementById("txtIdEdad").value;
+	//convierto en numeros enteros porque el dato ingresado van a ser edades
+	edad = parseInt(edadIngresada);
+	//hago la condicional
 	if( edad >= 13 && edad <= 17){
-		alert("Adolescente");
+		alert(`Usted tiene ${edad} y es Adolescente`);
 	}else {
-		alert("Usted no es Adolescente");
-	}
-
-	
+		alert(`Usted tiene ${edad} y No es Adolescente`);
+	}	
+	//limpio la entrada para usarse de nuevo
+	document.getElementById("txtIdEdad").value = "";
 }
 
 /*

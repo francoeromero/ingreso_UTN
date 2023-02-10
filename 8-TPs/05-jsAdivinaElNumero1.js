@@ -8,54 +8,75 @@ secreto del 1 al 100, en la pantalla del juego
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
 
-const comenzar = () =>{
-
-  numSecreto = Math.floor(Math.random() * (100 - 1 + 1)) + 1; //ambito global sin let o const
-  
+//declaro una variable global porque la voy a usar en las dos funciones
+let numSecreto = 0;
+function comenzar() 
+{
+  //declaro las variables
+  let max;
+  let min;
+  let random;
+  //asigno el max y minimo
+  max = 100;
+  min = 1;
+  //calculo el numero aleatorio
+  random = Math.random() * (max - min + 1);
+  numSecreto = Math.floor(random) + 1;
+}
+function verificar()
+{
+  alert(numSecreto);
 }
 
-const verificar = () =>{
-  let i = 0;
-  let a = 0;
-  let seguir; 
-  let num;
-  let flag = 0;
-  
-  do {
-    if (flag == 0){   
-      num = parseInt(document.getElementById("txtIdNumero").value);
-      if(num === numSecreto){
-        alert (`su numero es ${num} y el numero secreto es ${numSecreto} USTED ES EL GANADOR`);
-      }
-      else{
-        alert(`su numero es  ${num} y el numero secreto es ${numSecreto} PERDIÓ`)
-      }
-      
-      a = a + i;
-      i++;
-      flag = 1;
-    }
-  num = parseInt(prompt("Ingrese un numero del 1 al 100"));
-  
-  if(num === numSecreto){
-    alert (`su numero es ${num} y el numero secreto es ${numSecreto} USTED ES EL GANADOR`);
-  }
-  else{
-    alert(`su numero es  ${num} y el numero secreto es ${numSecreto} PERDIÓ`)
-  }
-  
-  a = a + i;
-  i++;
-  
-  seguir = prompt("Quieres seguir intentando?");
-  }while(seguir == 's');
 
-  document.getElementById("txtIdIntentos").value = i;
-  document.getElementById("txtIdNumero").value = num;
+
+// const comenzar = () =>{
+
+//   numSecreto = Math.floor(Math.random() * (100 - 1 + 1)) + 1; //ambito global sin let o const  
+// }
+
+// const verificar = () =>{
+//   let i = 0;
+//   let a = 0;
+//   let seguir; 
+//   let num;
+//   let flag = 0;
+  
+//   do {
+//     if (flag == 0){   
+//       num = parseInt(document.getElementById("txtIdNumero").value);
+//       if(num === numSecreto){
+//         alert (`su numero es ${num} y el numero secreto es ${numSecreto} USTED ES EL GANADOR`);
+//       }
+//       else{
+//         alert(`su numero es  ${num} y el numero secreto es ${numSecreto} PERDIÓ`)
+//       }
+      
+//       a = a + i;
+//       i++;
+//       flag = 1;
+//     }
+//   num = parseInt(prompt("Ingrese un numero del 1 al 100"));
+  
+//   if(num === numSecreto){
+//     alert (`su numero es ${num} y el numero secreto es ${numSecreto} USTED ES EL GANADOR`);
+//   }
+//   else{
+//     alert(`su numero es  ${num} y el numero secreto es ${numSecreto} PERDIÓ`)
+//   }
+  
+//   a = a + i;
+//   i++;
+  
+//   seguir = prompt("Quieres seguir intentando?");
+//   }while(seguir == 's');
+
+//   document.getElementById("txtIdIntentos").value = i;
+//   document.getElementById("txtIdNumero").value = num;
 
  
 
-}
+// }
 
 /*
 __________________________________

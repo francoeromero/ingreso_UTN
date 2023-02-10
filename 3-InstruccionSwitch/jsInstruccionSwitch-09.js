@@ -63,7 +63,6 @@ function mostrar()
 				alert("El precio es " + preciofinal + " con su descuento del 20% incluido Mar del plata  SWITCH");
 			}
 		break;
-
 		case "Verano":
 			if(destino == "Bariloche"){
 				preciofinal = PRECIO - (PRECIO * 0.2);

@@ -9,7 +9,7 @@ let ContadorDePerdidas=0;
 
 // Funcion para generar un numero random que sera la eleccion de la maquina
 const comenzar = () => {
-  eleccionMaquina = Math.floor(Math.random() * (3 - 1 + 1)) + 1;;
+  eleccionMaquina = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
 }
 
 //__________________________________________________________

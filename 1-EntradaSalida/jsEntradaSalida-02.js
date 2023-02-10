@@ -3,8 +3,12 @@ Debemos lograr tomar un nombre con 'prompt'
 y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-	let nombre = prompt('Cual es tu nombre?')
-	alert('Bienvenido ' + nombre);
+	//declaro una variable
+	let nombre;
+	//guardo el dato que ingreso el usuario a la variable
+	nombre = prompt('Cual es tu nombre?');
+	//muestro una ventana emergente con la cadena + la variable nombre
+	alert("Bienvenido " + nombre + " espero que te encuentres muy bien!");
 }
 
 /*

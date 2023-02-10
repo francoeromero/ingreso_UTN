@@ -1,21 +1,29 @@
 function mostrar()
 {
-	
 	//pido espacio de memoria creando una variable
 	let edad;
-
+	let edadIngresada;
+	//asigno el input a la variable
+	edadIngresada = document.getElementById("txtIdEdad").value;
 	//asigno esta variable al input donde el usuario escribira el valor
-	edad = parseInt(document.getElementById("txtIdEdad").value); //pongo parseint porque las edades son numeros redondos, nada de comas y tambien porque hay que transformar los valores de string a number, pero de todas formas si fuese string "15" == 15, esto da true 
-
+	edad = parseInt(edadIngresada);
 	//Ahora hago la sentencia, si edad es igual a 15 entonces se escriba niña bonita 
-	if(edad == 15) {
-		alert("Niña bonita");
+	if(edad === 15) {
+		edad = "Niña bonita";
+		alert(`Usted es una ${edad}`);
 	}
-	
-	else {
-		alert("fin");
-	}
+	//limpio las entradas para usarse nuevamente
+	document.getElementById("txtIdEdad").value = "";
 }
+
+
+// return(edad === 15) ? 
+	// "niño" : (edad === 10) ? 
+	// alert("niña bonita") :
+	// alert("no es niña bonita");
+
+//pongo parseint porque las edades son numeros redondos, nada de comas y tambien porque hay que transformar los valores de string a number, pero de todas formas si fuese string "15" == 15, esto da true 
+
 
 /*
  Asignacion  --->  = 

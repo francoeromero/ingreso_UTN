@@ -2,20 +2,37 @@ function mostrar()
 {
 	//pedimos espacio de memoria para las variables
 	let edad;
-	let estadocivil;
-
-	edad = parseInt(document.getElementById("txtIdEdad").value);
-	estadocivil = document.getElementById("estadoCivil").value;
-
-	if(edad < 18  && estadocivil != "Soltero"){
-		alert("Es muy pequeño para NO ser soltero.");
+	let edadIngresada;
+	let estadoCivil;
+	let mensaje;
+	//asigno el valor del id a la variable
+	edadIngresada = document.getElementById("txtIdEdad").value;
+	estadoCivil = document.getElementById("estadoCivil").value;
+	//convierto en numeros enteros
+	edad = parseInt(edadIngresada);
+	//sentencias
+	if(edad < 18){
+		if(estadoCivil != "Soltero"){
+			mensaje = "Es muy pequeño para NO ser soltero.";
+		}
+		else{
+			mensaje = "Estabien es soltero y es joven";
+		}
 	}
 	else {
-		alert ( "ok");
+		mensaje = "ok"
 	}
-	
-	
+	alert(mensaje);
+
 }
+
+	// if(edad < 18  && estadoCivil != "Soltero"){
+	// 	alert("Es muy pequeño para NO ser soltero.");
+	// }
+	// else {
+	// 	alert ( "ok");
+	// }
+
 
 /*
 

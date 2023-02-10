@@ -2,14 +2,18 @@ function mostrar()
 {
 	//pido espacio de memoria
 	let edad;
-
+	let edadIngresada;
 	//asigno al input
-	edad = parseInt(document.getElementById("txtIdEdad").value);
-
-	//condicional 
-	if (!(edad >= 13 && edad <= 17)) {
+	edadIngresada = document.getElementById("txtIdEdad").value;
+	//convierto en numeros enteros
+	edad = parseInt(edadIngresada);
+	//valido si el dato ingresado cumple con la siguiente condicional
+	if (!(edad > 13 && edad < 17)) 
+	{
 		alert("No es adolescente");
 	}
+	//limpio la entrada para usarse de nuevo
+	document.getElementById("txtIdEdad").value = "";
 }
 
 /*

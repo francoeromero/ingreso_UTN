@@ -2,24 +2,29 @@ function mostrar()
 {
 	//tomo el mes
 	let mes; 
+	let mensaje;
 	//asigno el valor del id a la variable
 	mes = document.getElementById("txtIdMes").value; 
 	//bucle
 	switch(mes){
 		case "Enero" : // condicional mes == "Enero" 
-			alert("Que comiences bien el año!!!"); //Instrucciones
-			break;//finalizar bloque
+			mensaje = "Que comiences bien el año!!!";
+			break;
 		case "Marzo" :
-			alert("A clases!!");
+			mensaje = "A clases!!";
 			break;
 		case "Julio" :
-			alert("Se viene las vacaciones!!");
+			mensaje = "Se viene las vacaciones!!";
 			break;
 		case "Diciembre" :
-			alert("Felices fiestas!!");
+			mensaje = "Felices fiestas!!" ;
 			break;
+		default :
+			mensaje = "no se definió un mensaje";
+		break;
 	}
-
+	alert(mensaje);
+}
 	// if(mes == "Enero"){
 	// 	alert("Que comiences bien el año!!!");
 	// }
@@ -36,7 +41,7 @@ function mostrar()
 	// 	alert("Mes común")
 	// }
 
-}
+
 
 /*
 

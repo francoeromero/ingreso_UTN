@@ -1,26 +1,25 @@
 function mostrar()
 {
-	let mes = document.getElementById("txtIdMes").value; 
-
-
+	let mes;
+	let mensaje;
+	mes = document.getElementById("txtIdMes").value; 
 	switch(mes){
-
 		case "Febrero":
-			alert("Tiene 28 dias");
+			mensaje = "Tiene 28 dias";
 			break;
-
 		case "Enero":
 		case "Abril":
 		case "Junio":
 		case "Septiembre":
 		case "Noviembre":
-			alert("Tiene 30 dias");
-			break;
-			
+			mensaje ="Tiene 30 dias" ;
+			break;	
 		default:
-			alert("Tiene 31 dias");
+			mensaje = "Tiene 31 dias";
 			break;
-
+	}
+	alert(mensaje);
+}	
 		// case "Marzo":
 		// case "Mayo":
 		// case "Julio":
@@ -30,7 +29,7 @@ function mostrar()
 		// 	alert("Tiene 31 dias");
 		// 	break;
 
-	}
+
 
 	// switch (mes){
 	// 	case "Enero":
@@ -86,4 +85,4 @@ function mostrar()
 
 
 
-}//FIN DE LA FUNCIÓN
+//FIN DE LA FUNCIÓN

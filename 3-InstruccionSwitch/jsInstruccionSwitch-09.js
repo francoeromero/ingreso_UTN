@@ -1,30 +1,29 @@
 function mostrar()
 {
+	let precioFinal;
 	let precio = 15000;
-	let preciofinal;
-	let aumento = 0;
-	let descuento = 0;
+	let porcentaje;
 	let estacion;
 	let destino;
+	let mensaje;
 	estacion = document.getElementById("txtIdEstacion").value;
 	destino = document.getElementById("txtIdDestino").value;
-
 	switch(estacion)
 	{
 		case "Invierno":
 			switch(destino)
 			{
 				case "Bariloche":
-					aumento = 0.2;
-					mensaje = "Tiene un aumento del 20%";
+					porcentaje = 1.2;//20% aumento
+					mensaje = "20% aumento";
 				break;
 				case "Mar del plata":
-					descuento = 0.2;
-					mensaje = "Tiene un descuento del 20%";
+					porcentaje = 0.8;//
+					mensaje = "20% descuento";
 				break;
 				default:
-					aumento = 0.1;
-					mensaje ="Tiene un aumento del 10% ";
+					porcentaje = 0.9;//
+					mensaje = "10% descuento";
 				break;
 			}
 		break;
@@ -32,41 +31,109 @@ function mostrar()
 			switch(destino)
 			{
 				case "Bariloche":
-					descuento = 0.2;
-					mensaje = "Tiene un descuento del 20%";
+					porcentaje = 0.8;//
+					mensaje = "20% descuento";
 				break;
 				case "Mar del plata":
-					aumento = 0.2;
-					mensaje = "Tiene un aumento del 20%";
+					porcentaje = 1.2;//
+					mensaje = "20% aumento";
 				break;
 				default:
-					descuento = 0.1;
-					mensaje = "Tiene un descuento del 10%";
+					porcentaje = 1.1;//
+					mensaje = "10% aumento";
 				break;
 			}
 		break;
 		default:
 			switch(destino)
 			{
-				case "Bariloche":
 				case "Cataratas":
 				case "Mar del plata":
-					aumento = 0.1;
-					mensaje = "Tiene un aumento del 10%"; 
+				case "Bariloche":
+					porcentaje = 1.1;//
+					mensaje ="10% aumento" ;
 				break;
 				default:
-					mensaje = "precio sin descuento";
+					porcentaje = 1;//
+					mensaje = "sin descuento";
 				break;
 			}
 		break;
-	}	
-	//calculo
-	aumento = precio * aumento;
-	descuento = precio * descuento;
-	preciofinal = precio + aumento - descuento;
-	//muestro
-	alert( mensaje + " un total de: $" + preciofinal);
+	}
+	precioFinal = precio * porcentaje;
+	alert("El precio es de " + precio + " y tiene un " + mensaje + " " + precioFinal);
 }
+
+
+
+// function mostrar()
+// {
+// 	let precio = 15000;
+// 	let preciofinal;
+// 	let aumento = 0;
+// 	let descuento = 0;
+// 	let estacion;
+// 	let destino;
+// 	estacion = document.getElementById("txtIdEstacion").value;
+// 	destino = document.getElementById("txtIdDestino").value;
+// 	switch(estacion)
+// 	{
+// 		case "Invierno":
+// 			switch(destino)
+// 			{
+// 				case "Bariloche":
+// 					aumento = 0.2;
+// 					mensaje = "Tiene un aumento del 20%";
+// 				break;
+// 				case "Mar del plata":
+// 					descuento = 0.2;
+// 					mensaje = "Tiene un descuento del 20%";
+// 				break;
+// 				default:
+// 					aumento = 0.1;
+// 					mensaje ="Tiene un aumento del 10% ";
+// 				break;
+// 			}
+// 		break;
+// 		case "Verano":
+// 			switch(destino)
+// 			{
+// 				case "Bariloche":
+// 					descuento = 0.2;
+// 					mensaje = "Tiene un descuento del 20%";
+// 				break;
+// 				case "Mar del plata":
+// 					aumento = 0.2;
+// 					mensaje = "Tiene un aumento del 20%";
+// 				break;
+// 				default:
+// 					descuento = 0.1;
+// 					mensaje = "Tiene un descuento del 10%";
+// 				break;
+// 			}
+// 		break;
+// 		default:
+// 			switch(destino)
+// 			{
+// 				case "Bariloche":
+// 				case "Cataratas":
+// 				case "Mar del plata":
+// 					aumento = 0.1;
+// 					mensaje = "Tiene un aumento del 10%"; 
+// 				break;
+// 				default:
+// 					mensaje = "precio sin descuento";
+// 				break;
+// 			}
+// 		break;
+// 	}	
+// 	//calculo
+// 	aumento = precio * aumento;
+// 	descuento = precio * descuento;
+// 	preciofinal = precio + aumento - descuento;
+// 	//muestro
+// 	alert( mensaje + " un total de: $" + preciofinal);
+// }
 
 
 

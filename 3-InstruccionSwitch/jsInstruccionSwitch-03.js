@@ -1,9 +1,11 @@
 function mostrar()
 {
-	//tomo el mes
+	//declaro variables
 	let mes;
 	let mensaje;
+	//asigno el id ala variable
 	mes = document.getElementById("txtIdMes").value; 
+	//valido 
 	switch(mes){
 		case "Febrero":
 			mensaje = "Este mes no tiene mas de 29 dias";

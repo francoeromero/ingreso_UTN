@@ -1,10 +1,13 @@
 function mostrar()
 {
-	//tomo la hora
+	//declaro
 	let hora;
 	let mensaje;
+	//asigno el id
 	hora = document.getElementById("txtIdHora").value;
+	//convierto en numeros enteros
 	hora = parseInt(hora);
+	//valido
 	switch(hora)
 	{
 		case 7:
@@ -27,7 +30,6 @@ function mostrar()
 			break;
 	}
 	alert(mensaje);
-
 }
 
 

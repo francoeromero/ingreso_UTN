@@ -1,8 +1,11 @@
 function mostrar()
 {
+	//declaro variables
 	let mes;
 	let mensaje;
+	//asigno el id ala varible
 	mes = document.getElementById("txtIdMes").value; 
+	//valido
 	switch(mes){
 		case "Febrero":
 			mensaje = "Tiene 28 dias";

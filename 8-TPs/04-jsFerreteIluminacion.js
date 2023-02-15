@@ -23,7 +23,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 */
 
 /*
-    LAMPARAS        MARCA                     PORCENTAJEDesporcentajeDescuento DE DESCUENTO
+    LAMPARAS        MARCA                     PORCENTAJE DE DESCUENTO
     6 o mas         todas                                50%
 
     5               "ArgentinaLuz"                       40%
@@ -37,9 +37,96 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
     3               “FelipeLamparas”                     10%
     3                otra marca                          5%
 */
-
-
-
+//---------------------------------------
+//SWITCH
+//---------------------------------------
+// function CalcularPrecio()
+// {
+//     let precioDescuento;
+//     let precioNormal;
+//     let cantidadLamparas;
+//     let marca;
+//     let unidad = 35;
+//     let porcentaje;
+//     let precioImpuesto;
+//     let mensaje;
+//     // asigno el id a las variables
+//     cantidadLamparas = document.getElementById("txtIdCantidad").value;
+//     marca = document.getElementById("Marca").value;
+//     //convierto en numero decimales
+//     cantidadLamparas = parseFloat(cantidadLamparas);
+//     switch(cantidadLamparas)
+//     {
+//         case 5:
+//             switch(marca)
+//             {
+//                 case "ArgentinaLuz":
+//                     porcentaje = 0.6;
+//                     mensaje = "Se aplica el 40% de descuento";
+//                 break;
+//                 default:
+//                     porcentaje = 0.7;
+//                     mensaje = "Se aplica el 30% de descuento";
+//                 break;    
+//             }
+//         break;
+//         case 4:
+//             switch(marca)
+//             {
+//                 case "ArgentinaLuz":
+//                 case "FelipeLamparas":
+//                     porcentaje = 0.75;
+//                     mensaje = "Se aplica el 25% de descuento";
+//                 break;
+//                 default:
+//                     porcentaje = 0.80;
+//                     mensaje = "Se aplica el 20% de descuento";
+//                 break;
+//             }
+//         break;
+//         case 3:
+//             switch(marca)
+//             {
+//             case "ArgentinaLuz":
+//                 porcentaje = 0.85;
+//                 mensaje = "Se aplica el 15% de descuento";
+//             break;
+//             case "FelipeLamparas":
+//                 porcentaje = 0.90;
+//                 mensaje = "Se aplica el 10% de descuento";
+//             break;
+//             default:
+//                 porcentaje = 0.95;
+//                 mensaje = "Se aplica el 5% de descuento";
+//             break;
+//             }
+//         break;
+//         case 2:
+//         case 1:
+//             porcentaje = 1;
+//             mensaje = "No se aplica ningun descuento";
+//         break;
+//         default:
+//             porcentaje = 0.5;
+//             mensaje = "Se aplica el 50% de descuento";
+//         break;
+//     }
+//     //calculo
+//     precioNormal = cantidadLamparas * unidad; 
+//     precioDescuento = precioNormal * porcentaje;  
+//     //E
+//     if(precioDescuento > 120)
+//     {
+//         precioImpuesto = precioDescuento + (precioDescuento * 0.1);
+//         mensaje = mensaje + " pero se suma un 10% de impuesto de IIBB";
+//     }
+//     //muestro
+//     alert(mensaje);
+//     document.getElementById("txtIdprecioDescuento").value = precioDescuento;
+// }
+//---------------------------------------
+//SWITCH - IF 
+//---------------------------------------
 function CalcularPrecio() 
 {
     let precioDescuento;
@@ -49,7 +136,6 @@ function CalcularPrecio()
     let unidad = 35;
     let porcentaje;
     let precioImpuesto;
-    let aumento;
     let mensaje;
     //asigno el id a las variables
     cantidadLamparas = document.getElementById("txtIdCantidad").value;
@@ -57,67 +143,68 @@ function CalcularPrecio()
     //convierto en numero decimales
     cantidadLamparas = parseFloat(cantidadLamparas);
     //valido a que porcentaje pertenece
-    switch (cantidadLamparas){
+    switch (cantidadLamparas)
+    {
 		case 5:
             if(marca == "ArgentinaLuz")
             {
-                porcentaje = 0.4;
+                porcentaje = 0.6;
                 mensaje = "Se aplica el 40% de descuento";   
             }
             else
             {
-                porcentaje = 0.3;
+                porcentaje = 0.7;
                 mensaje = "Se aplica el 30% de descuento";
             }	
 		break;
-            case 4:
-                if(marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+        case 4:
+            if(marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+            {
+                porcentaje = 0.75;
+                mensaje = "Se aplica el 25% de descuento";
+            }
+            else
+            {
+                porcentaje = 0.8;
+                mensaje = "Se aplica el 20% de descuento";
+            }
+        break;
+        case 3:
+            if(marca == "ArgentinaLuz")
+            {
+                porcentaje = 0.85;
+                mensaje = "Se aplica el 15% de descuento";
+            }
+            else
+            {
+                if(marca == "FelipeLamparas")
                 {
-                    porcentaje = 0.25;
-                    mensaje = "Se aplica el 25% de descuento";
+                    porcentaje = 0.9;
+                    mensaje = "Se aplica el 10% de descuento";
                 }
                 else
                 {
-                    porcentaje = 0.2;
-                    mensaje = "Se aplica el 20% de descuento";
+                    porcentaje = 0.95;
+                    mensaje = "Se aplica el 5% de descuento";
                 }
-            break;
-                case 3:
-                    if(marca == "ArgentinaLuz")
-                    {
-                        porcentaje = 0.15;
-                        mensaje = "Se aplica el 15% de descuento";
-                    }
-                    else
-                    {
-                        if(marca == "FelipeLamparas")
-                        {
-                            porcentaje = 0.10;
-                            mensaje = "Se aplica el 10% de descuento";
-                        }
-                        else
-                        {
-                            porcentaje = 0.05;
-                            mensaje = "Se aplica el 5% de descuento";
-                        }
-                    }
-                break;
-    default:
-        if(cantidadLamparas > 5)
-        {
-            porcentaje = 0.5;
-            mensaje = "Se aplica un 50% de descuento";
-        }
-        else
-        {
-            porcentaje = 0;
-            mensaje = "No se aplica ningún descuento";
-        }
-    break;
+            }
+        break;
+        default:
+            if(cantidadLamparas > 5)
+            {
+                porcentaje = 0.5;
+                mensaje = "Se aplica un 50% de descuento";
+            }
+            else
+            {
+                porcentaje = 1;
+                mensaje = "No se aplica ningún descuento";
+            }
+        break;
 	}
 	//calculo
     precioNormal = cantidadLamparas * unidad;
-    precioDescuento = precioNormal - (precioNormal * porcentaje);
+    precioDescuento = precioNormal * porcentaje;
     //E
     if(precioDescuento > 120)
     {

@@ -1,45 +1,94 @@
 function mostrar()
 {
-
-
-	let estacion = document.getElementById("txtIdEstacion").value; 
-	let destino = document.getElementById("txtIdDestino").value;
-
-
-	switch(estacion){
+	let estacion;
+	let destino;
+	let flag;
+	estacion = document.getElementById("txtIdEstacion").value; 
+	destino = document.getElementById("txtIdDestino").value;
+	switch(estacion)
+	{
 		case "Invierno":
-			if(destino == "Bariloche"){
-				alert("Se viaja");
+			switch(destino)
+			{
+				case "Bariloche":
+					flag = 0;
+				break;
+				default:
+					flag = 1;
+				break;
 			}
-			else {
-				alert("No se viaja");
-			}
-			break;
-
+		break;
 		case "Verano":
-			if (destino == "Mar del plata" || destino == "Cataratas"){
-				alert("Se viaja")
+			switch(destino)
+			{
+				case "Mar del plata":
+				case "Cataratas":
+					flag = 0;
+				break;
+				default:
+					flag = 1;
+				break;
 			}
-			else {
-				alert ("No se viaja");
-			}
-			break;
-
+		break;	
 		case "Otoño":
-			alert("Se viaja en todos los destinos");
-			break;
-		
+			switch(destino)
+			{
+				default:
+					flag = 0;
+				break;
+			}
+		break;
 		case "Primavera":
-			if (destino != "Bariloche"){
-				alert("Se viaja");
+			switch(destino)
+			{
+				case "Bariloche":
+					flag = 1;
+				break;
+				default:
+					flag = 0;
+				break;
 			}
-			else{
-				alert("NO se viaja");
-			}
-			break
+		break;
 	}
-	
+	if(flag == 0)
+	{
+		alert("Se viaja");
+	}
+	else 
+	{
+		alert("No se viaja")
+	}
 }
+
+// switch(estacion){
+	// 	case "Invierno":
+	// 		if(destino == "Bariloche"){
+	// 			alert("Se viaja");
+	// 		}
+	// 		else {
+	// 			alert("No se viaja");
+	// 		}
+	// 	break;
+	// 	case "Verano":
+	// 		if (destino == "Mar del plata" || destino == "Cataratas"){
+	// 			alert("Se viaja")
+	// 		}
+	// 		else {
+	// 			alert ("No se viaja");
+	// 		}
+	// 	break;
+	// 	case "Otoño":
+	// 		alert("Se viaja en todos los destinos");
+	// 	break;		
+	// 	case "Primavera":
+	// 		if (destino != "Bariloche"){
+	// 			alert("Se viaja");
+	// 		}
+	// 		else{
+	// 			alert("NO se viaja");
+	// 		}
+	// 	break
+	// }
 
 
 /*

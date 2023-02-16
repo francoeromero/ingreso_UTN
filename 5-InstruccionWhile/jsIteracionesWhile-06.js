@@ -42,8 +42,54 @@
 
 
 
-function mostrar() {
-	//los numeros que agregara el usuario
+function mostrar() 
+{
+	let controlVariable = 0;
+	let acumulador = 0;
+	let promedio;
+	let numeroIngresado;
+	let num;
+	
+	while(controlVariable < 5)
+	{
+		controlVariable = controlVariable + 1;
+		numeroIngresado = prompt("Ingrese un numero: ");
+		num = parseInt(numeroIngresado);
+		acumulador = acumulador + num;
+	}
+	promedio = acumulador / 5;
+	document.getElementById("txtIdSuma").value = acumulador;
+	document.getElementById("txtIdPromedio").value = promedio;	
+}
+
+/*
+ESTRUCTURA
+
+1 - variable numeros 
+2 - variable contador 
+3 - variable acumulador
+
+while (i < numVueltas) {
+
+	num = parseInt(prompt("ingresa un numero: "));
+
+	acumulador = acumulador + num; (acumulo)
+
+	contador = contador + 1  (cuento)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//los numeros que agregara el usuario
 	let num = 0;
 	//el contador de vueltas del bucle
 	let i = 0;
@@ -68,25 +114,6 @@ function mostrar() {
 		//muestro los resultados en la pantalla 
 		document.getElementById("txtIdSuma").value = acumulador;
 		document.getElementById("txtIdPromedio").value = promedio;
-	
-}
-
-/*
-ESTRUCTURA
-
-1 - variable numeros 
-2 - variable contador 
-3 - variable acumulador
-
-while (i < numVueltas) {
-
-	num = parseInt(prompt("ingresa un numero: "));
-
-	acumulador = acumulador + num; (acumulo)
-
-	contador = contador + 1  (cuento)
-}
-
 */
 
 

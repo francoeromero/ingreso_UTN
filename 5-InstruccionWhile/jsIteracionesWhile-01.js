@@ -1,3 +1,62 @@
+// function promedio()
+// {
+// 	let numUno;
+// 	let numDos;
+// 	let numTres;
+// 	let numCuatro;
+// 	let numCinco;
+// 	let numSeis;
+// 	let numSiete;
+// 	let numOcho;
+// 	let numNueve;
+// 	let numDiez;
+// 	let numeroIngresado;
+// 	let promedio;
+
+// 	numUno = prompt("Ingrese numero : ");
+// 	numDos = prompt("Ingrese numero : ");
+// 	numTres = prompt("Ingrese numero : ");
+// 	numCuatro = prompt("Ingrese numero : ");
+// 	numCinco = prompt("Ingrese numero : ");
+// 	numSeis = prompt("Ingrese numero : ");
+// 	numSiete = prompt("Ingrese numero : ");
+// 	numOcho = prompt("Ingrese numero : ");
+// 	numNueve = prompt("Ingrese numero : ");
+// 	numDiez = prompt("Ingrese numero : ");
+// 	promedio = (numUno + numDos + numTres +numCuatro +numCinco+numSeis+numSiete +numOcho+numNueve + numDiez) / 10;
+// 	alert(promedio);
+// }
+
+
+
+
+function mostrar()
+{
+	//declaro varible de control
+	let controlVariable = 0;
+	while(controlVariable < 10){
+		//le hago el incremento
+		controlVariable = controlVariable + 1;
+		//muestro en la consola dentro del bucle para dejar el valor en cada vuelta
+		console.log(controlVariable);
+	} 
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 al presionar el botón mostrar 10 repeticiones 
 con números ASCENDENTE, desde el 1 al 10.*/
@@ -14,27 +73,26 @@ con números ASCENDENTE, desde el 1 al 10.*/
 // 	}
 // }
 
-
 //ejemplo
 
-function mostrar()
-{
-let i = 0; //declaracion e inicializacion de la variable de control
+// function mostrar()
+// {
+// let i = 0; //declaracion e inicializacion de la variable de control
 
-while (  i  < 3  ) { // variable de control, la cantidad de repeticiones va a depender de la condicion 
+// while (  i  < 3  ) { // variable de control, la cantidad de repeticiones va a depender de la condicion 
 
-	alert("Hola"); // instruccion verdadera del while, se repetira 3 veces, hasta que se haga falsa y sale del while
+// 	alert("Hola"); // instruccion verdadera del while, se repetira 3 veces, hasta que se haga falsa y sale del while
 
-	//ahora la modificacion de la variable de control
-	i = i + 1; // valor del incrmento
+// 	//ahora la modificacion de la variable de control
+// 	i = i + 1; // valor del incrmento
 
-	//resumen entonces tenemos 3 valores: 
-	//valor inicial (i=0) valor condicionales(3) y valor del incremento (i = i + 1) 
-	//Podemos controlar y jugar con esos 3 valores 
-}
-	alert("estoy despues del while"); // despues de las 3 vueltas sale del while y continua ejecutando las instrucciones
+// 	//resumen entonces tenemos 3 valores: 
+// 	//valor inicial (i=0) valor condicionales(3) y valor del incremento (i = i + 1) 
+// 	//Podemos controlar y jugar con esos 3 valores 
+// }
+// 	alert("estoy despues del while"); // despues de las 3 vueltas sale del while y continua ejecutando las instrucciones
 
-}
+// }
 
 /*
 

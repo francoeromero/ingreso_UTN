@@ -3,6 +3,40 @@ Al presionar el botón pedir un sexo
 'f' para femenino, 'm' para masculino.*/
 function mostrar()
 {	
+	let sex;
+	sex = prompt("Ingrese su sexo: ");
+	while(!(sex == 'm' || sex == 'f'))
+	{
+		sex = prompt("Incorrecto, vuelva a escribir");
+	}
+	document.getElementById("txtIdSexo").value = sex;
+}
+
+
+
+
+
+
+
+
+
+/*
+siempre es el mismo mecanismo:
+
+1. pido espacio de memoria 
+2. solicito informacion al usuario
+3. con esa info calculo
+4 muestro el resultado 
+
+
+
+
+
+
+
+
+
+
 	//pedimos espacio de memoria
 	let sexoIngresado;
 	//pedimos al usuario que coloque informacion dentro del espacio de memoria osea la variable
@@ -17,16 +51,6 @@ function mostrar()
 	}
 		//muestro el resultado de lo que puso con una alerta si fue incorrecto
 	alert("incorrecto");
-	
-}
-
-/*
-siempre es el mismo mecanismo:
-
-1. pido espacio de memoria 
-2. solicito informacion al usuario
-3. con esa info calculo
-4 muestro el resultado 
 
 */
 

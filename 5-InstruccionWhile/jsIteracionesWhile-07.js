@@ -8,25 +8,18 @@ function mostrar() {
 	let i = 0;
 
 	do {
-
 		//acumulo con la misma variable para que los valores anteriores no se pierda por cada bucle 
 		num = num + parseInt(prompt("ingresa un numero: "));
-
 		//con esto hago que el usuario eliga si el bucle va a dar una vuelta o no, porque la variable preguntar es igual a 'si' 
 	 	preguntar = prompt("Quiere volver a ingresar otro numero?");
-
 		//el contador es la cantidad de vueltas que se repite el bucle
 		i = i + 1;
-	
 	} while (preguntar == 's'); //la condicional es activar el bucle si llega a ser verdadero 
-	
 		//saco el promedio con el acumulador num y lo divido por la cantidad de veces que se repitio el bucle
 		promedio =  num / i; 
-
 		//muestro en pantalla en los inputs
 		document.getElementById("txtIdSuma").value = num;
 		document.getElementById("txtIdPromedio").value = promedio;
-
 }
 
 

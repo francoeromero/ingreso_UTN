@@ -4,7 +4,42 @@ con números DESCENDENTES, desde el 10 al 1.*/
 
 function mostrar()
 {
-	//declaro varible de control
+	let i = 10;
+	while(i > 0)
+	{
+		console.log(i);
+		i--;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//declaro varible de control
 	let controlVariable = 10;
 	while(controlVariable > 0){
 		//muestro en la consola 
@@ -12,5 +47,8 @@ function mostrar()
 		//le hago el decremento
 		controlVariable = controlVariable - 1;
 	} 
-}
 
+
+
+
+*/

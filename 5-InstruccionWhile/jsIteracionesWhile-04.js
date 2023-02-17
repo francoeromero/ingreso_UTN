@@ -3,13 +3,18 @@ al presionar el botón
 pedir un número entre 0 y 9 inclusive.*/
 function mostrar()
 {
-	let num;
-	num = prompt("Ingrese un numero entre 0 y 9");
-	while(num < 0 || num > 9)
+	let variableControl;
+	// let datoValidado;
+	variableControl = prompt("Ingrese un numero entre 0 y 9");
+	variableControl = parseInt(variableControl);
+
+	while(variableControl < 0 || variableControl > 9)
 	{
-		num = prompt("incorrecto, tiene que ser del 0 al 9");
+		variableControl = prompt("incorrecto, tiene que ser del 0 al 9");
+		variableControl = parseInt(variableControl);
 	}
-	document.getElementById("txtIdNumero").value = num;
+	// datoValidado = datoValidado + numeroIngresado;
+	document.getElementById("txtIdNumero").value = variableControl;
 }
 
 

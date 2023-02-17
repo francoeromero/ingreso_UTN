@@ -32,14 +32,13 @@
 
 function mostrar()
 {
-	//declaro varible de control
-	let controlVariable = 0;
-	while(controlVariable < 10){
-		//le hago el incremento
-		controlVariable = controlVariable + 1;
-		//muestro en la consola dentro del bucle para dejar el valor en cada vuelta
-		console.log(controlVariable);
-	} 
+	let i = 0;
+	let num;
+	while(i < 10)
+	{
+		i++;
+		console.log(i);
+	}
 	
 }
 
@@ -50,6 +49,16 @@ function mostrar()
 
 
 
+
+// //declaro varible de control
+// let controlVariable = 0;
+// let numMostrar = 10;
+// while(controlVariable < 10){
+// 	//le hago el incremento
+// 	controlVariable = controlVariable + 1;
+// 	//muestro en la consola dentro del bucle para dejar el valor en cada vuelta
+// 	numMostrar = numMostrar - 1;
+// 	console.log(controlVariable);
 
 
 

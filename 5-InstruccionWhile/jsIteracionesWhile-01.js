@@ -33,7 +33,6 @@
 function mostrar()
 {
 	let i = 0;
-	let num;
 	while(i < 10)
 	{
 		i++;

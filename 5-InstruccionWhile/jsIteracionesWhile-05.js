@@ -4,10 +4,10 @@ Al presionar el botón pedir un sexo
 function mostrar()
 {	
 	let sex;
-	sex = prompt("Ingrese su sexo: ");
-	while(!(sex == 'm' || sex == 'f'))
+	sex = prompt("Seleccione su genero: ");
+	while(!(sex == 'f' || sex == 'm'))
 	{
-		sex = prompt("Incorrecto, vuelva a escribir");
+		sex = prompt("seleccion f o m : ");
 	}
 	document.getElementById("txtIdSexo").value = sex;
 }
@@ -25,12 +25,32 @@ siempre es el mismo mecanismo:
 
 1. pido espacio de memoria 
 2. solicito informacion al usuario
-3. con esa info calculo
+3. con esa info hago el bucle con la condicional
 4 muestro el resultado 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	let sex;
+	sex = prompt("Ingrese su sexo: ");
+	while(!(sex == 'm' || sex == 'f'))
+	{
+		sex = prompt("Incorrecto, vuelva a escribir");
+	}
+	document.getElementById("txtIdSexo").value = sex;
 
 
 

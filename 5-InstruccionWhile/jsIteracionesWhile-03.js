@@ -2,16 +2,13 @@
 al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
 function mostrar()
 {
-	//declaro variable con la clave
-	let claveIngresada = "utn750";
-	//pido al usuario que ingrese su clave
-	claveIngresada = prompt("Ingrese su clave: ");
-	//si no es "utn750" entonces inicia el bucle
-	while(claveIngresada != "utn750")
+	let clave = "utn750";
+	clave = prompt("Ingrese su clave: ");
+	while(clave != "utn750")
 	{
-		claveIngresada = prompt("clave incorrecta");
+		clave = prompt("Clave incorrecta vuelva a escribir");
 	}
-	alert("clave correcta");
+	alert("Clave correcta! acaba de iniciar sesion");
 }
 
 
@@ -34,6 +31,29 @@ function mostrar()
 
 
 
+
+
+
+/*
+
+
+
+
+
+//declaro variable con la clave
+	let claveIngresada = "utn750";
+	//pido al usuario que ingrese su clave
+	claveIngresada = prompt("Ingrese su clave: ");
+	//si no es "utn750" entonces inicia el bucle
+	while(claveIngresada != "utn750")
+	{
+		claveIngresada = prompt("clave incorrecta");
+	}
+	alert("clave correcta");
+
+
+
+*/
 
 
 

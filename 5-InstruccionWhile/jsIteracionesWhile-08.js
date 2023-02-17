@@ -3,6 +3,62 @@ Al presionar el botón pedir  números  hasta que el usuario quiera,
 sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
 {
+	let preguntar;
+	let numIngresado;
+	let numPositivo = 0;
+	let numNegativo = 1;
+	let i;
+	let a;
+	do
+	{
+		numIngresado = prompt("Ingrese el numero: ");
+		numIngresado = parseInt(numIngresado);
+		if(numIngresado < 0)
+		{
+			numNegativo = numNegativo * numIngresado;
+		}
+		else
+		{
+			numPositivo = numPositivo + numIngresado;
+		}
+		preguntar = prompt("Quieres continuar? 's' para si, 'n' para no");
+	}while(preguntar == 's');
+	document.getElementById("txtIdSuma").value = numPositivo;
+	document.getElementById("txtIdProducto").value = numNegativo;
+}
+
+
+
+
+
+
+/*
+Programa sin codigos (su estructura) : 
+
+//	declaracion de las variables
+
+//	debemos armar un bucle del tipo mientras el usuario quiera (do while)
+
+// pedir los numeros ---> dentro del bucle
+
+// analizar el signo de cada numero (si es positivo o negativo) ---> dentro del bucle
+
+//	acumulamos el numero en el acumulador correspondiente  ---> dentro del bucle
+
+//	mostrar los resultados ---> fuera del bucle
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	let num = 0; // el num es la variable que guarda los numeros del usuario
 	let preguntar; // para activar el bucle
@@ -28,28 +84,6 @@ function mostrar()
 		 // muestro en pantalla los resultados 
 	document.getElementById("txtIdSuma").value = sumapositivos ;
 	document.getElementById("txtIdProducto").value = multnegativos ;
-
-}
-
-
-
-
-
-/*
-Programa sin codigos (su estructura) : 
-
-//	declaracion de las variables
-
-//	debemos armar un bucle del tipo mientras el usuario quiera (do while)
-
-// pedir los numeros ---> dentro del bucle
-
-// analizar el signo de cada numero (si es positivo o negativo) ---> dentro del bucle
-
-//	acumulamos el numero en el acumulador correspondiente  ---> dentro del bucle
-
-//	mostrar los resultados ---> fuera del bucle
-
 
 */
 

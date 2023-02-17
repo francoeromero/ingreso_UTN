@@ -3,7 +3,75 @@ Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar()
 {	
-	// let preguntar;
+	let numIngresado;
+	let flag = 0;
+	let max;
+	let min;
+	let preguntar;
+	do
+	{
+		numIngresado = prompt("Ingrese un numero: ");
+		numIngresado = parseInt(numIngresado);
+		//igualamos los valores
+		if (flag == 0)
+		{
+			max = numIngresado;
+			min = numIngresado;
+			flag = 1;
+		}
+		//defino si es max o min 
+		if(numIngresado > max)
+		{
+			max = numIngresado;
+		}
+		else
+		{
+			if(numIngresado < min)
+			{
+				min = numIngresado;
+			}
+		}
+		preguntar = prompt("quieres seguir?");
+	}while(preguntar == 's');
+	document.getElementById("txtIdMaximo").value = max;
+	document.getElementById("txtIdMinimo").value = min;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let preguntar;
 	// let num;
 	// let maximo = 0;
 	// let minimo = 0;
@@ -21,42 +89,6 @@ function mostrar()
 	// 	preguntar = prompt("Quieres escribir otro numero?"); 
 
 	// }while(preguntar == 's');
-
-
-
-// NO hay que inicializar a max y min por 0, porque en el if siempre dara verdadero en maximo y en minimo nunca ejecutará
-	let num;
-	let max; // NO se inicializa con 0
-	let min; // Tampoco inicializar con 0 porque cuando utilizemos el if siempre dara verdadero en la primera instruccion 
-	let preguntar;
-	let flag = 0;
-
-	do {
-		num = parseInt(prompt("Escribe un numero: "));
-
-		if (flag == 0){
-			//igualamos el numero que puso el usuario, lo colocamos en max y min
-			max = num; 
-			min = num;
-			flag = 1; // para que no vuelva a pasar por aca SOLO UNA VEZ 
-		}
-
-		if(num > max){
-			max = num;
-		}
-		else if (num < min){
-			min = num;
-		}
-
-		preguntar = prompt("Quiere escribir otro numero?");
-
-	}while(preguntar == 's');
-
-	document.getElementById("txtIdMaximo").value = max;
-	document.getElementById("txtIdMinimo").value = min;
-}
-
-/*
 
 estructura for :
 
@@ -102,5 +134,44 @@ let min = 0;
 
 //despues del bucle--------------
 
+
+
+
+
+
+
+
+
+
+// NO hay que inicializar a max y min por 0, porque en el if siempre dara verdadero en maximo y en minimo nunca ejecutará
+	let num;
+	let max; // NO se inicializa con 0
+	let min; // Tampoco inicializar con 0 porque cuando utilizemos el if siempre dara verdadero en la primera instruccion 
+	let preguntar;
+	let flag = 0;
+
+	do {
+		num = parseInt(prompt("Escribe un numero: "));
+
+		if (flag == 0){
+			//igualamos el numero que puso el usuario, lo colocamos en max y min
+			max = num; 
+			min = num;
+			flag = 1; // para que no vuelva a pasar por aca SOLO UNA VEZ 
+		}
+
+		if(num > max){
+			max = num;
+		}
+		else if (num < min){
+			min = num;
+		}
+
+		preguntar = prompt("Quiere escribir otro numero?");
+
+	}while(preguntar == 's');
+
+	document.getElementById("txtIdMaximo").value = max;
+	document.getElementById("txtIdMinimo").value = min;
 
 */

@@ -44,22 +44,22 @@
 
 function mostrar() 
 {
-	let controlVariable = 0;
-	let acumulador = 0;
-	let promedio;
-	let numeroIngresado;
+	let i = 0;
+	let a = 0;
 	let num;
-	
-	while(controlVariable < 5)
+	let promedio;
+	while(i < 5)
 	{
-		controlVariable = controlVariable + 1;
-		numeroIngresado = prompt("Ingrese un numero: ");
-		num = parseInt(numeroIngresado);
-		acumulador = acumulador + num;
+		i++;
+		num = prompt("ingrese un numero: ");
+		num = parseInt(num);
+		a = a + num;
 	}
-	promedio = acumulador / 5;
-	document.getElementById("txtIdSuma").value = acumulador;
-	document.getElementById("txtIdPromedio").value = promedio;	
+	promedio = a / 5;
+	document.getElementById("txtIdSuma").value = a;
+	document.getElementById("txtIdPromedio").value = promedio;
+	
+
 }
 
 /*
@@ -77,6 +77,31 @@ while (i < numVueltas) {
 
 	contador = contador + 1  (cuento)
 }
+
+
+
+
+
+
+
+	let controlVariable = 0;
+	let acumulador = 0;
+	let promedio;
+	let numeroIngresado;
+	let num;
+	
+	while(controlVariable < 5)
+	{
+		controlVariable = controlVariable + 1;
+		numeroIngresado = prompt("Ingrese un numero: ");
+		num = parseInt(numeroIngresado);
+		acumulador = acumulador + num;
+	}
+	promedio = acumulador / 5;
+	document.getElementById("txtIdSuma").value = acumulador;
+	document.getElementById("txtIdPromedio").value = promedio;	
+
+
 
 
 

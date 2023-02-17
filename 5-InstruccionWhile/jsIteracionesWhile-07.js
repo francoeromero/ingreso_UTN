@@ -1,9 +1,55 @@
 
 //Al presionar el botón pedir números hasta que el USUARIO QUIERA e informar la suma acumulada y el promedio.
 
-function mostrar() {
+function mostrar() 
+{
+	let divisor = 0;
+	let acumulador = 0;
+	let num;
+	let preguntar;
+	let promedio;
+	do 
+	{
+		divisor = divisor + 1;
+		num = prompt("Escriba un numero: ");
+		num = parseInt(num);
+		acumulador = acumulador + num;
+		preguntar = prompt("Escriba 's' si quiere continuar: "); 
+	}while(preguntar == 's');
+	promedio = acumulador / divisor;
+	document.getElementById("txtIdSuma").value = a;
+	document.getElementById("txtIdPromedio").value = promedio;
+}
 
-	let preguntar; // = 's';
+
+
+
+
+
+/*
+
+txtIdPromedio
+txtIdSuma
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let preguntar; // = 's';
 	let num = 0;
 	let i = 0;
 
@@ -20,10 +66,10 @@ function mostrar() {
 		//muestro en pantalla en los inputs
 		document.getElementById("txtIdSuma").value = num;
 		document.getElementById("txtIdPromedio").value = promedio;
-}
 
 
-/*
+
+
 
 
 DO:

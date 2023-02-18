@@ -24,7 +24,88 @@ hasta que el usuario quiera, mostrar:
 
 
 function mostrar(){
-	
+	let numIngresado;
+	let preguntar;
+	let negativos = 0;
+	let contarNegativos = 0;
+	let positivos = 0;
+	let contarPositivos = 0;
+	let contarCeros = 0;
+	let promedioPositivos;
+	let promedioNegativos;
+	let diferencia;
+	let contarPares = 0;
+	do
+	{
+		numIngresado = prompt("Ingrese un numero: ");
+		numIngresado = parseInt(numIngresado);
+		if(numIngresado < 0)
+		{
+			negativos = negativos + numIngresado;
+			contarNegativos = contarNegativos + 1;
+		}
+		else
+		{
+			if(numIngresado == 0)
+			{
+				contarCeros = contarCeros + 1;
+			}
+			else
+			{
+				positivos = positivos + numIngresado;
+				contarPositivos = contarPositivos + 1;
+			}
+		}
+		if (numIngresado % 2 == 0){
+			contarPares = contarPares + 1;
+		}
+		preguntar = prompt("Escriba 's' si quiere seguir: ");
+	}while(preguntar == 's');
+	//calculo
+	promedioPositivos = positivos / contarPositivos;
+	promedioNegativos = negativos / contarNegativos;
+	diferencia = positivos - negativos;
+	//muestro
+	console.log("Suma de los negativos: " + negativos);
+	console.log("Suma de los positivos: " + positivos);
+	console.log("Cantidad de positivos: " + contarPositivos);
+	console.log("Cantidad de negativos: " + contarNegativos);
+	console.log("Cantidad de Ceros: " + contarCeros);
+	console.log("Promedio de positivos: " + promedioPositivos);
+	console.log("Promedio de negativos: " + promedioNegativos);
+	console.log("Cantidad de pares: " + contarPares);
+}
+
+/*
+
+1 . declarar variables, meter valores en diferentes cajitas(variables) para ordenarlos a cada uno
+
+2. generar un bucle, do while (para que el usuario ponga los numeros que quiera)
+
+3. codigos dentro del bucle
+		- pido un numero 
+		- que tengo que hacer con ese numero?
+		- analizar el signo del numero y actuar en consecuencia
+		- analizar si el num es par 
+		-  
+		- 
+		-
+
+4. codigos despues del bucle
+		-calculos que necesita los datos conseguidos despues del bucle
+		-
+5.  muestro los resultados 
+
+
+
+
+*/
+
+
+
+
+/*
+
 // 1 . declarar variables, meter valores en diferentes cajitas(variables) para ordenarlos a cada uno
 	let numero;
 	let seguir;
@@ -91,29 +172,5 @@ function mostrar(){
 		console.log("7 - Suma de los negativos: " + promedioPositivos);
 		console.log("8 - Suma de los negativos: " + promedioNegativos);
 		console.log("9 - Suma de los negativos: " + diferencia);
-}
-
-/*
-
-1 . declarar variables, meter valores en diferentes cajitas(variables) para ordenarlos a cada uno
-
-2. generar un bucle, do while (para que el usuario ponga los numeros que quiera)
-
-3. codigos dentro del bucle
-		- pido un numero 
-		- que tengo que hacer con ese numero?
-		- analizar el signo del numero y actuar en consecuencia
-		- analizar si el num es par 
-		-  
-		- 
-		-
-
-4. codigos despues del bucle
-		-calculos que necesita los datos conseguidos despues del bucle
-		-
-5.  muestro los resultados 
-
-
-
 
 */

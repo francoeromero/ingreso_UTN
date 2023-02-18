@@ -25,10 +25,64 @@ function comenzar()
 }
 function verificar()
 {
-  alert(numSecreto);
+  let numIngresado;
+  let mensaje;
+  let intentos = 0;
+  let inicio = 0;  
+  numIngresado = document.getElementById("txtIdNumero").value;
+  while(numIngresado != numSecreto)
+  {
+      numIngresado = prompt("Perdiste, ingresa otro numero: ");
+      numIngresado = parseInt(numIngresado);
+      intentos = intentos + 1;
+  }
+  mensaje = "GANASTE!";
+  alert(mensaje);
+  document.getElementById("txtIdIntentos").value = intentos;
+  document.getElementById("txtIdNumero").value = numSecreto;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // let numIngresado;
+  // let mensaje;
+  // numIngresado = document.getElementById("txtIdNumero").value;
+  // numIngresado = parseInt(numIngresado);
+  // if(numIngresado === numSecreto)
+  // {
+  //   mensaje = "GANASTE!";
+  // }
+  // else
+  // {
+  //   mensaje = "perdiste";
+  // }
+  // alert("El numero secreto es: "+ numSecreto + " " + mensaje);
+  // // document.getElementById("txtIdNumero").value = ;
+  // // document.getElementById("txtIdIntentos").value = ;
 
 // const comenzar = () =>{
 

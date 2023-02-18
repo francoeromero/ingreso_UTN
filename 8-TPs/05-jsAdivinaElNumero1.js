@@ -27,12 +27,11 @@ function verificar()
 {
   let numIngresado;
   let mensaje;
-  let intentos = 0;
-  let inicio = 0;  
+  let intentos = 0; 
   numIngresado = document.getElementById("txtIdNumero").value;
   while(numIngresado != numSecreto)
   {
-      numIngresado = prompt("Perdiste, ingresa otro numero: ");
+      numIngresado = prompt("Perdiste, ingresa otro numero del 1 al 100: " + numSecreto);
       numIngresado = parseInt(numIngresado);
       intentos = intentos + 1;
   }

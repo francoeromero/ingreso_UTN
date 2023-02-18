@@ -9,20 +9,110 @@
 Desde  6 Intentos hasta 10:”falta técnica”
 Más de 10 intentos: “afortunado en el amor!!”.*/
 
-var numeroSecreto; 
-var contadorIntentos;
-
+let numSecreto;
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	numSecreto = Math.floor(Math.random() * (100 - 1 + 1)) + 1; //ambito global sin let o const
-	
-
+  let max = 100;
+  let min = 1;
+  numSecreto = Math.random() * (max - min + 1);
+  numSecreto = Math.floor(numSecreto) + 1;
 }
 
 function verificar()
 {
-  let i = 0;
+  let numIngresado;
+  let mensaje;
+  let intentos = 0;
+  numIngresado = document.getElementById("txtIdNumero").value;
+  numIngresado = parseInt(numIngresado);
+  while(numIngresado != numSecreto)
+  {
+    numIngresado = prompt("Perdiste, vuelve a ingresar del 1 al 100: " + numSecreto);
+    numIngresado = parseInt(numIngresado);
+    intentos = intentos + 1;
+  }
+  
+  if(intentos == 1)
+  {
+    mensaje = "Usted es un psiquico";
+  }
+  else
+  {
+    if(intentos == 2)
+    {
+      mensaje = "excelente percepción";
+    }
+    else
+    {
+      if(intentos == 3)
+      {
+        mensaje =  "Esto es suerte";
+      }
+      else
+      {
+        if(intentos == 4)
+        {
+          mensaje = "Excelente técnica";
+        }
+        else
+        {
+          if(intentos == 5)
+          {
+            mensaje = "Usted está en la media";
+          }
+          else
+          {
+            if(intentos > 6  && intentos < 10)
+            {
+              mensaje = "falta técnica";
+            }
+            else
+            {
+              if(intentos > 10)
+              {
+                mensaje = "Afortunado en el amor!!";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  alert("GANASTE!! " + mensaje);
+  document.getElementById("txtIdNumero").value = numSecreto;
+  document.getElementById("txtIdIntentos").value = intentos;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+//Genero el número RANDOM entre 1 y 100
+	numSecreto = Math.floor(Math.random() * (100 - 1 + 1)) + 1; //ambito global sin let o const
+	
+
+
+
+
+
+ let i = 0;
   let a = 0;
   let seguir; 
   let num;
@@ -79,7 +169,7 @@ function verificar()
   document.getElementById("txtIdIntentos").value = i;
   document.getElementById("txtIdNumero").value = num;
 
- 
-	
 
-}
+
+
+*/

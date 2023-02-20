@@ -23,58 +23,77 @@ hasta que el usuario quiera, mostrar:
 
 
 
-function mostrar(){
-	let numIngresado;
-	let preguntar;
-	let negativos = 0;
-	let contarNegativos = 0;
-	let positivos = 0;
-	let contarPositivos = 0;
-	let contarCeros = 0;
-	let promedioPositivos;
-	let promedioNegativos;
-	let diferencia;
-	let contarPares = 0;
-	do
-	{
-		numIngresado = prompt("Ingrese un numero: ");
-		numIngresado = parseInt(numIngresado);
-		if(numIngresado < 0)
-		{
-			negativos = negativos + numIngresado;
-			contarNegativos = contarNegativos + 1;
-		}
-		else
-		{
-			if(numIngresado == 0)
-			{
-				contarCeros = contarCeros + 1;
-			}
-			else
-			{
-				positivos = positivos + numIngresado;
-				contarPositivos = contarPositivos + 1;
-			}
-		}
-		if (numIngresado % 2 == 0){
-			contarPares = contarPares + 1;
-		}
-		preguntar = prompt("Escriba 's' si quiere seguir: ");
-	}while(preguntar == 's');
-	//calculo
-	promedioPositivos = positivos / contarPositivos;
-	promedioNegativos = negativos / contarNegativos;
-	diferencia = positivos - negativos;
-	//muestro
-	console.log("Suma de los negativos: " + negativos);
-	console.log("Suma de los positivos: " + positivos);
-	console.log("Cantidad de positivos: " + contarPositivos);
-	console.log("Cantidad de negativos: " + contarNegativos);
-	console.log("Cantidad de Ceros: " + contarCeros);
-	console.log("Promedio de positivos: " + promedioPositivos);
-	console.log("Promedio de negativos: " + promedioNegativos);
-	console.log("Cantidad de pares: " + contarPares);
+
+function mostrar()
+{
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function mostrar(){
+// 	//declaro variables
+// 	let numIngresado;
+// 	let preguntar;
+// 	let negativos = 0;
+// 	let contarNegativos = 0;
+// 	let positivos = 0;
+// 	let contarPositivos = 0;
+// 	let contarCeros = 0;
+// 	let promedioPositivos;
+// 	let promedioNegativos;
+// 	let diferencia;
+// 	let contarPares = 0;
+// 	do
+// 	{
+// 		numIngresado = prompt("Ingrese un numero: ");
+// 		numIngresado = parseInt(numIngresado);
+// 		if(numIngresado < 0)
+// 		{
+// 			negativos = negativos + numIngresado;
+// 			contarNegativos = contarNegativos + 1;
+// 		}
+// 		else
+// 		{
+// 			if(numIngresado == 0)
+// 			{
+// 				contarCeros = contarCeros + 1;
+// 			}
+// 			else
+// 			{
+// 				positivos = positivos + numIngresado;
+// 				contarPositivos = contarPositivos + 1;
+// 			}
+// 		}
+// 		if (numIngresado % 2 == 0){
+// 			contarPares = contarPares + 1;
+// 		}
+// 		preguntar = prompt("Escriba 's' si quiere seguir: ");
+// 	}while(preguntar == 's');
+// 	//calculo
+// 	promedioPositivos = positivos / contarPositivos;
+// 	promedioNegativos = negativos / contarNegativos;
+// 	diferencia = positivos - negativos;
+// 	//muestro
+// 	console.log("Suma de los negativos: " + negativos);
+// 	console.log("Suma de los positivos: " + positivos);
+// 	console.log("Cantidad de positivos: " + contarPositivos);
+// 	console.log("Cantidad de negativos: " + contarNegativos);
+// 	console.log("Cantidad de Ceros: " + contarCeros);
+// 	console.log("Promedio de positivos: " + promedioPositivos);
+// 	console.log("Promedio de negativos: " + promedioNegativos);
+// 	console.log("Cantidad de pares: " + contarPares);
+// }
 
 /*
 

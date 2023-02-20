@@ -3,15 +3,26 @@ al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
 function mostrar()
 {
 	let clave = "utn750";
-	clave = prompt("Ingrese su clave: ");
+	clave = prompt("Ingrese su clave: ").toLowerCase();
 	while(clave != "utn750")
 	{
-		clave = prompt("Clave incorrecta vuelva a escribir");
+		clave = prompt("Clave incorrecta vuelva a escribir").toLowerCase();
 	}
 	alert("Clave correcta! acaba de iniciar sesion");
 }
 
+//toLowerCase() de mayuscula a minuscula
+//toUpperCase() de minuscula a mayuscula
 
+/*
+
+do
+{
+	clave = prompt("Ingrese la contraseña").toLowerCase();
+}while(contraseña != "utn750");
+
+
+*/
 
 
 

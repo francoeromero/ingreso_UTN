@@ -10,8 +10,12 @@ function mostrar()
 	let preguntar;
 	do
 	{
+		do
+		{
 		numIngresado = prompt("Ingrese un numero: ");
 		numIngresado = parseInt(numIngresado);
+		}while(isNaN(numIngresado) == true);
+		
 		//igualamos los valores
 		if (flag == 0)
 		{

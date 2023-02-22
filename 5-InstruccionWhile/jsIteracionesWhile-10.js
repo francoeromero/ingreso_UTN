@@ -26,7 +26,17 @@ hasta que el usuario quiera, mostrar:
 
 function mostrar()
 {
-	
+	let numIngresado;
+	let mensaje;
+	let preguntar;
+	let numNegativos = 0;
+	do
+	{
+		numIngresado = prompt("ingrese un numero: ");	
+		preguntar = confirm("Desea continuar?");	
+	}while(preguntar);
+
+
 }
 
 

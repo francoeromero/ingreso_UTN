@@ -11,8 +11,11 @@ function mostrar()
 	let a;
 	do
 	{
-		numIngresado = prompt("Ingrese el numero: ");
-		numIngresado = parseInt(numIngresado);
+		do{
+			numIngresado = prompt("Ingrese el numero: ");
+			numIngresado = parseInt(numIngresado);
+		}while(isNaN(numIngresado) == true);
+		
 		if(numIngresado < 0)
 		{
 			numNegativo = numNegativo * numIngresado;

@@ -22,8 +22,6 @@ hasta que el usuario quiera, mostrar:
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 
 
-
-
 function mostrar()
 {
 	let numIngresado;

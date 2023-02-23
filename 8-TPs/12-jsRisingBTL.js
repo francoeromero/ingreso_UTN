@@ -9,5 +9,33 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
-	
+	//1- crear espacios de memoria para guardar datos que escribira el usuario
+    //2- pedir los datos y asignarlo en sus respectivas variables para ir ordenando
+    //3- mostrar los datos en los elementos de html que son los inputs o entradas
+
+    //creamos las variables
+    let edad;
+    let mensaje;
+    edad = prompt("Ingrese edad: ");  
+    edad = parseInt(edad);
+    while(isNaN(edad) == true || edad < 18 || edad > 90)
+    {
+        edad = prompt("Edad incorrecta o intente de nuevo: ");
+        edad = parseInt(edad);
+    }
+    mensaje = "Edad validada!";
+    alert(mensaje);
+    document.getElementById("txtIdEdad").value = edad;
+
 }
+
+
+
+// if(edad > 18 && edad < 90)
+    // {
+    //     mensaje = "Edad validada"; 
+    // }
+    // else
+    // {
+    //     mensaje = "Edad No validada";
+    // }

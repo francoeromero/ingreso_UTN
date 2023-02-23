@@ -5,6 +5,7 @@ function mostrar()
 {	
 	let sex;
 	sex = prompt("Seleccione su genero: ");
+	//si no es f o m entonces entra al bucle
 	while(!(sex == 'f' || sex == 'm'))
 	{
 		sex = prompt("seleccion f o m : ");
@@ -14,19 +15,15 @@ function mostrar()
 
 
 
-
-
-
-
-
-
 /*
 siempre es el mismo mecanismo:
 
 1. pido espacio de memoria 
 2. solicito informacion al usuario
-3. con esa info hago el bucle con la condicional
+3.  BUCLE CONDICIONAL: Si el usuario ingresa un dato no deseado, el bucle se ejecuta y lo guía a que ingrese la información que necesitamos. Para eso sirve el WHILE
 4 muestro el resultado 
+
+La esencia de while es para que manipulemos el dato que ingrese el usuario, de no ingresar lo que nosotros queremos entonces lo mandamos a un bucle infinito hasta que escriba lo que YO quiero
 
 
 

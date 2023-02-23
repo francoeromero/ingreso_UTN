@@ -23,13 +23,14 @@ function mostrar()
 			min = numIngresado;
 			flag = 1;
 		}
-		//defino si es max o min 
-		if(numIngresado > max)
-		{
-			max = numIngresado;
-		}
 		else
 		{
+			//defino si es max  
+			if(numIngresado > max)
+			{
+				max = numIngresado;
+			}
+			//defino si es min 
 			if(numIngresado < min)
 			{
 				min = numIngresado;

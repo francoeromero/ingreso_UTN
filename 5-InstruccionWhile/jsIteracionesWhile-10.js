@@ -32,9 +32,20 @@ function mostrar()
 	let numNegativos = 0;
 	do
 	{
-		numIngresado = prompt("ingrese un numero: ");	
+		do
+		{
+			numIngresado = prompt("ingrese un numero: ");
+			numIngresado = parseInt(numIngresado);
+		}while(isNaN(numIngresado)== true);
+			
+		if(numIngresado < 0)
+		{
+			numNegativos = numNegativos + numIngresado;
+		}
 		preguntar = confirm("Desea continuar?");	
 	}while(preguntar);
+	mensaje = "\n la suma de los negativos es: "+numNegativos; 
+	alert(mensaje);
 
 
 }

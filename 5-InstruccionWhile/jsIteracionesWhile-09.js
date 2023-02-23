@@ -30,10 +30,12 @@ function mostrar()
 			{
 				max = numIngresado;
 			}
-			//defino si es min 
-			if(numIngresado < min)
+			else
 			{
-				min = numIngresado;
+				if(numIngresado < min)
+				{
+					min = numIngresado;
+				}
 			}
 		}
 		preguntar = prompt("quieres seguir?");

@@ -30,6 +30,11 @@ function mostrar()
 	let mensaje;
 	let preguntar;
 	let numNegativos = 0;
+	let numPositivos = 0;
+	let conteoNegativos = 0;
+	let conteoPositivos = 0;
+	let conteoCeros = 0;
+	let conteoPares = 0;
 	do
 	{
 		do
@@ -41,13 +46,32 @@ function mostrar()
 		if(numIngresado < 0)
 		{
 			numNegativos = numNegativos + numIngresado;
+			conteoNegativos = conteoNegativos + 1;
+		}
+		else
+		{
+			if(numIngresado > 0)
+			{
+				numPositivos = numPositivos + numIngresado;
+				conteoPositivos = conteoPositivos + 1;
+			}
+			else
+			{
+				conteoCeros = conteoCeros + 1;
+			}
+		}
+		if(numIngresado % 2 == 0)
+		{
+			conteoPares = conteoPares + 1;
 		}
 		preguntar = confirm("Desea continuar?");	
 	}while(preguntar);
-	mensaje = "\n la suma de los negativos es: "+numNegativos; 
+	mensaje = "\n la suma de los negativos es: " + numNegativos; 
+	mensaje = mensaje + "\n la suma de los positivos es: " + numPositivos;
+	mensaje = mensaje + "\n la cantidad de ceros son: " + conteoCeros;
+	mensaje = mensaje + "\n la cantidad de negativos son: " + conteoNegativos;
+	mensaje = mensaje + "\n la cantidad de positivos son: " + conteoPositivos; 
 	alert(mensaje);
-
-
 }
 
 

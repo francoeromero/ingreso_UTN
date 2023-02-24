@@ -14,19 +14,93 @@ function ComenzarIngreso ()
     //3- mostrar los datos en los elementos de html que son los inputs o entradas
 
     //creamos las variables
+    let preguntar;
     let edad;
-    let mensaje;
-    edad = prompt("Ingrese edad: ");  
-    edad = parseInt(edad);
-    while(isNaN(edad) == true || edad < 18 || edad > 90)
-    {
-        edad = prompt("Edad incorrecta o intente de nuevo: ");
-        edad = parseInt(edad);
-    }
-    mensaje = "Edad validada!";
-    alert(mensaje);
-    document.getElementById("txtIdEdad").value = edad;
 
+    do
+    {
+        edad = prompt("Ingrese edad: ");
+        edad = parseInt(edad);
+        while(edad < 18 || edad > 91)
+        {
+            edad = prompt("Error: ingrese de nuevo su edad: ");
+            edad = parseInt(edad);
+        }
+        preguntar = confirm("Quieres agregar a otra persona mas?");
+    }while(preguntar);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    let edad;
+    let sexo;
+    let estadoCivil;
+    let mensaje;
+    let respuesta;
+
+    respuesta="y";
+   
+
+    while(respuesta=="y")
+    {
+
+        edad=prompt("ingrese edad: ");
+        edad = parseInt(edad);
+        while(edad<18&&edad>91)
+        {
+            edad = prompt("Error ingrese de nuevo");
+            edad=parseInt(edad);
+        }
+        
+        respuesta = prompt("quiere ingresar otro cliente y/n:");
+    }    
+*/
+
+
+    /*
+    do
+    {
+        edad = prompt("Ingrese edad: ");  
+        edad = parseInt(edad);
+    } while(isNaN(edad) == true || edad < 18 || edad > 90);
+
+
+    do
+    {
+        sexo = prompt("Ingrese su genero m,masculino o f femenino : ");
+    }while(sexo != "m" && sexo != "f");
+    do
+    {
+        
+    }while(estadoCivil != 1 && estadoCivil != 2 && estadoCivil != 3 && estadoCivil != 4);
+
+    // mensaje = "Edad validada!";
+    // alert(mensaje);
+    document.getElementById("txtIdEdad").value = edad;
+    document.getElementById("txtIdSexo").value = sexo;
+*/
 }
 
 

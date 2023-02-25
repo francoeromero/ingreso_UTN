@@ -29,7 +29,11 @@ k- qué porcentaje usa equipaje de mano
 l- que porcentaje hay de cada sexo
 */
 //variables dato
+
+function comenzar()
+{
 let preguntar;
+let mensaje;
 let nombreTitular;
 let lugar;
 let temporada;
@@ -44,13 +48,29 @@ let pago;
 let cantidadPersonas = 0;
 let pesoAcumuladoGessel = 0;
 let diasAcumulados = 0;
-//acumuladores lugares
+//a- contadores
+let contadorTemparadaBaja = 0;
+let contadorTemporadaAlta = 0;
+//b- acumulador
+let acumuladorPesoGessel = 0;
+//c- acumuladores lugares
 let acumuladorGessel = 0;
 let acumuladorCordoba = 0;
 let acumuladorMadryn = 0;
 let maxDiasLugar;
-let flag = 0;
+let flagDias = 0;
+//d- acumulador importes
+let importesAcumulados = 0;
+//e- 
+let maxPeso;
+let minPeso;
+let flagPeso = 0;
+let nombreMasPesado = '';
+let nombreMenosPesado = '';
 
+
+
+preguntar = prompt("Quiere ingresar datos? y/n");
 
 while(preguntar=="y")
 {
@@ -124,27 +144,31 @@ while(preguntar=="y")
     {
         pago = prompt("\nError: \nIngrese 'mercado pago' o 'tarjeta de 'credito' ").toLowerCase();
     }
+    //-------------------------------------------------------
     //a- cantidad de personas que viajan en cada temporada
+    //-------------------------------------------------------
     if(temporada=="alta")
     {
-        contadorTemporadaAlta++;
+        contadorTemporadaAlta = contadorTemporadaAlta + 1;
     }
     else
     {
-        contadorTemparadaBaja++;
+        contadorTemparadaBaja = contadorTemparadaBaja + 1;
     }
+    //-------------------------------------------------------
     //b- el peso acumulado de todos los que viajan a villa gessel
-
-    if(lugar=="villa gessel")
+    //-------------------------------------------------------
+    if(lugar == "villa gessel")
     {
-        acumuladorPesoGessel+=pesoPasajero;
+        acumuladorPesoGessel += pesoPasajero;
     }    
+    //-------------------------------------------------------
     //c- el lugar con la mayor cantidad de dias acumulados
-    
-    if(flag == 0)
+    //-------------------------------------------------------
+    if(flagDias == 0)
     {
         maxDiasLugar = cantidadDias;
-        flag = 1;
+        flagDias = 1;
     }
     else
     {
@@ -191,21 +215,58 @@ while(preguntar=="y")
     
     if(acumuladorCordoba > acumuladorGessel && acumuladorCordoba > acumuladorMadryn)
     {
-        mensaje = "El maximo acumulador es Cordoba";
+        maxDiasLugar = acumuladorCordoba;
     }
     else
     {
         if(acumuladorGessel > acumuladorCordoba && acumuladorGessel > acumuladorMadryn)
         {
-            mensaje = "El maximo acumulador es Gessel";
+            maxDiasLugar = acumuladorGessel
         }
         else
         {  
-             mensaje = "El maximo acumulador es Madryn";
+            maxDiasLugar = acumuladorMadryn;
+        }
+    }
+    //-------------------------------------------------------
+    //d- la suma de todos los importes
+    //-------------------------------------------------------
+    importesAcumulados += importeViaje;
+    preguntar = prompt("Otro usuario?? y/n: ");
+    //-------------------------------------------------------
+    //e-el nombre del más pesado de los pasajeros y el del más liviano
+    //-------------------------------------------------------
+    if(flagPeso = 0)
+    {
+        maxPeso = pesoPasajero;
+        minPeso = pesoPasajero;
+        flagPeso = 1;
+    }
+    else
+    {
+        if(pesoPasajero > maxPeso)
+        {
+            nombreMasPesado = nombreTitular;
+        }
+        else
+        {
+            if(pesoPasajero < minPeso)
+            {
+                nombreMenosPesado = nombreTitular;
+            }
         }
     }
 
-    preguntar = prompt("Otro usuario?? y/n: ");
 }
+//muestro 
+mensaje = "\n La cantidad de personas en temporada Alta es: " + contadorTemporadaAlta;
+mensaje += "\n La cantidad de personas en temporada Baja es: " + contadorTemparadaBaja;
+mensaje += "\n El peso de todos los que viajan a Villa Gessel es: " + acumuladorPesoGessel;
+mensaje += "\n El maximo acumulador de dias es : " + maxDiasLugar;
+mensaje += "\n La suma de todos los importes es : " + importesAcumulados;
+mensaje += "\n El nombre del pasajero Mas pesado es: " + nombreMasPesado;
+mensaje += "\n El nombre del pasajero Menos pesado es: " + nombreMenosPesado;
 
-mensaje="Temporada alta: "+contadorTemporadaAlta+ " Temporada baja: "+contadorTemparadaBaja; 
+alert(mensaje);
+
+}

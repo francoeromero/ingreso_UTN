@@ -192,12 +192,12 @@ while(preguntar=="y")
     //-------------------------------------------------------
     if(temporada=="alta")
     {
-        contadorTemporadaAlta = contadorTemporadaAlta + 1;
+        contadorTemporadaAlta++;
         contadorUsoAlta++;
     }
     else
     {
-        contadorTemparadaBaja = contadorTemparadaBaja + 1;
+        contadorTemparadaBaja++;
         contadorUsoBaja++;
     }
     //-------------------------------------------------------

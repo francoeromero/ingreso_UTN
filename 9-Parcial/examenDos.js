@@ -81,17 +81,17 @@ function comenzar()
             precioCarta = parseFloat(precioCarta);
         }
         //Rareza de la carta (Hay 3 tipos de cartas Comun, Rara, Super Rara)
-        rarezaCarta = prompt("Ingresar la rareza: ").toLowerCase;
+        rarezaCarta = prompt("Ingresar la rareza Comun, Rara, Super Rara: ").toLowerCase;
         while(rarezaCarta != "comun" && rarezaCarta != "rara" && rarezaCarta != "super rara")
         {
             rarezaCarta = prompt("ERROR: comun, rara o super Rara");
         }
-        //a) el porcentaje de cartas de cada TIPO
+        //a) el porcentaje de cartas de cada TIPO(Heroe, Magica, Moneda, Trampa)
         if(tipoCarta == "heroe")
         {
             contadorHeroe++;
         }
-        else
+        else 
         {
             if(tipoCarta == "magica")
             {
@@ -103,25 +103,33 @@ function comenzar()
                 {
                     contadorMoneda++;
                 }
+                //trampa
                 else
                 {
                     contadorTrampa++;
                 }
             }
         }
-        contadorCartasIngresadas++;
-        //b) la cantidad de cartas segun su rareza
+        //Rareza de la carta (Hay 3 tipos de cartas Comun, Rara, Super Rara)
+        //c) de las cartas de tipo Super Rara, se necesita saber el nombre y el precio de la carta mas cara
+        //d) de las cartas de tipo Comun, se necesita saber el tipo y el precio de la mas barata
         if(rarezaCarta == "comun")
         {
             contadorComun++;
-            //d
-            if(flagMasBarata == 0 || precioCarta < precioMin)
+            if(flagMasBarata == 0) 
+            {
+                precioMin = precioCarta;
+                flagMasBarata = 1;
+            }
+            else 
+            {
+                if(precioCarta < precioMin)
                 {
                     precioMin = precioCarta;
                     nombreComunBarata = nombreCarta;
-                    flagMasBarata = 1;
+                    tipoCartaMin =  tipoCarta;
                 }
-            //fin d
+            }
         }
         else
         {
@@ -129,28 +137,108 @@ function comenzar()
             {
                 contadorRara++;
             }
-            else
+            else //super rara
             {
                 contadorSuperRara++;
-                //c
-                if(flagMasCara == 0 || precioCarta > precioMax)
+                if(flagMasCara == 0)
                 {
                     precioMax = precioCarta;
-                    nombreSuperRaraCara = nombreCarta;
-                    flag = 1;
+                    flagMasCara = 1;
                 }
-                //fin c
+                else
+                {
+                    {
+                        if(precioCarta > precioMax)
+                        {
+                            precioMax = precioCarta;
+                            nombreSuperRaraCara = nombreCarta;
+                        }
+                    }
+                }
             }
         }
         //e) de la venta mas cara, el precio, el tipo de carta y su rareza
-        if(flagMaxTotal == 0 || precioCarta > precioMaxTotal)
+        if(flagMaxTotal == 0)
         {
             precioMaxTotal = precioCarta;
-            tipoCartaMaxTotal = precioCarta;
-            tipoCartaRarezaMaxTotal = rarezaCarta;
             flagMaxTotal = 1;
         }
+        else
+        {
+            if(precioCarta > precioMaxTotal)
+            {
+                precioMaxTotal = precioCarta;
+                tipoCartaMaxTotal = precioCarta;
+                tipoCartaRarezaMaxTotal = rarezaCarta;
+            }
+        }
 
+        // //a) el porcentaje de cartas de cada TIPO
+        // if(tipoCarta == "heroe")
+        // {
+        //     contadorHeroe++;
+        // }
+        // else
+        // {
+        //     if(tipoCarta == "magica")
+        //     {
+        //         contadorMagica++;
+        //     }
+        //     else
+        //     {
+        //         if(tipoCarta == "moneda")
+        //         {
+        //             contadorMoneda++;
+        //         }
+        //         else
+        //         {
+        //             contadorTrampa++;
+        //         }
+        //     }
+        // }
+        // contadorCartasIngresadas++;
+        // //b) la cantidad de cartas segun su rareza
+        // if(rarezaCarta == "comun")
+        // {
+        //     contadorComun++;
+        //     //d
+        //     if(flagMasBarata == 0 || precioCarta < precioMin)
+        //         {
+        //             precioMin = precioCarta;
+        //             nombreComunBarata = nombreCarta;
+        //             flagMasBarata = 1;
+        //         }
+        //     //fin d
+        // }
+        // else
+        // {
+        //     if(rarezaCarta == "rara")
+        //     {
+        //         contadorRara++;
+        //     }
+        //     else
+        //     {
+        //         contadorSuperRara++;
+        //         //c
+        //         if(flagMasCara == 0 || precioCarta > precioMax)
+        //         {
+        //             precioMax = precioCarta;
+        //             nombreSuperRaraCara = nombreCarta;
+        //             flag = 1;
+        //         }
+        //         //fin c
+        //     }
+        // }
+        // //e) de la venta mas cara, el precio, el tipo de carta y su rareza
+        // if(flagMaxTotal == 0 || precioCarta > precioMaxTotal)
+        // {
+        //     precioMaxTotal = precioCarta;
+        //     tipoCartaMaxTotal = precioCarta;
+        //     tipoCartaRarezaMaxTotal = rarezaCarta;
+        //     flagMaxTotal = 1;
+        // }
+
+        //fin
         preguntar = prompt("Otro usuario?? y/n: ");
     }
     //calculo
@@ -171,9 +259,9 @@ function comenzar()
     mensaje += "\n La cantidad de cartas super raras: " + contadorSuperRara;
     mensaje += "\n El nombre de la carta super rara mas cara es: " + nombreSuperRaraCara;
     mensaje += "\n El nombre de la carta comun mas barata es: " + nombreComunBarata;
-    mensaje += "\n Rareza de la carta mas cara" + tipoCartaRarezaMaxTotal;
-    mensaje += "\n El tipo de carta mas cara" + tipoCartaMaxTotal;
-    mensaje += "\n El precio de la mas cara" + precioMaxTotal;
+    mensaje += "\n Rareza de la carta mas cara: " + tipoCartaRarezaMaxTotal;
+    mensaje += "\n El tipo de carta mas cara: " + tipoCartaMaxTotal;
+    mensaje += "\n El precio de la mas cara: $" + precioMaxTotal;
     alert(mensaje);
 
 }

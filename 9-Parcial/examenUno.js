@@ -48,9 +48,11 @@ let diasAcumulados = 0;
 let acumuladorGessel = 0;
 let acumuladorCordoba = 0;
 let acumuladorMadryn = 0;
-let maxLugar;
-let flagLugar = 0;
-do
+let maxDiasLugar;
+let flag = 0;
+
+
+while(preguntar=="y")
 {
     //pido al usuario el dato que quiero(Nombre del titular)
     nombreTitular = prompt("Ingrese nombre del titular: ").toLowerCase();
@@ -64,7 +66,7 @@ do
     //valido 
     while(lugar != "cordoba" && lugar != "puerto madryn" && lugar != "villa gessel")
     {
-        lugar = prompt("\n Error, ingrese los 3 lugares disponibles correctamente: \n Puerto Madryn, Villa Gessel y Cordoba ").toLowerCase;
+        lugar = prompt("\n Error, ingrese los 3 lugares disponibles correctamente: \n Puerto Madryn, Villa Gessel y Cordoba ").toLowerCase();
     }
     //pido al usuario la temporada
     temporada = prompt("\n Ingrese temporada: \n alta o baja ").toLowerCase();
@@ -123,17 +125,30 @@ do
         pago = prompt("\nError: \nIngrese 'mercado pago' o 'tarjeta de 'credito' ").toLowerCase();
     }
     //a- cantidad de personas que viajan en cada temporada
-    cantidadPersonas = cantidadPersonas + 1;
-    //b- el peso acumulado de todos los que viajan a villa gessel
-    pesoAcumuladoGessel = pesoAcumuladoGessel + pesoPasajero;
-    //c- el lugar con la mayor cantidad de dias acumulados
-    if(flagLugar == 0){
-        maxLugar = cantidadDias;
-        flagLugar = 1;
+    if(temporada=="alta")
+    {
+        contadorTemporadaAlta++;
     }
     else
     {
-        if(cantidadDias > maxLugar)
+        contadorTemparadaBaja++;
+    }
+    //b- el peso acumulado de todos los que viajan a villa gessel
+
+    if(lugar=="villa gessel")
+    {
+        acumuladorPesoGessel+=pesoPasajero;
+    }    
+    //c- el lugar con la mayor cantidad de dias acumulados
+    
+    if(flag == 0)
+    {
+        maxDiasLugar = cantidadDias;
+        flag = 1;
+    }
+    else
+    {
+        if( cantidadDias > maxDiasLugar)
         {
             if(lugar == "cordoba")
             {
@@ -151,8 +166,46 @@ do
                 }
             }
         }
+        else
+        {
+            if(cantidadDias == maxDiasLugar)
+            {
+                if(lugar == "cordoba")
+                {
+                    acumuladorCordoba = acumuladorCordoba + cantidadDias; 
+                }
+                else
+                {
+                    if(lugar == "puerto madryn")
+                    {
+                        acumuladorMadryn = acumuladorMadryn + cantidadDias;
+                    }
+                    else
+                    {
+                        acumuladorGessel = acumuladorGessel + cantidadDias;
+                    }
+                }
+            }
+        }
+    }
+    
+    if(acumuladorCordoba > acumuladorGessel && acumuladorCordoba > acumuladorMadryn)
+    {
+        mensaje = "El maximo acumulador es Cordoba";
+    }
+    else
+    {
+        if(acumuladorGessel > acumuladorCordoba && acumuladorGessel > acumuladorMadryn)
+        {
+            mensaje = "El maximo acumulador es Gessel";
+        }
+        else
+        {  
+             mensaje = "El maximo acumulador es Madryn";
+        }
     }
 
-    preguntar = confirm("Desea ingresar otro pasajero? ");
-}while(preguntar);
+    preguntar = prompt("Otro usuario?? y/n: ");
+}
 
+mensaje="Temporada alta: "+contadorTemporadaAlta+ " Temporada baja: "+contadorTemparadaBaja; 

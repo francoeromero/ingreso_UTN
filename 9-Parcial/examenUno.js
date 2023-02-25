@@ -68,6 +68,9 @@ let flagPeso = 0;
 let nombreMasPesado = '';
 let nombreMenosPesado = '';
 //f bandera importe mas alto
+let acumuladorImporteCordoba = 0;
+let acumuladorImporteGessel = 0;
+let acumuladorImporteMadryn = 0;
 let maxImporte;
 let lugarMayorImporte = '';
 let flagImporte = 0;
@@ -81,11 +84,18 @@ let contadorMercadoPago = 0;
 let contadorTarjeta = 0;
 let maxPago;
 //i bandera temporada
+let contadorUsoAlta = 0;
+let contadorUsoBaja = 0;
+
 let flagTemporada = 0;
 let contadorAlta;
 let contadorBaja;
 let temporadaMasViajada;
 //j bandera pasajeros
+let contadorCordobaPasajeros = 0;
+let contadorGesselPasajeros = 0 ;
+let contadorMadrynPasajeros = 0;
+
 let flagPasajeros = 0;
 let pasajerosGessel = 0;
 let pasajerosCordoba = 0;
@@ -103,9 +113,7 @@ let contadorMujeres = 0;
 let porcentajeMujeres;
 let porcentajeHombres;
 
-
-
-preguntar = prompt("Quiere ingresar datos? y/n");
+preguntar = "y";
 
 while(preguntar=="y")
 {
@@ -185,10 +193,12 @@ while(preguntar=="y")
     if(temporada=="alta")
     {
         contadorTemporadaAlta = contadorTemporadaAlta + 1;
+        contadorUsoAlta++;
     }
     else
     {
         contadorTemparadaBaja = contadorTemparadaBaja + 1;
+        contadorUsoBaja++;
     }
     //-------------------------------------------------------
     //b- el peso acumulado de todos los que viajan a villa gessel
@@ -200,271 +210,379 @@ while(preguntar=="y")
     //-------------------------------------------------------
     //c- el lugar con la mayor cantidad de dias acumulados
     //-------------------------------------------------------
-    if(flagDias == 0)
+    if(lugar == "cordoba")
     {
-        maxDiasLugar = cantidadDias;
-        flagDias = 1;
+        acumuladorCordoba = acumuladorCordoba + cantidadDias;
+        acumuladorImporteCordoba += importeViaje; 
+        contadorCordobaPasajeros++;
     }
     else
     {
-        if( cantidadDias > maxDiasLugar)
+        if(lugar == "puerto madryn")
         {
-            if(lugar == "cordoba")
-            {
-                acumuladorCordoba = acumuladorCordoba + cantidadDias;
-            }
-            else
-            {
-                if(lugar == "puerto madryn")
-                {
-                    acumuladorMadryn = acumuladorMadryn + cantidadDias;
-                }
-                else
-                {
-                    acumuladorGessel = acumuladorGessel + cantidadDias;
-                }
-            }
+            acumuladorMadryn = acumuladorMadryn + cantidadDias;
+            acumuladorImporteMadryn += importeViaje;
+            contadorMadrynPasajeros++;
         }
         else
         {
-            if(cantidadDias == maxDiasLugar)
-            {
-                if(lugar == "cordoba")
-                {
-                    acumuladorCordoba = acumuladorCordoba + cantidadDias; 
-                }
-                else
-                {
-                    if(lugar == "puerto madryn")
-                    {
-                        acumuladorMadryn = acumuladorMadryn + cantidadDias;
-                    }
-                    else
-                    {
-                        acumuladorGessel = acumuladorGessel + cantidadDias;
-                    }
-                }
-            }
+            acumuladorGessel = acumuladorGessel + cantidadDias;
+            acumuladorImporteGessel += importeViaje;
+            contadorGesselPasajeros++;
         }
     }
-    
-    if(acumuladorCordoba > acumuladorGessel && acumuladorCordoba > acumuladorMadryn)
-    {
-        maxDiasLugar = acumuladorCordoba;
-    }
-    else
-    {
-        if(acumuladorGessel > acumuladorCordoba && acumuladorGessel > acumuladorMadryn)
-        {
-            maxDiasLugar = acumuladorGessel
-        }
-        else
-        {  
-            maxDiasLugar = acumuladorMadryn;
-        }
-    }
+    // if(flagDias == 0 || cantidadDias > maxDiasLugar)
+    // {
+    //     maxDiasLugar = cantidadDias;
+    //     flagDias = 1;
+    // }
+    // if(flagDias == 0)
+    // {
+    //     maxDiasLugar = cantidadDias;
+    //     flagDias = 1;
+    // }
+    // else
+    // {
+    //     if( cantidadDias > maxDiasLugar)
+    //     {
+    //         if(lugar == "cordoba")
+    //         {
+    //             acumuladorCordoba = acumuladorCordoba + cantidadDias;
+    //         }
+    //         else
+    //         {
+    //             if(lugar == "puerto madryn")
+    //             {
+    //                 acumuladorMadryn = acumuladorMadryn + cantidadDias;
+    //             }
+    //             else
+    //             {
+    //                 acumuladorGessel = acumuladorGessel + cantidadDias;
+    //             }
+    //         }
+    //     }
+    //     else
+    //     {
+    //         if(cantidadDias == maxDiasLugar)
+    //         {
+    //             if(lugar == "cordoba")
+    //             {
+    //                 acumuladorCordoba = acumuladorCordoba + cantidadDias; 
+    //             }
+    //             else
+    //             {
+    //                 if(lugar == "puerto madryn")
+    //                 {
+    //                     acumuladorMadryn = acumuladorMadryn + cantidadDias;
+    //                 }
+    //                 else
+    //                 {
+    //                     acumuladorGessel = acumuladorGessel + cantidadDias;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     //-------------------------------------------------------
     //d- la suma de todos los importes
     //-------------------------------------------------------
     importesAcumulados += importeViaje;
-    preguntar = prompt("Otro usuario?? y/n: ");
     //-------------------------------------------------------
     //e-el nombre del más pesado de los pasajeros y el del más liviano
     //-------------------------------------------------------
-    if(flagPeso == 0)
+    if(flagPeso == 0 || pesoPasajero > maxPeso)
     {
         maxPeso = pesoPasajero;
-        minPeso = pesoPasajero;
-        flagPeso = 1;
         nombreMasPesado = nombreTitular;
-        nombreMenosPesado = nombreTitular;
     }
-    else
+    if(flagPeso == 0 || pesoPasajero < minPeso)
     {
-        if(pesoPasajero > maxPeso)
-        {
-            maxPeso = pesoPasajero;
-            nombreMasPesado = nombreTitular;
-        }
-        else
-        {
-            if(pesoPasajero < minPeso)
-            {
-                minPeso = pesoPasajero;
-                nombreMenosPesado = nombreTitular;
-            }
-        }
-    }
+        minPeso = pesoPasajero;
+        nombreMenosPesado = nombreTitular;
+        flagPeso = 1;
+    }    
+    
+    
+    // if(flagPeso == 0)
+    // {
+    //     maxPeso = pesoPasajero;
+    //     minPeso = pesoPasajero;
+    //     flagPeso = 1;
+    //     nombreMasPesado = nombreTitular;
+    //     nombreMenosPesado = nombreTitular;
+    // }
+    // else
+    // {
+    //     if(pesoPasajero > maxPeso)
+    //     {
+    //         maxPeso = pesoPasajero;
+    //         nombreMasPesado = nombreTitular;
+    //     }
+    //     else
+    //     {
+    //         if(pesoPasajero < minPeso)
+    //         {
+    //             minPeso = pesoPasajero;
+    //             nombreMenosPesado = nombreTitular;
+    //         }
+    //     }
+    // }
     //-------------------------------------------------------
     //f-el lugar donde se pagó el mayor importe
     //-------------------------------------------------------
-    if(flagImporte == 0)
-    {
-        maxImporte = importeViaje;
-        flagImporte = 1;
-        lugarMayorImporte = lugar;
-    }
-    else
-    {
-        if(importeViaje > maxImporte)
-        {
-            maxImporte = importeViaje;
-            lugarMayorImporte = lugar;
-        }
-    }
+
+    // if(flagImporte == 0)
+    // {
+    //     maxImporte = importeViaje;
+    //     flagImporte = 1;
+    //     lugarMayorImporte = lugar;
+    // }
+    // else
+    // {
+    //     if(importeViaje > maxImporte)
+    //     {
+    //         maxImporte = importeViaje;
+    //         lugarMayorImporte = lugar;
+    //     }
+    // }
     //-------------------------------------------------------
     //g-el nombre de la mujer más alta
-    //-------------------------------------------------------
-    if(flagMujerAlta == 0)
-    {
-        maxAltura = alturaPasajero;
-        flagMujerAlta = 1;
-        nombreMujerAlta = nombreTitular;
-    }
-    else
-    {
-        if(alturaPasajero > maxAltura && sexoPasajero == 'f')
-        {
-            maxAltura = alturaPasajero;
-            nombreMujerAlta = nombreTitular;
-        }
-    }
-    //-------------------------------------------------------
-    //h- Cuál fue la forma de pago más utilizada
-    //-------------------------------------------------------
-    if(flagPago == 0)
-    {
-        maxPago = pago;
-        flagPago = 1;
-    }
-    else
-    {
-        if(pago == "mercado pago")
-        {
-            contadorMercadoPago++;
-        }
-        else
-        {
-            contadorTarjeta++;
-        }
-    }
-    if(contadorMercadoPago > contadorTarjeta)
-    {
-        maxPago = "Mercado pago";
-    }
-    else
-    {
-        if(contadorMercadoPago == contadorTarjeta)
-        {
-            maxPago = "ambos";
-        }
-        else
-        {
-        maxPago = "Tarjeta de Credito";
-        }
-    }
-    //-------------------------------------------------------
-    //i- en qué temporada se viajó más
-    //-------------------------------------------------------
-    if(flagTemporada == 0)
-    {
-        temporadaMasViajada = temporada;
-        flagTemporada = 1;
-    }
-    else
-    {
-        if(temporada == "alta")
-        {
-            contadorAlta++;
-        }
-        else
-        {
-            contadorBaja++;
-        }
-    }
-    if(contadorAlta > contadorBaja)
-    {
-        temporadaMasViajada = "Alta";
-    }
-    else
-    {
-        if(contadorAlta == contadorBaja)
-        temporadaMasViajada = "Ambos";
-        else
-        {
-            temporadaMasViajada = "Baja";
-        }
-    }
-     //-------------------------------------------------------
-    //j- qué lugar tuvo más pasajeros
-     //-------------------------------------------------------
-    if(flagPasajeros == 0)
-    {
-        lugarMasPasajeros = lugar;
-        flagPasajeros = 1;
-    }
-    else
-    {
-        if(lugar == "cordoba")
-        {
-            pasajerosCordoba++;
-        }
-        else
-        {
-            if(lugar == "puerto madryn")
-            {
-                pasajerosMadryn++;
-            }
-            else
-            {
-                pasajerosGessel++;
-            }
-        }
-    }
-    if(pasajerosCordoba > pasajerosGessel && pasajerosCordoba > pasajerosMadryn)
-    {
-        lugarMasPasajeros = "Cordoba";
-    }
-    else 
-    {
-        if(pasajerosGessel > pasajerosCordoba && pasajerosGessel > pasajerosMadryn)
-        {
-            lugarMasPasajeros = "Villa Gessel";
-        }
-        else
-        {
-            lugarMasPasajeros = "Puerto Madryn";
-        }
-    }
-    //-------------------------------------------------------
-    //k- porcentaje equipaje a mano
-    //-------------------------------------------------------
-    if(equipaje == "si")
-    {
-        contadorSi++;
-    }
-    else
-    {
-        contadorNo++;
-    }
-    contadorIngresados++;
-
-    porcentajeEquipaje = contadorIngresados / contadorSi * 100;
-    //-------------------------------------------------------
-    //l- que porcentaje hay de cada sexo
     //-------------------------------------------------------
     if(sexoPasajero == "f")
     {
         contadorMujeres++;
+        if(flagMujerAlta == 0 || alturaPasajero > maxAltura)
+        {
+            maxAltura = alturaPasajero;
+            flagMujerAlta = 1;
+        }  
     }
     else
     {
         contadorHombres++;
     }
+    
+    // if(flagMujerAlta == 0)
+    // {
+    //     maxAltura = alturaPasajero;
+    //     flagMujerAlta = 1;
+    //     nombreMujerAlta = nombreTitular;
+    // }
+    // else
+    // {
+    //     if(alturaPasajero > maxAltura && sexoPasajero == 'f')
+    //     {
+    //         maxAltura = alturaPasajero;
+    //         nombreMujerAlta = nombreTitular;
+    //     }
+    // }
+    //-------------------------------------------------------
+    //h- Cuál fue la forma de pago más utilizada
+    //-------------------------------------------------------
+    if(pago == "mercado pago")
+    {
+        contadorMercadoPago++;
+    }
+    else
+    {
+        contadorTarjeta++;
+    }
+    // if(flagPago == 0)
+    // {
+    //     maxPago = pago;
+    //     flagPago = 1;
+    // }
+    // else
+    // {
+    //     if(pago == "mercado pago")
+    //     {
+    //         contadorMercadoPago++;
+    //     }
+    //     else
+    //     {
+    //         contadorTarjeta++;
+    //     }
+    // }
+    // if(contadorMercadoPago > contadorTarjeta)
+    // {
+    //     maxPago = "Mercado pago";
+    // }
+    // else
+    // {
+    //     if(contadorMercadoPago == contadorTarjeta)
+    //     {
+    //         maxPago = "ambos";
+    //     }
+    //     else
+    //     {
+    //         maxPago = "Tarjeta de Credito";
+    //     }
+    // }
+    //-------------------------------------------------------
+    //i- en qué temporada se viajó más
+    //-------------------------------------------------------
+
+    // if(flagTemporada == 0)
+    // {
+    //     temporadaMasViajada = temporada;
+    //     flagTemporada = 1;
+    // }
+    // else
+    // {
+    //     if(temporada == "alta")
+    //     {
+    //         contadorAlta++;
+    //     }
+    //     else
+    //     {
+    //         contadorBaja++;
+    //     }
+    // }
+    // if(contadorAlta > contadorBaja)
+    // {
+    //     temporadaMasViajada = "Alta";
+    // }
+    // else
+    // {
+    //     if(contadorAlta == contadorBaja)
+    //     temporadaMasViajada = "Ambos";
+    //     else
+    //     {
+    //         temporadaMasViajada = "Baja";
+    //     }
+    // }
+    //-------------------------------------------------------
+    //j- qué lugar tuvo más pasajeros
+    //-------------------------------------------------------
+    // if(flagPasajeros == 0)
+    // {
+    //     lugarMasPasajeros = lugar;
+    //     flagPasajeros = 1;
+    // }
+    // else
+    // {
+    //     if(lugar == "cordoba")
+    //     {
+    //         pasajerosCordoba++;
+    //     }
+    //     else
+    //     {
+    //         if(lugar == "puerto madryn")
+    //         {
+    //             pasajerosMadryn++;
+    //         }
+    //         else
+    //         {
+    //             pasajerosGessel++;
+    //         }
+    //     }
+    // }
+    // if(pasajerosCordoba > pasajerosGessel && pasajerosCordoba > pasajerosMadryn)
+    // {
+    //     lugarMasPasajeros = "Cordoba";
+    // }
+    // else 
+    // {
+    //     if(pasajerosGessel > pasajerosCordoba && pasajerosGessel > pasajerosMadryn)
+    //     {
+    //         lugarMasPasajeros = "Villa Gessel";
+    //     }
+    //     else
+    //     {
+    //         lugarMasPasajeros = "Puerto Madryn";
+    //     }
+    // }
+    // //-------------------------------------------------------
+    // //k- porcentaje equipaje a mano
+    // //-------------------------------------------------------
+    if(equipaje == "si")
+    {
+        contadorSi++;
+    }
     contadorIngresados++;
-    porcentajeHombres = contadorIngresados / contadorHombres * 100;
-    porcentajeMujeres = contadorIngresados / contadorMujeres * 100;
+    
+    //-------------------------------------------------------
+    //l- que porcentaje hay de cada sexo
+    //-------------------------------------------------------
+    // if(sexoPasajero == "f")
+    // {
+    //     contadorMujeres++;
+    // }
+    // else
+    // {
+    //     contadorHombres++;
+    // }
+    // contadorIngresados++;
+    // porcentajeHombres = contadorIngresados / contadorHombres * 100;
+    // porcentajeMujeres = contadorIngresados / contadorMujeres * 100;
+    
+    preguntar = prompt("Otro usuario?? y/n: ");
 }
+//c - 
+if(acumuladorCordoba > acumuladorGessel && acumuladorCordoba > acumuladorMadryn)
+{
+    maxDiasLugar = acumuladorCordoba;
+}
+else
+{
+    if(acumuladorGessel > acumuladorCordoba && acumuladorGessel > acumuladorMadryn)
+    {
+        maxDiasLugar = acumuladorGessel;
+    }
+    else
+    {  
+        maxDiasLugar = acumuladorMadryn;
+    }
+}
+//f
+if (acumuladorImporteCordoba > acumuladorImporteGessel && acumuladorImporteCordoba > acumuladorImporteMadryn)
+{
+    maxImporte = "Cordoba es el mayor importe";
+}
+else 
+{
+    if(acumuladorGessel > acumuladorCordoba && acumuladorGessel > acumuladorImporteMadryn)
+    {
+        maxImporte = "Gessel es el mayor importe";
+    }
+    else
+    {
+        maxImporte = "Madryn es el mayor importe";
+    }
+}
+//h
+if(contadorMercadoPago > contadorTarjeta)
+{
+    maxPago = "Mercado Pago";
+}
+else
+{
+    maxPago = "Tarjeta de credito";
+}
+//j
+if(contadorCordobaPasajeros > contadorGesselPasajeros && contadorCordobaPasajeros > contadorMadrynPasajeros)
+{
+    lugarMasPasajeros = "Cordoba";
+}
+else 
+{
+    if(contadorGesselPasajeros > contadorCordobaPasajeros && contadorGesselPasajeros > contadorMadrynPasajeros)
+    {
+        lugarMasPasajeros = "Villa Gessel";
+    }
+    else
+    {
+        lugarMasPasajeros = "Puerto Madryn";
+    }
+}
+//k
+// contadorIngresados___100
+// contadorSi_____x
+porcentajeEquipaje = (contadorSi * 100) / contadorIngresados;
+//l
+porcentajeHombres = (contadorHombres * 100) / contadorIngresados;
+porcentajeMujeres = (contadorMujeres * 100) / contadorIngresados;
+
 //muestro 
 mensaje = "\n La cantidad de personas en temporada Alta es: " + contadorTemporadaAlta;
 mensaje += "\n La cantidad de personas en temporada Baja es: " + contadorTemparadaBaja;
@@ -478,8 +596,8 @@ mensaje += "\n El nombre de la mujer mas alta es: " + nombreMujerAlta;
 mensaje += "\n La forma de pago mas utilizada es: " + maxPago;
 mensaje += "\n La temporada mas viajada es: " + temporadaMasViajada;
 mensaje += "\n El lugar con mas pasajeros es: " + lugarMasPasajeros;
-mensaje += "\n El porcentaje de equipaje a mano es: " + porcentajeEquipaje.toFixed(0) + "%";
-mensaje += "\n EL porcentaje de Hombres es : " + porcentajeHombres.toFixed(0) + "%";
-mensaje += "\n El porcentaje de Mujeres es: " + porcentajeMujeres.toFixed(0) + "%";
+mensaje += "\n El porcentaje de equipaje a mano es: " + porcentajeEquipaje + "%";
+mensaje += "\n EL porcentaje de Hombres es : " + porcentajeHombres + "%";
+mensaje += "\n El porcentaje de Mujeres es: " + porcentajeMujeres + "%";
 alert(mensaje);
 }

@@ -61,12 +61,20 @@ let maxDiasLugar;
 let flagDias = 0;
 //d- acumulador importes
 let importesAcumulados = 0;
-//e- 
+//e- bandera
 let maxPeso;
 let minPeso;
 let flagPeso = 0;
 let nombreMasPesado = '';
 let nombreMenosPesado = '';
+//f bandera
+let maxImporte;
+let lugarMayorImporte = '';
+let flagImporte = 0;
+//g
+let flagMujerAlta = 0;
+let maxAltura;
+let nombreMujerAlta = '';
 
 
 
@@ -236,27 +244,67 @@ while(preguntar=="y")
     //-------------------------------------------------------
     //e-el nombre del más pesado de los pasajeros y el del más liviano
     //-------------------------------------------------------
-    if(flagPeso = 0)
+    if(flagPeso == 0)
     {
         maxPeso = pesoPasajero;
         minPeso = pesoPasajero;
         flagPeso = 1;
+        nombreMasPesado = nombreTitular;
+        nombreMenosPesado = nombreTitular;
     }
     else
     {
         if(pesoPasajero > maxPeso)
         {
+            maxPeso = pesoPasajero;
             nombreMasPesado = nombreTitular;
         }
         else
         {
             if(pesoPasajero < minPeso)
             {
+                minPeso = pesoPasajero;
                 nombreMenosPesado = nombreTitular;
             }
         }
     }
-
+    //-------------------------------------------------------
+    //f-el lugar donde se pagó el mayor importe
+    //-------------------------------------------------------
+    if(flagImporte == 0)
+    {
+        maxImporte = importeViaje;
+        flagImporte = 1;
+    }
+    else
+    {
+        if(importeViaje > maxImporte)
+        {
+            maxImporte = importeViaje;
+            lugarMayorImporte = lugar;
+        }
+    }
+    //-------------------------------------------------------
+    //g-el nombre de la mujer más alta
+    //-------------------------------------------------------
+    if(flagMujerAlta == 0)
+    {
+        maxAltura = alturaPasajero;
+        flagMujerAlta = 1;
+        nombreMujerAlta = nombreTitular;
+    }
+    else
+    {
+        if(alturaPasajero > maxAltura && sexoPasajero == 'f')
+        {
+            maxAltura = alturaPasajero;
+            nombreMujerAlta = nombreTitular;
+        }
+    }
+    //-------------------------------------------------------
+    //h- Cuál fue la forma de pago más utilizada
+    //-------------------------------------------------------
+    
 }
 //muestro 
 mensaje = "\n La cantidad de personas en temporada Alta es: " + contadorTemporadaAlta;
@@ -266,7 +314,7 @@ mensaje += "\n El maximo acumulador de dias es : " + maxDiasLugar;
 mensaje += "\n La suma de todos los importes es : " + importesAcumulados;
 mensaje += "\n El nombre del pasajero Mas pesado es: " + nombreMasPesado;
 mensaje += "\n El nombre del pasajero Menos pesado es: " + nombreMenosPesado;
-
+mensaje += "\n El nombre del Lugar donde se pago mas: " + lugarMayorImporte;
+mensaje += "\n El nombre de la mujer mas alta es: " + nombreMujerAlta;
 alert(mensaje);
-
 }

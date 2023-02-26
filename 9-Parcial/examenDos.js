@@ -32,6 +32,7 @@ function comenzar()
     let precioCarta;
     let rarezaCarta;
     //a
+    let cartasIngresadas = 0;
     let contadorCartasIngresadas = 0;
     let contadorMagica = 0;
     let contadorMoneda = 0;
@@ -64,34 +65,34 @@ function comenzar()
         nombreCarta = prompt("Ingrese el nombre de la carta: ");
         while(isNaN(nombreCarta) == false)
         {  
-            nombreCarta = prompt("Error: ingrese un nombre:");
+            nombreCarta = prompt("ERROR: ingrese un nombre:");
         }
         //Tipo de carta (Heroe, Magica, Moneda, Trampa)
         tipoCarta = prompt("Ingrese tipo de carta (Heroe, Magica, Moneda, Trampa): ").toLowerCase();
         while(tipoCarta != "heroe" && tipoCarta != "magica" && tipoCarta != "moneda" && tipoCarta != "trampa")
         {
-            tipoCarta = prompt("Error: Heroe, Magica, Moneda, Trampa ");
+            tipoCarta = prompt("ERROR: Heroe, Magica, Moneda, Trampa ");
         }
         //Precio de la carta
         precioCarta = prompt("Ingrese el precio de la carta");
         precioCarta = parseFloat(precioCarta);
         while(isNaN(precioCarta) == true)
         {
-            precioCarta = prompt("Error: ingrese el numero");
+            precioCarta = prompt("ERROR: ingrese el numero");
             precioCarta = parseFloat(precioCarta);
         }
         //Rareza de la carta (Hay 3 tipos de cartas Comun, Rara, Super Rara)
-        rarezaCarta = prompt("Ingresar la rareza Comun, Rara, Super Rara: ").toLowerCase;
+        rarezaCarta = prompt("Ingrese su rareza: comun, rara o super rara");
         while(rarezaCarta != "comun" && rarezaCarta != "rara" && rarezaCarta != "super rara")
         {
-            rarezaCarta = prompt("ERROR: comun, rara o super Rara");
+            rarezaCarta = prompt("ERROR: comun, rara o super rara");
         }
         //a) el porcentaje de cartas de cada TIPO(Heroe, Magica, Moneda, Trampa)
         if(tipoCarta == "heroe")
         {
             contadorHeroe++;
         }
-        else 
+        else
         {
             if(tipoCarta == "magica")
             {
@@ -103,75 +104,108 @@ function comenzar()
                 {
                     contadorMoneda++;
                 }
-                //trampa
                 else
                 {
-                    contadorTrampa++;
-                }
-            }
-        }
-        //Rareza de la carta (Hay 3 tipos de cartas Comun, Rara, Super Rara)
-        //c) de las cartas de tipo Super Rara, se necesita saber el nombre y el precio de la carta mas cara
-        //d) de las cartas de tipo Comun, se necesita saber el tipo y el precio de la mas barata
-        if(rarezaCarta == "comun")
-        {
-            contadorComun++;
-            if(flagMasBarata == 0) 
-            {
-                precioMin = precioCarta;
-                flagMasBarata = 1;
-            }
-            else 
-            {
-                if(precioCarta < precioMin)
-                {
-                    precioMin = precioCarta;
-                    nombreComunBarata = nombreCarta;
-                    tipoCartaMin =  tipoCarta;
-                }
-            }
-        }
-        else
-        {
-            if(rarezaCarta == "rara")
-            {
-                contadorRara++;
-            }
-            else //super rara
-            {
-                contadorSuperRara++;
-                if(flagMasCara == 0)
-                {
-                    precioMax = precioCarta;
-                    flagMasCara = 1;
-                }
-                else
-                {
+                    if(tipoCarta == "trampa")
                     {
-                        if(precioCarta > precioMax)
-                        {
-                            precioMax = precioCarta;
-                            nombreSuperRaraCara = nombreCarta;
-                        }
+                        contadorTrampa++;
                     }
                 }
             }
         }
-        //e) de la venta mas cara, el precio, el tipo de carta y su rareza
-        if(flagMaxTotal == 0)
-        {
-            precioMaxTotal = precioCarta;
-            flagMaxTotal = 1;
-        }
-        else
-        {
-            if(precioCarta > precioMaxTotal)
-            {
-                precioMaxTotal = precioCarta;
-                tipoCartaMaxTotal = precioCarta;
-                tipoCartaRarezaMaxTotal = rarezaCarta;
-            }
-        }
+        cartasIngresadas++;
+
+
+        //segundo intento
+        // //a) el porcentaje de cartas de cada TIPO(Heroe, Magica, Moneda, Trampa)
+        // if(tipoCarta == "heroe")
+        // {
+        //     contadorHeroe++;
+        // }
+        // else 
+        // {
+        //     if(tipoCarta == "magica")
+        //     {
+        //         contadorMagica++;
+        //     }
+        //     else
+        //     {
+        //         if(tipoCarta == "moneda")
+        //         {
+        //             contadorMoneda++;
+        //         }
+        //         //trampa
+        //         else
+        //         {
+        //             contadorTrampa++;
+        //         }
+        //     }
+        // }
+        // //Rareza de la carta (Hay 3 tipos de cartas Comun, Rara, Super Rara)
+        // //c) de las cartas de tipo Super Rara, se necesita saber el nombre y el precio de la carta mas cara
+        // //d) de las cartas de tipo Comun, se necesita saber el tipo y el precio de la mas barata
+        // if(rarezaCarta == "comun")
+        // {
+        //     contadorComun++;
+        //     if(flagMasBarata == 0) 
+        //     {
+        //         precioMin = precioCarta;
+        //         flagMasBarata = 1;
+        //     }
+        //     else 
+        //     {
+        //         if(precioCarta < precioMin)
+        //         {
+        //             precioMin = precioCarta;
+        //             nombreComunBarata = nombreCarta;
+        //             tipoCartaMin =  tipoCarta;
+        //         }
+        //     }
+        // }
+        // else
+        // {
+        //     if(rarezaCarta == "rara")
+        //     {
+        //         contadorRara++;
+        //     }
+        //     else //super rara
+        //     {
+        //         contadorSuperRara++;
+        //         if(flagMasCara == 0)
+        //         {
+        //             precioMax = precioCarta;
+        //             flagMasCara = 1;
+        //         }
+        //         else
+        //         {
+        //             {
+        //                 if(precioCarta > precioMax)
+        //                 {
+        //                     precioMax = precioCarta;
+        //                     nombreSuperRaraCara = nombreCarta;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // //e) de la venta mas cara, el precio, el tipo de carta y su rareza
+        // if(flagMaxTotal == 0)
+        // {
+        //     precioMaxTotal = precioCarta;
+        //     flagMaxTotal = 1;
+        // }
+        // else
+        // {
+        //     if(precioCarta > precioMaxTotal)
+        //     {
+        //         precioMaxTotal = precioCarta;
+        //         tipoCartaMaxTotal = precioCarta;
+        //         tipoCartaRarezaMaxTotal = rarezaCarta;
+        //     }
+        // }
+
+
+        //primer intento
 
         // //a) el porcentaje de cartas de cada TIPO
         // if(tipoCarta == "heroe")
@@ -243,25 +277,28 @@ function comenzar()
     }
     //calculo
     //a
-    porcentajeHeroe =(contadorHeroe*100) / contadorCartasIngresadas;
-    porcentajeMoneda =(contadorMoneda*100) / contadorCartasIngresadas;
-    porcentajeMagica =(contadorMagica*100) / contadorCartasIngresadas;
-    porcentajeTrampa =(contadorTrampa*100) / contadorCartasIngresadas;
+    //porcentajeEquipaje = (contadorSi * 100) / contadorIngresados;
+    
+    porcentajeHeroe = (contadorHeroe * 100) / cartasIngresadas;
+    porcentajeMoneda = (contadorMoneda * 100) / cartasIngresadas;
+    porcentajeMagica = (contadorMagica*100)  / cartasIngresadas;
+    porcentajeTrampa = (contadorTrampa*100) / cartasIngresadas;
+    
     //b
 
     //muestro
-    mensaje = "\n El porcentaje de Heroe es: " + porcentajeHeroe;
-    mensaje += "\n El porcentaje de Moneda es: " + porcentajeMoneda;
-    mensaje += "\n El porcentaje de Magica es: " + porcentajeMagica;
-    mensaje += "\n El porcentaje de Trampa es: " + porcentajeTrampa;
-    mensaje += "\n La cantidad de cartas comunes son : " + contadorComun;
-    mensaje += "\n La cantidad de cartas raras son: " + contadorRara;
-    mensaje += "\n La cantidad de cartas super raras: " + contadorSuperRara;
-    mensaje += "\n El nombre de la carta super rara mas cara es: " + nombreSuperRaraCara;
-    mensaje += "\n El nombre de la carta comun mas barata es: " + nombreComunBarata;
-    mensaje += "\n Rareza de la carta mas cara: " + tipoCartaRarezaMaxTotal;
-    mensaje += "\n El tipo de carta mas cara: " + tipoCartaMaxTotal;
-    mensaje += "\n El precio de la mas cara: $" + precioMaxTotal;
+    mensaje = "\n El porcentaje de Heroe es: " + porcentajeHeroe + "%";
+    mensaje += "\n El porcentaje de Moneda es: " + porcentajeMoneda + "%";
+    mensaje += "\n El porcentaje de Magica es: " + porcentajeMagica + "%";
+    mensaje += "\n El porcentaje de Trampa es: " + porcentajeTrampa + "%";
+    // mensaje += "\n La cantidad de cartas comunes son : " + contadorComun;
+    // mensaje += "\n La cantidad de cartas raras son: " + contadorRara;
+    // mensaje += "\n La cantidad de cartas super raras: " + contadorSuperRara;
+    // mensaje += "\n El nombre de la carta super rara mas cara es: " + nombreSuperRaraCara;
+    // mensaje += "\n El nombre de la carta comun mas barata es: " + nombreComunBarata;
+    // mensaje += "\n Rareza de la carta mas cara: " + tipoCartaRarezaMaxTotal;
+    // mensaje += "\n El tipo de carta mas cara: " + tipoCartaMaxTotal;
+    // mensaje += "\n El precio de la mas cara: $" + precioMaxTotal;
     alert(mensaje);
 
 }

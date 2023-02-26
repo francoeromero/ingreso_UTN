@@ -34,11 +34,11 @@ let diaMantecaMaximo;
 let precioMantecaMaximo;
 let flagManteca = 0;
 //c
-let medialunasTopeSemanal = "";
+let medialunasTopeSemanal;
 let acumuladorHarina = 0;
 let acumuladorAzucar = 0;
 let acumuladorManteca = 0;
-while(preguntar)
+while(preguntar == "y")
 {
     cantidadManteca = prompt("Ingrese la cantidad de MANTECA en KG:");
     cantidadManteca = parseFloat(cantidadManteca);
@@ -80,9 +80,9 @@ while(preguntar)
     {
         precioMantecaMaximo = cantidadManteca;
         diaMantecaMaximo = contadorDias;
-        flagManteca == 1;
+        flagManteca = 1;
     }
-    preguntar = confirm("Quiere agregar otra persona ? y/n");
+    preguntar = confirm("Quiere agregar insumos ? y/n");
 }
 //a
 promedioHarina = contadorHarina / contadorIngresados;
@@ -97,7 +97,6 @@ else
 {
     medialunasTopeSemanal = "\n Los insumos todavia no alcanzaron para completar la semana";
 }
-
 mensaje =  medialunasTopeSemanal;
 mensaje += "\n El promedio de HARINA es: " + promedioHarina;
 mensaje += "\n El promedio de AZUCAR es: " + promedioAzucar;

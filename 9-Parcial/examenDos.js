@@ -43,17 +43,17 @@ function comenzar()
     let porcentajeHeroe;
     let porcentajeTrampa;
     //b
-    let contadorSuperRara;
-    let contadorRara;
-    let contadorComun;
+    let contadorSuperRara = 0;
+    let contadorRara = 0;
+    let contadorComun = 0;
     //c
-    let precioMax;
-    let nombreSuperRaraCara;
+    let precioMax = 0; //sino me da undefined
+    let nombreSuperRaraCara = "no hay"; //sino me da undefined
     let flagMasCara = 0;
     //d
     let flagMasBarata=0;
-    let precioMin;
-    let nombreComunBarata;
+    let precioMin = 0; //sino me da undefined
+    let nombreComunBarata = "no hay"; //sino me da undefined
     //e
     let tipoCartaRarezaMaxTotal;
     let tipoCartaMaxTotal;
@@ -88,6 +88,7 @@ function comenzar()
             rarezaCarta = prompt("ERROR: comun, rara o super rara");
         }
         //a) el porcentaje de cartas de cada TIPO(Heroe, Magica, Moneda, Trampa)
+        
         if(tipoCarta == "heroe")
         {
             contadorHeroe++;
@@ -114,7 +115,44 @@ function comenzar()
             }
         }
         cartasIngresadas++;
-
+        //b) la cantidad de cartas segun su rareza comun rara super rara
+        if(rarezaCarta == "super rara")
+        {
+            contadorSuperRara++;
+            //c nombre y precio de la mas cara
+            if(flagMasCara == 0 || precioCarta > precioMax)
+            {
+                precioMax = precioCarta;
+                nombreSuperRaraCara = nombreCarta;
+                flagMasCara = 1;
+            }
+        }
+        else
+        {
+            if(rarezaCarta == "rara")
+            {
+                contadorRara++;
+            }
+            else
+            {
+                contadorComun++;
+                //d - tipo de carta y precio de la mas barata
+                if(flagMasBarata == 0 || precioMin < precioCarta) 
+                {
+                    precioMin = tipoCarta;
+                    nombreComunBarata = nombreCarta;
+                    flagMasBarata = 1;
+                }
+            }
+        }
+        //e) de la venta mas cara, el precio, el tipo de carta y su rareza
+        if(flagMaxTotal == 0 || precioCarta > precioMaxTotal)
+        {
+            precioMaxTotal = precioCarta;
+            tipoCartaMaxTotal =  tipoCarta;
+            tipoCartaRarezaMaxTotal = rarezaCarta;
+            flagMaxTotal = 1;
+        }
 
         //segundo intento
         // //a) el porcentaje de cartas de cada TIPO(Heroe, Magica, Moneda, Trampa)
@@ -291,13 +329,15 @@ function comenzar()
     mensaje += "\n El porcentaje de Moneda es: " + porcentajeMoneda + "%";
     mensaje += "\n El porcentaje de Magica es: " + porcentajeMagica + "%";
     mensaje += "\n El porcentaje de Trampa es: " + porcentajeTrampa + "%";
-    // mensaje += "\n La cantidad de cartas comunes son : " + contadorComun;
-    // mensaje += "\n La cantidad de cartas raras son: " + contadorRara;
-    // mensaje += "\n La cantidad de cartas super raras: " + contadorSuperRara;
-    // mensaje += "\n El nombre de la carta super rara mas cara es: " + nombreSuperRaraCara;
-    // mensaje += "\n El nombre de la carta comun mas barata es: " + nombreComunBarata;
-    // mensaje += "\n Rareza de la carta mas cara: " + tipoCartaRarezaMaxTotal;
-    // mensaje += "\n El tipo de carta mas cara: " + tipoCartaMaxTotal;
+    mensaje += "\n La cantidad de cartas comunes son : " + contadorComun;
+    mensaje += "\n La cantidad de cartas raras son: " + contadorRara;
+    mensaje += "\n La cantidad de cartas super raras: " + contadorSuperRara;
+    mensaje += "\n El nombre de la carta super rara mas cara es: " + nombreSuperRaraCara; //
+    mensaje += "\n El precio de la carta super rara es : " + precioMax;
+    mensaje += "\n El nombre de la carta comun mas barata es: " + nombreComunBarata;
+    mensaje += "\n El precio de la carta comun mas barata es : " + precioMin; //
+    mensaje += "\n Rareza de la carta mas cara: " + tipoCartaRarezaMaxTotal;
+    mensaje += "\n El tipo de carta mas cara: " + tipoCartaMaxTotal;
     // mensaje += "\n El precio de la mas cara: $" + precioMaxTotal;
     alert(mensaje);
 

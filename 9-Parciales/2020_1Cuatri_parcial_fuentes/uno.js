@@ -42,8 +42,9 @@ function mostrar()
 	let mayorCantidadProducto;
 	let precioProductoMasUnidades = 0;
 	let cantidadTotalMasUnidades = 0;
+	let carga = 0;
 	
-	while(preguntar == "y")
+	while(carga < 6)
 	{
 		tipoProducto = prompt("Ingrese el tipo de producto, barbijo, jabon, alcohol").toLowerCase();
 		while(tipoProducto != "barbijo" && tipoProducto != "jabon" && tipoProducto != "alcohol")
@@ -85,7 +86,7 @@ function mostrar()
 		}
 		
 		//b) Del tipo con mas unidades, el promedio por compra (suma de los productos / la cantidad total)
-			// precioProductoMasUnidades / cantidadTotalMasUnidades
+		// precioProductoMasUnidades / cantidadTotalMasUnidades
 		if(flagMasUnidades == 0 || cantidadProducto > mayorCantidadProducto)
 		{
 			//el valor de la cantidad mayor
@@ -103,67 +104,68 @@ function mostrar()
 		}
 		
 		//fin while
-		preguntar = prompt("quiere agregar otro? y/n");
+		carga++;
 	}
 	//b
 	promedioMasUnidades =  precioProductoMasUnidades / cantidadTotalMasUnidades;
-
+	
 	mensaje = "\n El alcohol mas barato su cantidad es: " + cantidadAlcoholMasBarato;
 	mensaje += "\n El alcohol mas barato su fabricante es: " + fabricanteAlcoholMasBarato;
 	mensaje += "\n El promedio por compra del tipo con mas unidades es: " + promedioMasUnidades;
-	 mensaje += "\n La cantidad de jabones fueron: "+ acumuladorJabon;
+	mensaje += "\n La cantidad de jabones fueron: "+ acumuladorJabon;
 	alert(mensaje);
 }
 
 
 
-		// if(tipoProducto == "alcohol")
-		// {
-		// 	acumuladorAlcohol += cantidadProducto;
-		// 	acumuladorPrecioAlcohol += precioProducto * cantidadProducto;
-		// }
-		// else
-		// {
-		// 	if(tipoProducto == "barbijo")
-		// 	{
-		// 		acumuladorBarbijo += cantidadProducto;
-		// 		acumuladorPrecioBarbijo += precioProducto * cantidadProducto;
-		// 	}
-		// 	else//jabon
-		// 	{
-		// 		acumuladorJabon += cantidadProducto;	
-		// 		acumuladorPrecioJabon += precioProducto * cantidadProducto;
-		// 	}
-		// }
-		// contadorProductosIngresados++;
-
-
-
-	// //b
-	// if(acumuladorAlcohol > acumuladorBarbijo && acumuladorAlcohol > acumuladorJabon)
-	// {
-	// 	cantidadProductoMasUnidades = acumuladorAlcohol;
-	// 	precioProductoMasUnidades = acumuladorPrecioAlcohol;
+// if(tipoProducto == "alcohol")
+// {
+	// 	acumuladorAlcohol += cantidadProducto;
+	// 	acumuladorPrecioAlcohol += precioProducto * cantidadProducto;
 	// }
 	// else
 	// {
-	// 	if(acumuladorBarbijo > acumuladorAlcohol && acumuladorBarbijo > acumuladorJabon)
+		// 	if(tipoProducto == "barbijo")
+		// 	{
+			// 		acumuladorBarbijo += cantidadProducto;
+			// 		acumuladorPrecioBarbijo += precioProducto * cantidadProducto;
+			// 	}
+			// 	else//jabon
+			// 	{
+				// 		acumuladorJabon += cantidadProducto;	
+				// 		acumuladorPrecioJabon += precioProducto * cantidadProducto;
+				// 	}
+				// }
+				// contadorProductosIngresados++;
+
+
+				
+				// //b
+				// if(acumuladorAlcohol > acumuladorBarbijo && acumuladorAlcohol > acumuladorJabon)
+				// {
+					// 	cantidadProductoMasUnidades = acumuladorAlcohol;
+					// 	precioProductoMasUnidades = acumuladorPrecioAlcohol;
+					// }
+					// else
+					// {
+						// 	if(acumuladorBarbijo > acumuladorAlcohol && acumuladorBarbijo > acumuladorJabon)
 	// 	{
-	// 		cantidadProductoMasUnidades = acumuladorBarbijo;	
-	// 		precioProductoMasUnidades = acumuladorPrecioBarbijo;
-	// 	}
-	// 	else
-	// 	{
-	// 		cantidadProductoMasUnidades = acumuladorJabon;
-	// 		precioProductoMasUnidades = acumuladorPrecioJabon;
-	// 	}
+		// 		cantidadProductoMasUnidades = acumuladorBarbijo;	
+		// 		precioProductoMasUnidades = acumuladorPrecioBarbijo;
+		// 	}
+		// 	else
+		// 	{
+			// 		cantidadProductoMasUnidades = acumuladorJabon;
+			// 		precioProductoMasUnidades = acumuladorPrecioJabon;
+			// 	}
 	// }
 	// if(cantidadProductoMasUnidades > 0)
 	// {
-	// 	promedioMasUnidades = precioProductoMasUnidades / cantidadProductoMasUnidades
-	// }
-	// else
-	// {
-	// 	promedioMasUnidades = 0;
-	// }
-	// promedioMasUnidades =  precioProductoMasUnidades / cantidadProductoMasUnidades;
+		// 	promedioMasUnidades = precioProductoMasUnidades / cantidadProductoMasUnidades
+		// }
+		// else
+		// {
+			// 	promedioMasUnidades = 0;
+			// }
+			// promedioMasUnidades =  precioProductoMasUnidades / cantidadProductoMasUnidades;
+			

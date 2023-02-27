@@ -7,7 +7,7 @@ expresados en Kg (validar):
 *Cantidad de harina
 Cantidad de azucar
 Se necesita saber:
-a) Promedio de azucar, manteca y harina que se usó en la semana.
+a) Promedio de azucar, manteca y harina que se usó en la semana. 
 b) El dia que mas manteca se gastó (por ejemplo el dia 3 se gasto mas manteca)
 c) Se sabe que para producir 2400 medialunas semanales se necesitan 100 kg de harina, 10 kg de azucar y 
 20 kg de manteca, informar si los insumos alcanzaron para dicha produccion.
@@ -38,8 +38,11 @@ let medialunasTopeSemanal;
 let acumuladorHarina = 0;
 let acumuladorAzucar = 0;
 let acumuladorManteca = 0;
-while(preguntar == "y")
+let contador;
+contador = 0;
+while(contador < 8)
 {
+    contador++;
     cantidadManteca = prompt("Ingrese la cantidad de MANTECA en KG:");
     cantidadManteca = parseFloat(cantidadManteca);
     while(isNaN(cantidadManteca) == true)
@@ -61,35 +64,53 @@ while(preguntar == "y")
         cantidadAzucar = parseFloat(cantidadAzucar);
     }
     //a) Promedio de azucar, manteca y harina que se usó en la semana.
-    if(cantidadAzucar > 0)
-    {
-        contadorAzucar++;
-    }
-    else
-    {
-        contadorManteca++;
-        contadorHarina++;
-    }
+  
     acumuladorManteca += cantidadManteca;
     acumuladorHarina += cantidadHarina;
     acumuladorAzucar += cantidadAzucar;
-    contadorIngresados++;
     //b) El dia que mas manteca se gastó (por ejemplo el dia 3 se gasto mas manteca)
-    contadorDias++;
+    
     if(flagManteca == 0 || cantidadManteca > precioMantecaMaximo )
     {
         precioMantecaMaximo = cantidadManteca;
-        diaMantecaMaximo = contadorDias;
+        diaMantecaMaximo = contador;
         flagManteca = 1;
     }
-    preguntar = confirm("Quiere agregar insumos ? y/n");
 }
 //a
-promedioHarina = contadorHarina / contadorIngresados;
-promedioAzucar = contadorAzucar / contadorIngresados;
-promedioManteca = contadorManteca / contadorIngresados;
+promedioHarina = contadorHarina / contador;
+promedioManteca = contadorManteca / contador;
+//b
+
+if(acumuladorAzucar > 0)
+{
+    promedioAzucar = contadorAzucar / contador;
+    mensaje = "el promedio de azucar es" + promedioAzucar;
+}
+else
+{
+    mensaje ="no ingresaron azucar";
+}
+if(acumuladorManteca > 0)
+{
+    promedioAzucar = contadorManteca / contador;
+    mensaje = "el promedio de Manteca es" + promedioManteca;
+}
+else
+{
+    mensaje ="no ingresaron Manteca";
+}
+if(acumuladorHarina > 0)
+{
+    promedioAzucar = contadorHarina / contador;
+    mensaje = "el promedio de harina es" + promedioHarina;
+}
+else
+{
+    mensaje ="no ingresaron harina";
+}
 //c- 100 kg de harina, 10 kg de azucar y 20 kg de manteca, informar si los insumos 
-if(acumuladorHarina > 100 && acumuladorAzucar > 10 && acumuladorManteca > 20)
+if(acumuladorHarina > 99 && acumuladorAzucar > 9 && acumuladorManteca > 19)
 {
     medialunasTopeSemanal = "\n Los insumos alcanzó para la semana";
 }

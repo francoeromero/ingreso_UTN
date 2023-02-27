@@ -48,7 +48,7 @@ function comenzar()
     let contadorComun = 0;
     //c
     let precioMax = 0; //sino me da undefined
-    let nombreSuperRaraCara = "no hay"; //sino me da undefined
+    let nombreSuperRaraCara = "no hay"; //sino me da undefined porque va en el else de un if
     let flagMasCara = 0;
     //d
     let flagMasBarata=0;
@@ -321,6 +321,9 @@ function comenzar()
     porcentajeMoneda = (contadorMoneda * 100) / cartasIngresadas;
     porcentajeMagica = (contadorMagica*100)  / cartasIngresadas;
     porcentajeTrampa = (contadorTrampa*100) / cartasIngresadas;
+    //pendiente consulta dividir por cero
+    if(contadorHeroe == 0)
+    
     
     //b
 

@@ -1,6 +1,15 @@
+/*
+
+Porcentaje = (suma de manzanas(acumulador) / total ingresados (contador)) * 100
+Promedio = suma de algo (acumulador)/ contador 
 
 
-var continua;
+
+*/
+	/******************************************************** */
+	/*WHILE INFINITO*/
+	/******************************************************** */
+	var continua;
 	var mensaje;
 	var a;
 	var a;
@@ -12,39 +21,7 @@ var continua;
 	var a;
 	do
 	{
-		do
-		{
-			ab = prompt("Ingrese").toLowerCase();
-		}while(ab != "a" && ab != "a" && ab != "a");
 		
-		do
-		{
-			ac = prompt("Ingrese").toLowerCase();
-		}while(ac != "a" && ac != "a" && ac != "a");
-
-		
-		do
-		{
-			bc = prompt("Ingrese");
-			bc = parseInt(bc);
-		}while(isNaN(bc) && bc < 0);
-		
-		do
-		{
-			cd = prompt("Ingrese");
-			cd = parseFloat(cd);
-		}while(isNaN(cd) && (cd < 10 || cd > 100));
-
-		do
-		{
-			df = prompt("Ingrese").toLowerCase();
-		}while(!isNaN(df) || (df != "a" && df != "a"));
-
-		do
-		{
-			dfg = prompt("Ingrese").toLowerCase();
-		}while(!isNaN(dfg) || (dfg != "a" && dfg != "a"));
-
 		continua = confirm("Quieres continuar?");
 	}while(continua);
 	//calculo o comparacion 
@@ -58,5 +35,46 @@ var continua;
 	mensaje += "\n " + a;
 	mensaje += "\n " + a;
 	alert(mensaje);
+	
+	let i;
+	for (i = 0; i < 5; i++) {
 
+	}
+	/******************************************************** */
+	/*CADENAS */
+	/******************************************************** */
+	do
+	{
+		01 = prompt("Ingrese 01").toLowerCase();
+	}while(01 != "a" && 01 != "a" && 01 != "a");
+	
+	do
+	{
+		02 = prompt("Ingrese 02").toLowerCase();
+	}while(!isNaN(02));
+
+	do
+	{
+		03 = prompt("Ingrese 02").toLowerCase();
+	}while(!isNaN(03) || (03 != "a" && 03 != "a"));
+	/******************************************************** */
+	/*NUMEROS */
+	/******************************************************** */
+	do
+	{
+		04 = prompt("Ingrese 04");
+		04 = parseInt(04);
+	}while(isNaN(04) && 04 < 0);
+	
+	do
+	{
+		05 = prompt("Ingrese 05");
+		05 = parseFloat(05);
+	}while(05 < 10 || 05 > 100);
+
+	do
+	{
+		06 = prompt("Ingrese 06");
+		06 = parseFloat(06);
+	}while(isNaN(06) && (06 < 10 || 06 > 100));
 

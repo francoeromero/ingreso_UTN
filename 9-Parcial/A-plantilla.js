@@ -16,7 +16,6 @@ var continua;
 		{
 			ab = prompt("Ingrese").toLowerCase();
 		}while(ab != "a" && ab != "a" && ab != "a");
-
 		
 		do
 		{
@@ -46,22 +45,6 @@ var continua;
 			dfg = prompt("Ingrese").toLowerCase();
 		}while(!isNaN(dfg) || (dfg != "a" && dfg != "a"));
 
-		if(a)
-		{
-
-		}
-		else
-		{
-			if(b)
-			{
-
-			}
-			else
-			{
-
-			}
-		}
-		
 		continua = confirm("Quieres continuar?");
 	}while(continua);
 	//calculo o comparacion 

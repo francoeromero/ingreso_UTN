@@ -92,52 +92,6 @@ calculo:
                 }
             }
         }
-
-
-
-        // if (flag == 0)
-		// {
-		// 	max = numIngresado;
-		// 	min = numIngresado;
-		// 	flag = 1;
-		// }
-		// else
-		// {
-		// 	//defino si es max  
-		// 	if(numIngresado > max)
-		// 	{
-		// 		max = numIngresado;
-		// 	}
-		// 	else
-		// 	{
-		// 		if(numIngresado < min)
-		// 		{
-		// 			min = numIngresado;
-		// 		}
-		// 	}
-		// }
-
-        //b
-        // if(flagBlue == 0 || dolarBlue > maxDolarBlue )
-        // {
-        //     maxDolarBlue = dolarBlue;
-        //     flagBlue = 1;
-        // }
-        // if(flagBlue == 0 || dolarBlue < minDolarBlue)
-        // {
-        //     minDolarBlue = dolarBlue;
-        //     flagBlue = 1;
-        // }
-        // if(flagOficial == 0 ||dolarOficial > maxDolarOficial)
-        // {
-        //     maxDolarOficial = dolarOficial;
-        //     flagOficial = 1;
-        // }
-        // if(flagOficial == 0 ||dolarOficial < minDolarOficial)
-        // {
-        //     minDolarOficial = dolarOficial;
-        //     flagOficial = 1;
-        // }
         
     }
     promedioDolarBlue = acumuladorDolarBlue / i;
@@ -149,6 +103,53 @@ calculo:
     mensaje += "\n El dolar oficial mas alto de la semana fue de : " + maxDolarOficial;
     mensaje += "\n El dolar oficial mas bajo de la semana fue de : " + minDolarOficial;
     alert(mensaje);
-
     
-
+    
+    
+    
+            // if (flag == 0)
+            // {
+            // 	max = numIngresado;
+            // 	min = numIngresado;
+            // 	flag = 1;
+            // }
+            // else
+            // {
+            // 	//defino si es max  
+            // 	if(numIngresado > max)
+            // 	{
+            // 		max = numIngresado;
+            // 	}
+            // 	else
+            // 	{
+            // 		if(numIngresado < min)
+            // 		{
+            // 			min = numIngresado;
+            // 		}
+            // 	}
+            // }
+    
+            //b
+            // if(flagBlue == 0 || dolarBlue > maxDolarBlue )
+            // {
+            //     maxDolarBlue = dolarBlue;
+            //     flagBlue = 1;
+            // }
+            // if(flagBlue == 0 || dolarBlue < minDolarBlue)
+            // {
+            //     minDolarBlue = dolarBlue;
+            //     flagBlue = 1;
+            // }
+            // if(flagOficial == 0 ||dolarOficial > maxDolarOficial)
+            // {
+            //     maxDolarOficial = dolarOficial;
+            //     flagOficial = 1;
+            // }
+            // if(flagOficial == 0 ||dolarOficial < minDolarOficial)
+            // {
+            //     minDolarOficial = dolarOficial;
+            //     flagOficial = 1;
+            // }
+    
+    
+    

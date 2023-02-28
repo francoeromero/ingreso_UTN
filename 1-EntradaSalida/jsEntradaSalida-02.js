@@ -18,8 +18,9 @@ Si el ingreso supera los 100.000 ARS calcular impuesto de AFIP del 21% e informa
 "El ingreso neto por ETH es de X1 pesos y se descontó X2 pesos de AFIP".
 Siendo .X1 el neto en ARS y X2 el impuesto aplicado.
 */
-
-var continua;
+function comenzar()
+{
+	var continua;
 	var mensaje;
 	var nombreCripto;
 	var cantidad;
@@ -29,7 +30,7 @@ var continua;
 	var cotizacionUsd;
 	var nombreMayorCotizacion;
 	var flagMayorCotizacion = 0;
-	var a;
+	var mayorCotizacion;
 	var a;
 	var a;
 	var a;
@@ -42,17 +43,19 @@ var continua;
 		{
 			nombreCripto = prompt("Ingrese nombreCripto btc o eth").toLowerCase();
 		}while(nombreCripto != "btc" && nombreCripto != "eth");
+
 		do
 		{
 			cantidad = prompt("Ingrese cantidad");
 			cantidad = parseInt(cantidad);
 		}while(isNaN(cantidad) || cantidad < 0);
+		
 		do
 		{
 			cotizacionUsd = prompt("Ingrese cotizacionUsd");
 			cotizacionUsd = parseInt(cotizacionUsd);
 		}while(isNaN(cotizacionUsd) || cotizacionUsd < 0);
-
+	
 		//consulta profe 1 
 		// if(flag==0 || cantidad  > cantidadMasMinado )
 		// {
@@ -119,6 +122,8 @@ var continua;
 				mayorCotizacion = cotizacionUsd;
 				nombreMayorCotizacion = nombreCripto;
 			}
+		//C) Cantidad total de ingreso bruto en USD de cada criptomoneda. acumulador btc eth
+		
 		// }
 		// // A) Nombre y cantidad de la criptomoneda más minada. flag
 		// if(flagMasMinada == 0)
@@ -150,7 +155,6 @@ var continua;
 		// 		nombreMayorCotizacion = nombreCripto;
 		// 	}
 		// }
-
 		continua = confirm("Quieres continuar?");
 	}while(continua);
 	//calculo o comparacion 
@@ -164,81 +168,4 @@ var continua;
 	mensaje += "\n " + a;
 	mensaje += "\n " + a;
 	alert(mensaje);
-	
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-Debemos lograr tomar un nombre con 'prompt' 
-y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
-/*
-APUNTES
-Como tomo un dato y donde se guarda? 
-// //declaro una variable
-// let nombre;
-// //guardo el dato que ingreso el usuario a la variable
-// nombre = prompt('Cual es tu nombre?');
-// //muestro una ventana emergente con la cadena + la variable nombre
-// alert("Bienvenido " + nombre + " espero que te encuentres muy bien!");
-el dato se va a guardad en la memoria ram
-espacio de informacion 
-
-Que es prompt ? 
-es un metodo que se usa para mostrar una entrada para que el usuario escriba un dato
-
-Los nombres de las variables tienen que ser coherentes 
-nunca puede empezar con un numero
-
-declarar una variable afuera de una funcion ? 
-cuando se recarga una pagina se activa una variable fuera de la funcion
-pero si esta dentro se tiene que activar la funcion
-
-var let const  
-
-ahora se utiliza let y const para las constantes que el valor nunca cambia 
-
-ejemplo: 
-
-let nombre; //declaro una variable para asignar un espacio de memoria dentro de esa variable 
-
-nombre = "juan"; // asigno una cadena ala variable llamada juan
-
-alert(nombre); // asigno una alerta que llame a la variable nombre 
-
-se puede cambiar el let pero el const no 
-
-let nombre = "jose";
-alert(nombre);
-let nombre = "fran";
-alert(nombre);
-
-
-
-*/

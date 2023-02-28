@@ -147,17 +147,6 @@ mensaje += "\n El nombre del jugador que más muertes tuvo. " + nombreMasMuertes
 mensaje += "\n edad del jugador que más muertes tuvo." + edadMasMuertes;
 
 alert(mensaje);
-
-/*
-A) Nombre del jugador más joven. (fla)
-B) El jugador que más bajas tuvo.
-C) El jugador que menos muertes tuvo.
-D) El promedio de bajas.
-E) Cantidad de jugadores que tienen entre 20 y 30 años cuyas bajas están entre 10 y 15.
-F) El nombre y edad del jugador que más muertes tuvo.
-
-
-*/
 }
 
 /* 

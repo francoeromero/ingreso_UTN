@@ -6,6 +6,7 @@ if(acumulador === 0)
 	No se puede dividir por cero;
 }
 
+ingreso neto = ingreso bruto - (ingreso neto * 0.21)
 
 Promedio = suma de algo (acumulador)/ contador
 
@@ -22,16 +23,9 @@ flag se usa:
 	/******************************************************** */
 	/*WHILE INFINITO*/
 	/******************************************************** */
-	var continua;
-	var mensaje;
-	var a;
-	var a;
-	var a;
-	var a;
-	var a;
-	var a;
-	var a;
-	var a;
+	let continua;
+	let mensaje;
+	
 	do
 	{
 		
@@ -52,23 +46,26 @@ flag se usa:
 	/******************************************************** */
 	/*FOR LIMITES*/
 	/******************************************************** */
-	var i;
+	let i;
 	for (i = 0; i < 5; i++) {
 
 	}
 	/******************************************************** */
 	/*CADENAS */
 	/******************************************************** */
+	let 01;
 	do
 	{
 		01 = prompt("Ingrese 01").toLowerCase();
 	}while(01 != "a" && 01 != "a" && 01 != "a");
 	
+	let 02;
 	do
 	{
 		02 = prompt("Ingrese 02").toLowerCase();
 	}while(!isNaN(02));
 
+	let 03;
 	do
 	{
 		03 = prompt("Ingrese 02").toLowerCase();
@@ -76,18 +73,21 @@ flag se usa:
 	/******************************************************** */
 	/*NUMEROS */
 	/******************************************************** */
+	let 04;
 	do
 	{
 		04 = prompt("Ingrese 04");
 		04 = parseInt(04);
-	}while(isNaN(04) && 04 < 0);
+	}while(isNaN(04) || 04 < 0);
 	
+	let 05;
 	do
 	{
 		05 = prompt("Ingrese 05");
 		05 = parseFloat(05);
 	}while(05 < 10 || 05 > 100);
 
+	let 06;
 	do
 	{
 		06 = prompt("Ingrese 06");
@@ -101,6 +101,9 @@ flag se usa:
 	004 = variable resultado de lo que me pide
 	005 = otro dato ingresado que pide para almacenarlo al 004*/
 	/******************************************************** */
+	let 001 = 0;
+	let 002;
+	let 004;
 	if(001 == 0)
 	{
 		002 = 003;

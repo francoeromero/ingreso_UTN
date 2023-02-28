@@ -1,9 +1,22 @@
 /*
 
 Porcentaje = (suma de manzanas(acumulador) / total ingresados (contador)) * 100
-Promedio = suma de algo (acumulador)/ contador 
+if(acumulador === 0)
+{
+	No se puede dividir por cero;
+}
 
 
+Promedio = suma de algo (acumulador)/ contador
+
+if(suma de algo === 0)
+{
+	Nose puede dividir por cero;
+}
+
+flag se usa:
+	cuando paso la primera vez o una sola vez 
+	para saber los max y min  
 
 */
 	/******************************************************** */
@@ -36,7 +49,10 @@ Promedio = suma de algo (acumulador)/ contador
 	mensaje += "\n " + a;
 	alert(mensaje);
 	
-	let i;
+	/******************************************************** */
+	/*FOR LIMITES*/
+	/******************************************************** */
+	var i;
 	for (i = 0; i < 5; i++) {
 
 	}
@@ -77,4 +93,25 @@ Promedio = suma de algo (acumulador)/ contador
 		06 = prompt("Ingrese 06");
 		06 = parseFloat(06);
 	}while(isNaN(06) && (06 < 10 || 06 > 100));
-
+	/******************************************************** */
+	/*FLAG 
+	001 = flag 
+	002 = maximo o minimo 
+	003 = dato ingresado 
+	004 = variable resultado de lo que me pide
+	005 = otro dato ingresado que pide para almacenarlo al 004*/
+	/******************************************************** */
+	if(001 == 0)
+	{
+		002 = 003;
+		001 = 1;
+		004 = 005;
+	}
+	else
+	{
+		if(003 > 002)
+		{
+			002 = 003;
+			004 = 005;
+		}
+	}

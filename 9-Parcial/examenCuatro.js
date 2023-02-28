@@ -1,7 +1,7 @@
 /*
 El usuario debe ingresar las cotizaciones semanales del dólar (semana laboral de 5 días), los valores deben ser positivos:
 Se debe Informar al usuario lo siguiente:
-1) Informar cuál fue el dólar con mayor cotización promedio en la semana
+1) Informar cuál fue el dólar con mayor cotización promedio en la semana ()
 2) informar cotización más alta del dólar oficial
 3) Informar cotización más baja del dólar blue
 

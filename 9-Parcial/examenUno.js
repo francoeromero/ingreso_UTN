@@ -12,16 +12,16 @@ sexo pasajero (F o M o NB)
 Viaja con equipaje de mano?
 paga con mercado , tarjeta o efectivo
 
-a- cantidad de personas que viajan en cada temporada
-b- el peso acumulado de todos los que viajan a villa gessel
-c- el lugar con la mayor cantidad de dias acumulados
-d- la suma de todos los importes
+a- cantidad de personas que viajan en cada temporada ( contador)
+b- el peso acumulado de todos los que viajan a villa gessel ( acumulador peso)
+c- el lugar con la mayor cantidad de dias acumulados (con if y voy acumulando todos, fuera del while comparo)
+d- la suma de todos los importes (acumulador de todos los importes que ingresan en el while)
 
-e-el nombre del más pesado de los pasajeros y el del más liviano
-f-el lugar donde se pagó el mayor importe
-g-el nombre de la mujer más alta
+e-el nombre del más pesado de los pasajeros y el del más liviano (1 solo flag e igualo max min peso )
+f-el lugar donde se pagó el mayor importe (1 flag max importe)
+g-el nombre de la mujer más alta (1 flag max altura)
 
-h- Cuál fue la forma de pago más utilizada
+h- Cuál fue la forma de pago más utilizada()
 i- en qué temporada se viajó más
 j- qué lugar tuvo más pasajeros
 

@@ -4,9 +4,9 @@ Cada alumno cuenta con nota del primer y segundo cuatrimestre (0 a 10)
 número de comisión (1000 a 2000)
 nombre, apellido, materia (programcuatrimestreion, matematica, ingles).
 
-1) Notas promedio primer y segundo cuatrimestre
-2) Nombre, apellido y comisión del alumno con menor nota primer cuatrimestre
-3) Materia con mayor número de promocionados (se promociona con 6)
+1) Notas promedio primer y segundo cuatrimestre (promedio)
+2) Nombre, apellido y comisión del alumno con menor nota primer cuatrimestre (flag)
+3) Materia con mayor número de promocionados (se promociona con 6) (if)
 */
 /*
 datos: 
@@ -36,7 +36,7 @@ nota > 5
 3) Materia con mayor número de promocionados (se promociona con 6)
 */
 
-var continua;
+    var continua;
 	var mensaje;
 	var cuatrimestre;
 	var numComision;

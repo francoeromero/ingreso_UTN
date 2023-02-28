@@ -118,12 +118,32 @@ function mostrar()
 		
 		continua = confirm("Quieres continuar?");
 	}while(continua);
-	/****************************************************** */
+	
 	//calculo o comparacion 
 	//c
 	cantidadTotalIngresosBrutosUsd = acumuladorUsdBtc + acumuladorUsdEth;
 	//d
-	//D) Sabiendo que el coste de electricidad para:
+	
+	//muestro
+	mensaje = "\n A- Nombre y cantidad de la criptomoneda más minada." + nombreMasMinada + " y la cantidad es " + masMinada;
+	mensaje += "\n B- Nombre de la criptomoneda que mayor cotización tuvo." + nombreMayorCotizacion;
+	mensaje += "\n C- Cantidad total de ingreso bruto en USD de cada criptomoneda." + cantidadTotalIngresosBrutosUsd;
+	
+	alert(mensaje);
+}
+
+
+
+
+
+
+
+
+
+
+/*
+segundo intento d y e
+//D) Sabiendo que el coste de electricidad para:
 	// BTC es de un 7% y para ETH es un 4% calcular el ingreso total neto en USD.
 	
 	// ingreso neto = ingreso bruto - (ingreso neto * 0.21)
@@ -156,24 +176,8 @@ function mostrar()
 	ingresoNetoBtc = ingresoBrutoBtc - (ingresoBrutoBtc*impuestoUsd);
 	ingresoNetoEth = ingresoBrutoEth - (ingresoBrutoEth*impuestoUsd);
 	ingresoNetoTotal = ingresoBrutoEth + ingresoBrutoEth;
-	//e- Si el ingreso supera los 100.000 ARS calcular impuesto de AFIP del 21% e informar
-// "El ingreso neto por ETH es de X1 pesos y se descontó X2 pesos de AFIP".
 
-	
-	
-	//muestro
-	mensaje = "\n A- Nombre y cantidad de la criptomoneda más minada." + nombreMasMinada + " y la cantidad es " + masMinada;
-	mensaje += "\n B- Nombre de la criptomoneda que mayor cotización tuvo." + nombreMayorCotizacion;
-	mensaje += "\n C- Cantidad total de ingreso bruto en USD de cada criptomoneda." + cantidadTotalIngresosBrutosUsd;
-	mensaje += "\n D- ingreso neto total sumando electricidad" + ingresoNetoTotal;
-	mensaje += aviso;
-	
-	alert(mensaje);
-}
-
-
-
-
+*/
 
 
 

@@ -1,14 +1,29 @@
 /*
 
+PORCENTAJE:
+
+CABA(kg)________________100%
+pesoAcumulado(kg)_______x %
 Porcentaje = (suma de manzanas(acumulador) / total ingresados (contador)) * 100
-if(acumulador === 0)
+porcentaje = pesoAvellaneda * 100 / AVELLANEDA 
+
+
+********************************
+
+if(acumulador o contador > 0)
 {
-	No se puede dividir por cero;
+	//aca calculo el promedio
+	 promedio = (suma de los términos) / (número de términos);
 }
+else
+{
+	promedio = 0;
+	mensaje = "No se puede calcular";
+}
+******************************
 
 ingreso neto = ingreso bruto - (ingreso neto * 0.21)
 
-Promedio = suma de algo (acumulador)/ contador
 
 if(suma de algo === 0)
 {

@@ -6,7 +6,7 @@ La empresa dispone de 3 bodegas para almacenar los productos:
 - Avellaneda (20.000KG)
 - CABA (25.000KG) 
 - Lanus (15.000 KG)
-
+    Avellaneda (20.000KG) - CABA (25.000KG) - Lanus (15.000 KG)
 Para poder almacenar los productos correctamente se debera ingresar:
 
 - el deposito, validar si esta disponible
@@ -37,21 +37,27 @@ function comenzar()
     let continua;
     let mensaje;
     let nombreBodega;
-    let descripcionProducto;
+    let nombreProducto;
     let pesoProducto;
 	let AVELLANEDA = 20000;
+    let contadorIngressosAvellaneda = 0;
+    let acumuladorAvellaneda = 0;
 	let CABA = 25000;
 	let LANUS = 15000;
 	let productoConMasPeso;
 	let nombreProductoConMasPeso;
     let primerIngreso = 0;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
+    let productoMasPeso;
+    let acumuladorCABA=0;
+    let nombreProductoMasPeso;
+    let pesoAvellaneda;
+    let pesoCABA;
+    let pesoLanus;
+    let acumuladorLanus = 0;
+    let promedioMasPesado;
+    let bodegaConMasIngresos;
+    let contadorIngresosLanus = 0;
+    let contadorIngresosCABA = 0;
 	
 	do
 	{
@@ -63,8 +69,8 @@ function comenzar()
 
         do
         {
-            descripcionProducto = prompt("Ingrese descripcionProducto").toLowerCase();
-        }while(!isNaN(descripcionProducto));
+            nombreProducto = prompt("Ingrese nombreProducto").toLowerCase();
+        }while(!isNaN(nombreProducto));
         
         do
         {
@@ -72,30 +78,107 @@ function comenzar()
             pesoProducto = parseInt(pesoProducto);
         }while(isNaN(pesoProducto) || pesoProducto < 0);
 
-        if(primerIngreso == 0)
+        // a) Cual fue el producto con mas peso entre las tres bodegas, e indicar el promedio 
+        if(primerIngreso == 0 || pesoProducto > productoMasPeso)
         {
-            productoConMasPeso = pesoProducto;
-            nombreProductoConMasPeso = descripcionProducto;
+            productoMasPeso = pesoProducto;
+            nombreProductoMasPeso = nombreProducto;
             primerIngreso = 1;
+        }
+      /************************************** */
+      // Avellaneda (20.000KG) - CABA (25.000KG) - Lanus (15.000 KG)
+      //promedioMasPesado = pesoMasPesado / (pesoAvellaneda + pesoCABA + pesoLanus);
+      //b) Cual fue la bodega con mas ingresos. 
+        if(nombreBodega == "avellaneda")
+        {
+            if((acumuladorAvellaneda + pesoProducto) > AVELLANEDA)
+            {
+                alert("Se llenó la bodega AVELLANEDA");
+            }
+            else
+            {
+                acumuladorAvellaneda += pesoProducto;
+                //b
+                contadorIngressosAvellaneda++;
+            }
         }
         else
         {
-            if(productoConMasPeso > )
+            if(nombreBodega == "caba")
+            {
+                if((acumuladorCABA + pesoCABA) > CABA)
+                {
+                    alert("Se llenó la bodega CABA");
+                }
+                else
+                {
+                acumuladorCABA += pesoProducto;
+                //b
+                contadorIngresosCABA++;
+                }
+            }
+            else //lanus
+            {
+                if((acumuladorLanus+pesoProducto)>LANUS)
+                {
+                    alert("Se llenó la bodega LANUS");
+                }
+                else
+                {
+                    acumuladorLanus += pesoProducto;
+                    //B
+                    contadorIngresosLanus++;
+                }
+            }
         }
-
-
+    
+        /******************************************* */
 		continua = confirm("Quieres continuar?");
 	}while(continua);
+    // promedio =  peso / suma de todos los pesos; 
+    //promerdio = pesoMaximo / (pesoAvellaneda + pesoCABA +pesoLanus);
+    promedioMasPesado = pesoMasPesado / (pesoAvellaneda + pesoCABA + pesoLanus);
+    //b bodega con mas ingresos
+    if(contadorIngresosCABA > contadorIngresosLanus && contadorIngresosCABA > contadorIngressosAvellaneda)
+    {
+        bodegaConMasIngresos = "CABA";
+    }
+    else
+    {
+        if(contadorIngresosLanus > contadorIngresosCABA && contadorIngresosLanus > contadorIngressosAvellaneda)
+        {
+            bodegaConMasIngresos = "LANUS";
+        }
+        else
+        {
+            bodegaConMasIngresos = "AVELLANEDA";
+        }
+    }
+
+
+    // if(acumulador o contador > 0)
+    // {
+    //     //aca calculo el promedio
+    //     promedio = (suma de los términos) / (número de términos);
+    // }
+    // else
+    // {
+    //     promedio = 0;
+    //     mensaje = "No se puede calcular";
+    // }
+        
+
+
 	//calculo o comparacion 
 	//muestro
-	mensaje = "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
+	// mensaje = "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
 	alert(mensaje);
 	
 
@@ -352,7 +435,7 @@ function mostrar()
 			pesoProducto = prompt("Ingrese el peso del producto");
 			pesoProducto = parseFloat(pesoProducto);
 		}while(isNaN(pesoProducto));
-
+*********************************
 		if(banderaPrimerPesoIngresado || pesoProducto > pesoMaximo){
 			pesoMaximo = pesoProducto;
 			productoMaximo = descripcionProducto;

@@ -123,31 +123,43 @@ flag se usa:
 		06 = parseFloat(06);
 	}while(isNaN(06) && (06 < 10 || 06 > 100));
 	/******************************************************** */
-	/*FLAG 
-	001 = flag 
-	002 = maximo o minimo 
-	003 = dato ingresado 
-	004 = variable resultado de lo que me pide
-	005 = otro dato ingresado que pide para almacenarlo al 004*/
+	/*FLAG  MAXIMO Y MINIMO 
 	/******************************************************** */
-	let flag = 0;
-	let maxOmin;
-	let loQueMePide;
-	if(flag == 0)
+	let primerIngreso = 0;
+	let max;
+	let min;
+	let nombreMaximo;
+	let nombreMinimo;
+	let DatoCantidadIngresado;
+	let nombreIngresado;
+	if(primerIngreso == 0)
 	{
-		maxOmin = DatoUnoIngresado;
-		loQueMePide = DatoDosIngresado;
-		flag = 1;
+		max = DatoCantidadIngresado;
+		min = DatoCantidadIngresado;
+		nombreMaximo = nombreIngresado;
+		nombreMinimo = nombreIngresado;
+		primerIngreso = 1;
 	}
 	else
 	{
-		if(DatoUnoIngresado > maxOmin)
+		if(DatoCantidadIngresado > max)
 		{
-			maxOmin = DatoUnoIngresado;
-			loQueMePide = DatoDosIngresado;
+			max = DatoCantidadIngresado;
+			nombreMaximo = nombreIngresado;
+		}
+		else
+		{
+			if(numIngresado < min)
+			{
+				min = numIngresado;
+				nombreMinimo = nombreIngresado;
+			}
 		}
 	}
-/********************************************** */
+	/************************************************************** */
+	/*				FLAG  MAS CORTO 
+	/************************************************************** */
+
 	let flag = 0;
 	let maxOmin;
 	let loQueMePide;
@@ -157,4 +169,25 @@ flag se usa:
 		loQueMePide = DatoDosIngresado;
 		flag = 1;
 	}
+	/************************************************************** */
+	/*				FLAG  MAS CORTO MINIMO Y MAXIMO
+	/************************************************************** */
+	let flag = 0;
+	let MAX;
+	let MIN;
+	let nombreMAX;
+	let nombreMIN;
+	let cantidad;
+	let nombreIngresado;
+	if(flag == 0 || cantidad > MAX)
+	{
+		MAX = cantidad;
+		nombreMAX = nombreIngresado;
+	}
 	
+	if(flag == 0 || cantidad < MIN)
+	{
+		MIN = cantidad;
+		nombreMIN = nombreIngresado;
+		flag = 1;
+	}

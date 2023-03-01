@@ -1,15 +1,16 @@
 /*
-
+*******************************
 PORCENTAJE:
+*******************************
+// CABA(kg)________________100%
+// pesoAcumulado(kg)_______x %
+// porcentaje = pesoAvellaneda * 100 / AVELLANEDA 
 
-CABA(kg)________________100%
-pesoAcumulado(kg)_______x %
+
 Porcentaje = (suma de manzanas(acumulador) / total ingresados (contador)) * 100
-porcentaje = pesoAvellaneda * 100 / AVELLANEDA 
-
-
 ********************************
-
+PROMEDIO 
+********************************
 if(acumulador o contador > 0)
 {
 	//aca calculo el promedio
@@ -40,6 +41,19 @@ flag se usa:
 	/******************************************************** */
 	let continua;
 	let mensaje;
+	let ;
+	let ;
+	let ;
+	let ;
+	let ;
+	let ;
+	let ;
+	let ;
+	let ;
+	let ;
+	let ;
+	let ;
+	let ;
 	
 	do
 	{
@@ -116,20 +130,31 @@ flag se usa:
 	004 = variable resultado de lo que me pide
 	005 = otro dato ingresado que pide para almacenarlo al 004*/
 	/******************************************************** */
-	let 001 = 0;
-	let 002;
-	let 004;
-	if(001 == 0)
+	let flag = 0;
+	let maxOmin;
+	let loQueMePide;
+	if(flag == 0)
 	{
-		002 = 003;
-		001 = 1;
-		004 = 005;
+		maxOmin = DatoUnoIngresado;
+		loQueMePide = DatoDosIngresado;
+		flag = 1;
 	}
 	else
 	{
-		if(003 > 002)
+		if(DatoUnoIngresado > maxOmin)
 		{
-			002 = 003;
-			004 = 005;
+			maxOmin = DatoUnoIngresado;
+			loQueMePide = DatoDosIngresado;
 		}
 	}
+/********************************************** */
+	let flag = 0;
+	let maxOmin;
+	let loQueMePide;
+	if(flag == 0 || DatoUnoIngresado > maxOmin)
+	{
+		maxOmin = DatoUnoIngresado;
+		loQueMePide = DatoDosIngresado;
+		flag = 1;
+	}
+	

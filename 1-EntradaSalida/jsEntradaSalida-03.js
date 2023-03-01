@@ -107,12 +107,12 @@ function mostrar()
 		//C) Cantidad total de ingreso bruto en USD de cada criptomoneda.
 		if(nombreCripto=="btc")
 		{
-			acumuladorUsdBtc+=cotizacionUsd;
+			acumuladorUsdBtc += (cotizacionUsd * cantidadCripto);
 			
 		}
 		else
 		{
-			acumuladorUsdEth+=cotizacionUsd;
+			acumuladorUsdEth += (cotizacionUsd*cantidadCripto);
 			
 		}
 		
@@ -176,7 +176,8 @@ segundo intento d y e
 	ingresoNetoBtc = ingresoBrutoBtc - (ingresoBrutoBtc*impuestoUsd);
 	ingresoNetoEth = ingresoBrutoEth - (ingresoBrutoEth*impuestoUsd);
 	ingresoNetoTotal = ingresoBrutoEth + ingresoBrutoEth;
-
+4% 0.96
+7% 0.93
 */
 
 

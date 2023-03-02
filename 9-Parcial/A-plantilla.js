@@ -8,6 +8,15 @@ PORCENTAJE:
 
 
 Porcentaje = (suma de manzanas(acumulador) / total ingresados (contador)) * 100
+
+ //para saber cuanto es el porcentaje que acumulo
+    // limitebodega (kg)_______100%
+    // acumulador(kg)_________x%(porcentajeAcumulado)
+    //porcentajeDisponible = 100 - porcentajeAcumulado 
+   
+    // para saber cuanto es el resto que queda
+    // acumulador(kg)_______100%
+    // limiteBodega(kg)_____x%
 ********************************
 PROMEDIO 
 ********************************

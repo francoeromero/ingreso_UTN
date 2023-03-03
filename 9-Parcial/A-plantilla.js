@@ -50,36 +50,26 @@ flag se usa:
 	/******************************************************** */
 	let continua;
 	let mensaje;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
-	let ;
+	
 	
 	do
 	{
 		
 		continua = confirm("Quieres continuar?");
 	}while(continua);
-	//calculo o comparacion 
+	//**************************************** */
+
 	//muestro
-	mensaje = "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
-	mensaje += "\n " + a;
+	// mensaje = "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
+	// mensaje += "\n " + a;
 	alert(mensaje);
+	
 	
 	/******************************************************** */
 	/*FOR LIMITES*/

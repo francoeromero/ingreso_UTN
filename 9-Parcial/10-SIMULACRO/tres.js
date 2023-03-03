@@ -23,7 +23,6 @@ c-Promedio de edad de los pilotos que tiene un vehículo con número par.
 function comenzar()
 {
 
-    
 	let i;
     let nombrePiloto;
     let edadPiloto;
@@ -140,11 +139,7 @@ function comenzar()
 	mensaje = "\n a-La nacionalidad que más pilotos tiene es " + nacionalidadMasPilotos;
 	mensaje += "\n b-Cantidad de pilotos mayores de 25 años con número de vehículo impar " + contadorPilotosImpar;
 	mensaje += "\n c-Promedio de edad de los pilotos que tiene un vehículo con número par" + promedioPilotosPar;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
+	
 	alert(mensaje);
 
 

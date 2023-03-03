@@ -177,9 +177,12 @@ function comenzar()
     // acumulador(kg)_________x%(porcentajeAcumulado)
     //porcentajeDisponible = 100 - porcentajeAcumulado 
    
-    // para saber cuanto es el resto que queda
+
+
+    // PROFE:
+    //PORCENTAJE RESTO
     // acumulador(kg)_______100%
-    // limiteBodega(kg)_____x%
+    // limiteBodega(kg)_____x%   
     
     if(acumuladorPesoCABA===0)
     {

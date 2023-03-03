@@ -107,54 +107,20 @@ function comenzar ()
     votosEmitidos = acumuladorVotos;
     //c
      //para saber cuanto es el porcentaje que acumulo
-    // acumuladorvotos (kg)_______100%
-    // acumuladorvotos(kg)_________x%(porcentajeAcumulado)
+    // acumuladorvotosGENERAL ()_______100%
+    // acumuladorvotos()_________x%(porcentajeAcumulado)
     
-    if(acumuladorVotosUno > 0)
-    {
-        votosCandidatoUno = acumuladorVotosUno * 100 / votosEmitidos;
-    }
-    else
-    {
-        votosCandidatoUno = "No hubo votos";
-    }
-    
-    if(votosCandidatoDos > 0)
-    {
-        votosCandidatoDos = acumuladorVotosDos * 100 / votosEmitidos;
-    }
-    else
-    {
-        votosCandidatoDos = "No hubo votos";
-    }
-    
-    if(votosCandidatoTres > 0)
-    {
-        votosCandidatoTres = acumuladorVotosTres * 100 / votosEmitidos;
-    }
-    else
-    {
-        votosCandidatoTres = "No hubo votos";
-    }
-    
-    if(votosCandidatoCuatro>0)
-    {
-        votosCandidatoCuatro = acumuladorVotosCuatro * 100 / votosEmitidos;
-    }
-    else
-    {
-        votosCandidatoCuatro = "No hubo votos";
-    }
 
-    if(votosCandidatoCinco>0)
-    {
+
+        votosCandidatoUno = acumuladorVotosUno * 100 / votosEmitidos;
+        votosCandidatoDos = acumuladorVotosDos * 100 / votosEmitidos;
+        votosCandidatoTres = acumuladorVotosTres * 100 / votosEmitidos;
+        votosCandidatoCuatro = acumuladorVotosCuatro * 100 / votosEmitidos;
         votosCandidatoCinco = acumuladorVotosCinco * 100 / votosEmitidos;
 
-    }
-    else
-    {
-        votosCandidatoCinco = "No hubo votos";
-    }
+        
+   
+    
 
 	mensaje = "\n a-el promedio de edades de los candidatos " + promedioEdades;
 	mensaje += "\n b-total de votos emitidos." + votosEmitidos;

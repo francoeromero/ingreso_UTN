@@ -79,6 +79,7 @@ flag se usa:
 
 
 	let i;
+	let mensaje;
 	for (i = 0; i < 5; i++) {
 
 	}

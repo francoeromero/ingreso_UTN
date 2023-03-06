@@ -4,7 +4,7 @@ PORCENTAJE:
 *******************************
 	porcentaje1 = acumuladorOcontador1 * 100 / contadorPrincipal;
     porcentaje2 = acumuladorOcontador3  * 100 / contadorPrincipal;
-    porcentaje3 = acumuladorOcontador2  * 100 / contadorPrincipal;
+    porcentaje3 = aculadorOcontador2  * 100 / contadorPrincipal;
 
 
 // CABA(kg)________________100%
@@ -205,25 +205,34 @@ flag se usa:
 	/************************************************************** */
 	/*				FLAG  MAS CORTO MINIMO Y MAXIMO
 	/************************************************************** */
-	let flag = 0;
+
+	let flag = true;
 	let MAX;
 	let MIN;
 	let nombreMAX;
 	let nombreMIN;
-	let cantidad;
-	let nombreIngresado;
-	if(flag == 0 || cantidad > MAX)
+	if(flag==true)
 	{
-		MAX = cantidad;
-		nombreMAX = nombreIngresado;
+		MAX = DatoIngresadoCantidad;
+		MIN = DatoIngresadoCantidad;
+		nombreMAX = DatoIngresadoNombre;
+		nombreMIN = DatoIngresadoNombre;
+		flag = false;
 	}
-	
-	if(flag == 0 || cantidad < MIN)
+	else
 	{
-		MIN = cantidad;
-		nombreMIN = nombreIngresado;
-		flag = 1;
+		if(DatoCantidadIngresado > MAX)
+		{
+			MAX = DatoCantidadIngresado;
+			nombreMAX = DatoIngresadoNombre;
+		}
+		if(DatoCantidadIngresado < MIN)
+		{
+			MIN = DatoCantidadIngresado;
+			nombreMIN = DatoIngresadoNombre;
+		}
 	}
+
 
 	/************************************************************** */
 	/*				CONTADOR O ACUMULADOR CON 3 VARIABLES

@@ -256,12 +256,12 @@ flag se usa:
 	/************************************************************** */
 	if(condicion1 > condicion2 && condicion1 > condicion3)
 	{
-        elQueTieneMayorCantidadEs = condicion1;
+        elQueTieneMayorCantidadEs = "condicion1";
     }else{
         if(condicion2 > condicion3 && condicion2 > condicion1)
 		{
-            elQueTieneMayorCantidadEs = condicion2;
+            elQueTieneMayorCantidadEs = "condicion2";
         }else{
-            elQueTieneMayorCantidadEs = condicion3;
+            elQueTieneMayorCantidadEs = "condicion3";
         }
     }

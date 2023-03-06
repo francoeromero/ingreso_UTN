@@ -2,6 +2,11 @@
 *******************************
 PORCENTAJE:
 *******************************
+	porcentaje1 = acumuladorOcontador1 * 100 / contadorPrincipal;
+    porcentaje2 = acumuladorOcontador3  * 100 / contadorPrincipal;
+    porcentaje3 = acumuladorOcontador2  * 100 / contadorPrincipal;
+
+
 // CABA(kg)________________100%
 // pesoAcumulado(kg)_______x %
 // porcentaje = pesoAvellaneda * 100 / AVELLANEDA 
@@ -20,6 +25,12 @@ Porcentaje = (suma de manzanas(acumulador) / total ingresados (contador)) * 100
 ********************************
 PROMEDIO 
 ********************************
+//PROMEDIO
+
+// acumuladorDeAlgo += cantidadEseAlgoIngresado; //adentro del for/while
+// promedio = acumuladorDeAlgo  / contadorPrincipal; //afuerta del for/while
+
+
 if(acumulador o contador > 0)
 {
 	//aca calculo el promedio
@@ -30,6 +41,8 @@ else
 	promedio = 0;
 	mensaje = "No se puede calcular";
 }
+
+
 ******************************
 
 ingreso neto = ingreso bruto - (ingreso neto * 0.21)
@@ -211,3 +224,35 @@ flag se usa:
 		nombreMIN = nombreIngresado;
 		flag = 1;
 	}
+
+	/************************************************************** */
+	/*				CONTADOR O ACUMULADOR CON 3 VARIABLES
+	/************************************************************** */
+	switch(condicion){
+		case "valor1":
+			contador1 ++;
+			acumulador1+=variable1;
+			break;
+		case "valor2":
+			contador2 ++;
+			acumulador2+=variable1;
+			break;
+		default:
+			contador3 ++;
+			acumulador3+=variable1;
+			break;
+	}
+	/************************************************************** */
+	/*				CUAL ES EL MAYOR DE LOS 3
+	/************************************************************** */
+	if(condicion1 > condicion2 && condicion1 > condicion3)
+	{
+        elQueTieneMayorCantidadEs = condicion1
+    }else{
+        if(condicion2 > condicion3 && condicion2 > condicion1)
+		{
+            elQueTieneMayorCantidadEs = condicion2
+        }else{
+            elQueTieneMayorCantidadEs = condicion3
+        }
+    }

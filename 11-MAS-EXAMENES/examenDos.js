@@ -15,9 +15,13 @@ Los datos necesarios son:
 
 Calcular y mostrar en un document.write:
 A- A la compra más grande realizada, se le otorgará un 15% de descuento, mostrando el nombre del cliente y su edad.
+(maxCompra) flag1
 B- La mínima cantidad de vehículos vendidos.
+(minCompra) flag1
 C- Cuántas camionetas a GNC se compraron.
+(if preferencias- contador) 
 D- El cliente más viejo que compró una PickUp Nafta.
+(if-maxEdad) flag2
 E- El porcentaje de clientes que compraron Auto, Camioneta y PickUp.
 
 
@@ -105,15 +109,19 @@ function comenzar()
         //C- Cuantos GNC se compraron
         if(tipoVehiculo =="camioneta")
         {
-            acumuladorCamioneta+=cantidadVehiculos;
+            
             if(preferencias=="gnc")
             {
                 contadorCamionetasGNC++;
             }
+            else
+            {
+                acumuladorCamioneta+=cantidadVehiculos;
+            }
         }
         else
         {
-            if(tipoVehiculo=="pickup")
+            if(tipoVehiculo=="pickup" && preferencias =="nafta")
             {
                 acumuladorPickup+=cantidadVehiculos;
                 if(banderaViejo == 0 || edadCliente > clienteMasViejoPickup)

@@ -21,35 +21,38 @@
         E) Nombre del piloto más joven con más victorias. * if-flag1
         F) Nacionalidad del piloto más veterano con menos victorias. * flag1
         G) Promedio de edad de los pilotos que tiene un vehículo con número par. *if2
+                NACIONAL
+        IMPAR
+        PAR
 
         
         */
-       
-       function comenzar()
-       {
-           let i;
-           let mensaje;
-           let nombrePiloto;
-           let nacionalidadPiloto;
-           let edadPiloto;
-           let cantidadCarrerasGanadas;
-           let numeroVehiculo;
-           let flagJovenViejo = 0;
-           let menosEdad;
-           let mayorEdad;
-           let nacionalidadPilotoMasJoven;
-           let cantidadCarreraMasGanada;
-           let nombrePilotoMasJovenMayorCantidadCarrerasGanadas;
-           let nacionalidadPilotoViejoMenosCarrerasGanadas;
-           let cantidadCarreraMenosGanada;
-           let contadorVehiculosPar=0;
-           let contadorVehiculosImpar=0;
-           let nombrePilotoJovenImpar;
-           let acumuladorEdadPar=0;
-           let promedioEdadPar;
-           
 
-	for (i = 0; i < 10; i++) {
+        function comenzar()
+        {
+
+        let i;
+        let mensaje;
+        let nombrePiloto;
+        let edadPiloto;
+        let nacionalidadPiloto;
+        let cantidadCarrerasGanadas;
+        let numeroVehiculo;
+        let flag=0;
+        let nacionalidadPilotoMasJoven;
+        let nombrePilotoMenosVictoriaNumeroImpar;
+        let maximaEdad;
+        let minimaEdad;
+        let carrerasMenosGanadas;
+        let nombrePilotoMenosVictoriasNumImpar;
+        let contadorPilotosVehiculoImpar=0;
+        let carrerasMasGanadas;
+        let nombrePilotoMasJovenConMasVictorias;
+        let nacionalidadPilotoVeteranoMenosVictorias;
+        let acumuladorEdadPar=0;
+        let promedioEdadVehiculosPar;
+        let contadorVehiculosPar=0;
+        for (i = 0; i < 10; i++) {
 
         do
         {
@@ -59,103 +62,124 @@
         {
             edadPiloto = prompt("Ingrese edadPiloto");
             edadPiloto = parseInt(edadPiloto);
-        }while(isNaN(edadPiloto) || edadPiloto < 17);
+        }while(isNaN(edadPiloto) || edadPiloto < 17 || edadPiloto >90);
         do
         {
-            nacionalidadPiloto = prompt("Ingrese nacionalidadPiloto (argentino, ingles, frances, brasilero, estadounidense)").toLowerCase();
-        }while(nacionalidadPiloto != "argentino" && nacionalidadPiloto != "ingles" && nacionalidadPiloto != "estadounidense"&& nacionalidadPiloto != "frances" && nacionalidadPiloto != "brasilero");
-
+            nacionalidadPiloto = prompt("Ingrese nacionalidadPiloto").toLowerCase();
+        }while(nacionalidadPiloto != "argentino" && nacionalidadPiloto != "frances" && nacionalidadPiloto != "brasilero"&& nacionalidadPiloto != "estadounidense");
         do
         {
             cantidadCarrerasGanadas = prompt("Ingrese cantidadCarrerasGanadas");
             cantidadCarrerasGanadas = parseInt(cantidadCarrerasGanadas);
         }while(isNaN(cantidadCarrerasGanadas) || cantidadCarrerasGanadas < 0);
-
         do
         {
             numeroVehiculo = prompt("Ingrese numeroVehiculo");
             numeroVehiculo = parseInt(numeroVehiculo);
         }while(isNaN(numeroVehiculo) || numeroVehiculo < 0);
-
-        // A) Nacionalidad del piloto más joven. * flag1 - edad
-        // E) Nombre del piloto más joven con más victorias. * if-flag1
-        // F) Nacionalidad del piloto más veterano con menos victorias. * flag1
-
-
-        if(flagJovenViejo == 0)
+        
+        if(flag==0)
         {
-            menosEdad = edadPiloto;
-            mayorEdad = edadPiloto;
-            cantidadCarreraMasGanada= cantidadCarrerasGanadas
-            nacionalidadPilotoMasJoven = nacionalidadPiloto;//A
-            nombrePilotoMasJovenMayorCantidadCarrerasGanadas = nombrePiloto;//E
-            nacionalidadPilotoViejoMenosCarrerasGanadas = nacionalidadPiloto;//F
-            nombrePilotoJovenImpar = nombrePiloto; //C
-            flagJovenViejo = 1;
+            nacionalidadPilotoMasJoven=nacionalidadPiloto;//A
+            minimaEdad = edadPiloto;
+            maximaEdad = edadPiloto;
+            carrerasMenosGanadas = cantidadCarrerasGanadas;
+            carrerasMasGanadas = cantidadCarrerasGanadas;
+            nombrePilotoMenosVictoriaNumeroImpar=nombrePiloto;//C
+            flag=1;
         }
         else
         {
-            if(edadPiloto < menosEdad)
+            //A
+            if(edadPiloto < minimaEdad)
             {
-                //A 
                 nacionalidadPilotoMasJoven = nacionalidadPiloto;
-                //B
-                if(cantidadCarrerasGanadas > cantidadCarreraMasGanada)
+                //E
+                if(cantidadCarrerasGanadas > carrerasMasGanadas)
                 {
-                    nombrePilotoMasJovenMayorCantidadCarrerasGanadas=nombrePiloto;
+                    nombrePilotoMasJovenConMasVictorias=nombrePiloto;
                 }
-                else
-                {
-                    //C
-                    if(cantidadCarreraMasGanada < cantidadCarrerasGanadas && !(numeroVehiculo%2==0))
-                    {
-                        nombrePilotoJovenImpar=nombrePiloto;
-                    }
-                }
+            }
+            //C
+            if(cantidadCarrerasGanadas < carrerasMenosGanadas && !(numeroVehiculo%2==0))
+            {
+                nombrePilotoMenosVictoriasNumImpar=nombrePiloto;
+            }
+            //D
+            if(edadPiloto > 25 && !(numeroVehiculo%2==0))
+            {
+                contadorPilotosVehiculoImpar++;
             }
             else
             {
                 //F
-                if(edadPiloto > mayorEdad)
+                if(edadPiloto > maximaEdad && cantidadCarrerasGanadas < carrerasMenosGanadas)
                 {
-                    if(cantidadCarreraMasGanada < cantidadCarreraMenosGanada)
-                    {
-                        nacionalidadPilotoViejoMenosCarrerasGanadas = nacionalidadPiloto;
-                    }
+                    nacionalidadPilotoVeteranoMenosVictorias=nacionalidadPiloto;
                 }
-                
             }
         }
-
-        // B) Cantidad de vehículos con número par.
-        //G) Promedio de edad de los pilotos que tiene un vehículo con número par. 
+        //B
         if(numeroVehiculo%2==0)
         {
+         
             contadorVehiculosPar++;
             acumuladorEdadPar+=edadPiloto;
         }
-        
-	}
-	//**************************************** */
-    //G
-    if(contadorVehiculosPar!=0)
-    {
-        promedioEdadPar = acumuladorEdadPar / contadorVehiculosPar;
-    }
-    else
-    {
-        promedioEdadPar = 0;
-    }
-	//muestro
-	mensaje = "\n A - nacionalidad del Piloto Mas Joven " + nacionalidadPilotoMasJoven;
-    mensaje += "\n B- cantidad de vehiculos par es: " + contadorVehiculosPar;
-	mensaje += "\n B - nombre Piloto Mas Joven Mayor Cantidad de Carreras Ganadas " + nombrePilotoMasJovenMayorCantidadCarrerasGanadas;
-	mensaje += "\n C- nombre Piloto mas Joven con num vehiculo Impar " + nombrePilotoJovenImpar;
-	mensaje += "\n D-" ;
-	mensaje += "\n E- nombre Piloto Mas Joven Mayor Cantidad Carreras Ganadas " + nombrePilotoMasJovenMayorCantidadCarrerasGanadas;
-	mensaje += "\n F- nacionalidad Piloto Viejo Menos Carreras Ganadas " + nacionalidadPilotoViejoMenosCarrerasGanadas;
-    mensaje+= "\n promedio de edad pilotos con numero par: " + promedioEdadPar;
-	
-	alert(mensaje);
 
-}
+        }
+        //****************fin iteracion************************ */
+        //G
+        if(acumuladorEdadPar!=0)
+        {
+            promedioEdadVehiculosPar = acumuladorEdadPar / i;
+        }
+        else
+        {
+            promedioEdadVehiculosPar= 0;
+        }
+            //muestro
+            mensaje = "\n A) Nacionalidad del piloto más joven " + nacionalidadPilotoMasJoven;
+            mensaje += "\n B) Cantidad de vehículos con número par. " + contadorVehiculosPar;
+            mensaje += "\n  C) Nombre del piloto con menos victorias y el número de auto impar." + nombrePilotoMenosVictoriaNumeroImpar;
+            mensaje += "\n D) Cantidad de pilotos mayores de 25 años con número de vehículo impar" + contadorPilotosVehiculoImpar;
+            mensaje += "\n E) Nombre del piloto más joven con más victorias. " + nombrePilotoMasJovenConMasVictorias;
+            mensaje += "\n F) Nacionalidad del piloto más veterano con menos victorias. " + nacionalidadPilotoVeteranoMenosVictorias;
+            mensaje += "\n G) Promedio de edad de los pilotos que tiene un vehículo con número par. " + promedioEdadVehiculosPar;
+        
+            alert(mensaje);
+        
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

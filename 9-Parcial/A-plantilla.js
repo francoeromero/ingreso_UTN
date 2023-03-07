@@ -118,19 +118,22 @@ flag se usa:
 	let 01;
 	do
 	{
-		01 = prompt("Ingrese 01").toLowerCase();
+		01 = prompt("Ingrese 01");
+		01 = 01.toLowerCase();
 	}while(01 != "a" && 01 != "a" && 01 != "a");
 	
 	let 02;
 	do
 	{
-		02 = prompt("Ingrese 02").toLowerCase();
+		02 = prompt("Ingrese 02");
+		02 = 02.toLowerCase();
 	}while(!isNaN(02));
 
 	let 03;
 	do
 	{
-		03 = prompt("Ingrese 02").toLowerCase();
+		03 = prompt("Ingrese 02");
+		03 = 03.toLowerCase();
 	}while(!isNaN(03) || (03 != "a" && 03 != "a"));
 	/******************************************************** */
 	/*NUMEROS */

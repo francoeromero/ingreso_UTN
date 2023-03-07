@@ -49,7 +49,7 @@ function comenzar()
     let tipoProductoConMayorCantidadCompras;
     let impuesto=1.2;
     let precioConImpuesto;
-    
+    let preguntar;
 	for (i = 0; i < 12; i++) 
     {
         do
@@ -58,14 +58,19 @@ function comenzar()
         }while(!isNaN(nombreCliente));
         do
         {
-            tipoProducto = prompt("Ingrese tipo de Producto (cafe medialunas churros)").toLowerCase();
-        }while(tipoProducto != "cafe" && tipoProducto != "medialunas" && tipoProducto != "churros");
-        do
-        {
-            cantidadProducto = prompt("Ingrese cantidad Producto");
-            cantidadProducto = parseInt(cantidadProducto);
-        }while(isNaN(cantidadProducto) || cantidadProducto < 0);
-        
+            do
+            {
+                tipoProducto = prompt("Ingrese tipo de Producto (cafe medialunas churros)").toLowerCase();
+            }while(tipoProducto != "cafe" && tipoProducto != "medialunas" && tipoProducto != "churros");
+            do
+            {
+                cantidadProducto = prompt("Ingrese cantidad Producto");
+                cantidadProducto = parseInt(cantidadProducto);
+            }while(isNaN(cantidadProducto) || cantidadProducto < 0);
+
+            preguntar=confirm("Algo mas?");
+        }while(preguntar);
+
         if(tipoProducto=="medialunas")
         {
             acumuladorMedialunas+=cantidadProducto;

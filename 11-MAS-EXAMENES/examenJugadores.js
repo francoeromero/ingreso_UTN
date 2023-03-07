@@ -11,14 +11,10 @@ goles
 se necesita saber
 a) el goleador del torneo
 b) el jugador argentino con menos rojas recibidas
-c) el porcentaje de jugadores ingleses de la liga   Porcentaje = (suma de ingleses / total jugadores) * 100
+c) el porcentaje de jugadores ingleses de la liga   
 Nota: deben poder ingresar todos numeros positivos, no se deben ingresar numeros negativos 
 */
-/*
-a) el goleador del torneo
-b) el jugador argentino con menos rojas recibidas
-c) el porcentaje de jugadores ingleses de la liga   Porcentaje = (suma de ingleses / total jugadores) * 100
-*/
+
 
 function comenzar ()
 {

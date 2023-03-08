@@ -258,15 +258,15 @@ flag se usa:
 	/************************************************************** */
 	/*				CUAL ES EL MAYOR DE LOS 3
 	/************************************************************** */
-	let elQueTieneMayorCantidadEs;
+	let a;
 	if(condicion1 > condicion2 && condicion1 > condicion3)
 	{
-        elQueTieneMayorCantidadEs = "condicion1";
+        a = "condicion1";
     }else{
         if(condicion2 > condicion3 && condicion2 > condicion1)
 		{
-            elQueTieneMayorCantidadEs = "condicion2";
+            a = "condicion2";
         }else{
-            elQueTieneMayorCantidadEs = "condicion3";
+            a = "condicion3";
         }
     }

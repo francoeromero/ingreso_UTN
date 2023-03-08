@@ -60,7 +60,7 @@ function comenzar()
     let contadorArquerosTotales=0;
     let contadorGuerrerosTotales=0;
     let contadorMagosTotales=0;
-    let contadorGeneralPersonajes;
+    let contadorGeneralPersonajes=0;
     let porcentajeGuerreros;
     let porcentajeMagos;
     let porcentajeArqueros;
@@ -109,6 +109,11 @@ function comenzar()
                 case "arquero":
                     acumuladorFuerzaArqueroSinBoni+=cantidadFuerza;
                     contadorArquerosSinBoni++;
+                    //C
+                    if(cantidadFuerza<3 && cantidadResistencia>3 )
+                    {
+                        contadorArqueros3y3++;
+                    }
                 break;
             }
         }
@@ -155,14 +160,6 @@ function comenzar()
                 break;
             }
         }
-        else
-        {
-            //C
-            if(cantidadFuerza<3 && cantidadResistencia>3 && tipoPersonaje=="arquero")
-            {
-                contadorArqueros3y3++;
-            }
-        }
         //E
         switch (tipoPersonaje) {
             case "arquero":
@@ -199,6 +196,9 @@ function comenzar()
     {
         promedioFuerzaGuerrerosSinBoni=0;
     }
+
+
+
     //E
     if(contadorArquerosTotales!=0)
     {
@@ -227,13 +227,19 @@ function comenzar()
     }
 
 	//muestro
-	// mensaje = "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
+	mensaje = "\n A- nombre del Mas poderoso es: " + nombreMasPoderoso;
+	mensaje += "\n A- tipo Personaje del MasPoderoso " + tipoPersonajeMasPoderoso;
+	mensaje += "\n A- nombre DEL MAS DEBIL " + nombreMasDebil;
+	mensaje += "\n A- tipo personaje mas debil " + tipoPersonajeMasDebil;
+	mensaje += "\n B- CANTIDAD MAGOS atacan por más de 5,y resisten por más de 3." + contadorMagos;
+	mensaje += "\n B- CANTIDAD ARQUEROS atacan por más de 5,y resisten por más de 3." + contadorArqueros;
+	mensaje += "\n B- CANTIDAD GUERREROS atacan por más de 5,y resisten por más de 3." + contadorGuerreros;
+	mensaje += "\n C- CANTIDAD ARQUEROS SIN BONI  tienen fuerza de ataque menor a 3 pero resistencia mayor a 3." + contadorArqueros3y3;
+	mensaje += "\n D promedioFuerzaArquerosSinBoni" + promedioFuerzaArquerosSinBoni;
+	mensaje += "\n D- promedioFuerzaGuerrerosSinBoni" + promedioFuerzaGuerrerosSinBoni;
+	mensaje += "\n D- promedioFuerzaGuerrerosSinBoni " + promedioFuerzaGuerrerosSinBoni;
+	mensaje += "\n E- PORCENTAJE ARQUEROS TOTALES " + porcentajeArqueros + "%";
+	mensaje += "\n E- PORCENTAJE GUERREROS TOTALES " + porcentajeGuerreros + "%";
+	mensaje += "\n E- PORCENTAJE MAGOS TOTALES " + porcentajeMagos + "%";
 	alert(mensaje);
 }

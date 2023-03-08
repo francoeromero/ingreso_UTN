@@ -28,7 +28,7 @@ PROMEDIO
 //PROMEDIO
 
 // acumuladorDeAlgo += cantidadEseAlgoIngresado; //adentro del for/while
-// promedio = acumuladorDeAlgo  / contadorPrincipal; //afuerta del for/while
+// promedio = acumuladorDeAlgo  / contadorPrincipal; //afuerta del for/while OJOO!! DIVIDIR POR CONTADOR GENERAL ESPECIFICO SEGUN LO QUE TE PIDE
 
 
 if(acumulador o contador > 0)

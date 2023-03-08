@@ -1,5 +1,14 @@
 /*
-Un maxikiosko solicita la creación de una aplicación simple para ir controlando la mercadería vendida durante el transcurso del día laboral. Se ingresarán un total de 10 ventas, incluyendo una serie de datos: Nombre del producto, Tipo de producto ("golosinas", "bebidas", "cigarrillos"), Precio unitario del producto (desde 1,00$ hasta 1000,00$), Cantidad de unidades por venta (entre 1 y 10). Se deberá calcular e informar: a) El total bruto recaudado con las 10 ventas. b) El promedio de unidades por compra de golosinas (en caso de no realizar ninguna venta de golosinas, informarlo). c) De los cigarrillos más caros, el nombre y su precio unitario. d) De las 10 ventas, que porcentaje de ventas le pertenece a las bebidas.
+Un maxikiosko solicita la creación de una aplicación simple para ir controlando la mercadería vendida durante el transcurso del día laboral. Se ingresarán un total de 10 ventas, incluyendo una serie de datos: 
+
+
+Nombre del producto, 
+Tipo de producto ("golosinas", "bebidas", "cigarrillos"), Precio unitario del producto (desde 1,00$ hasta 1000,00$), Cantidad de unidades por venta (entre 1 y 10). Se deberá calcular e informar:
+
+a) El total bruto recaudado con las 10 ventas.
+b) El promedio de unidades por compra de golosinas (en caso de no realizar ninguna venta de golosinas, informarlo). 
+c) De los cigarrillos más caros, el nombre y su precio unitario. 
+d) De las 10 ventas, que porcentaje de ventas le pertenece a las bebidas.
 */
 
 function comenzar()
@@ -19,6 +28,7 @@ function comenzar()
     let precioCigarrilloMasCaro;
     let nombreCigarrilloMasCaro;
     let acumuladorBebidas=0;
+    let porcentajeBebidas;
     
 
 	for (i = 0; i < 10; i++) {
@@ -73,10 +83,7 @@ function comenzar()
                 acumuladorBebidas+=precioUnitarioProducto;
             }
         }
-
-
-
-
+        
 	}
 	//****************FIN DE ITERACIÓN************************ */
     
@@ -87,19 +94,24 @@ function comenzar()
     }
     else
     {
-        promedioGolosinas=0;
+        promedioGolosinas="ninguna venta de golosinas";
     }
     //porcentaje bebidas
-    let porcentajeBebidas;
-    porcentajeBebidas= (acumuladorBebidas*100 )/ i
+    // acumuladorBrutoRecaudado($) ____100%
+    // acumuladorBebidas($)____________x%
+    if(acumuladorBebidas!=0)
+    {
+        porcentajeBebidas= (acumuladorBebidas*100 )/ acumuladorBrutoRecaudado;
+    }
+    else
+    {
+        porcentajeBebidas=0;
+    }
 	//muestro
-	// mensaje = "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
-	// mensaje += "\n " + a;
+	mensaje = "\n a) El total bruto recaudado con las 10 ventas. " + acumuladorBrutoRecaudado;
+	mensaje += "\n b) El promedio de unidades por compra de golosinas " + promedioGolosinas;
+	mensaje += "\n c) De los cigarrillos más caros, el nombre y su precio unitario. " + nombreCigarrilloMasCaro + " y su precio es: "+ precioCigarrilloMasCaro;
+	mensaje += "\n d) de las 10 ventas porcentaje de las bebidas " + porcentajeBebidas + "%";
+	
 	alert(mensaje);
 }

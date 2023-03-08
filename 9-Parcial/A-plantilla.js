@@ -258,6 +258,7 @@ flag se usa:
 	/************************************************************** */
 	/*				CUAL ES EL MAYOR DE LOS 3
 	/************************************************************** */
+	let elQueTieneMayorCantidadEs;
 	if(condicion1 > condicion2 && condicion1 > condicion3)
 	{
         elQueTieneMayorCantidadEs = "condicion1";

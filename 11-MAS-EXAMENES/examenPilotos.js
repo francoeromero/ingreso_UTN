@@ -6,7 +6,7 @@
         Se deberá generar un programa para registrar las estadísticas de los 10 integrantes de una carrera de autos.
         Se pedirá el ingreso de:
 
-        -Nombre
+        -Nombre 
         -Edad (mayor a 18)
         -Nacionalidad del piloto (argentino, ingles, frances, brasilero, estadounidense)
         -Cantidad de carreras ganadas (no pueden ser números negativos)

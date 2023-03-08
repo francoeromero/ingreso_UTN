@@ -209,7 +209,7 @@ function CalcularPrecio()
     if(precioDescuento > 120)
     {
         precioImpuesto = precioDescuento + (precioDescuento * 0.1);
-        mensaje = mensaje + " pero se suma un 10% de impuesto de IIBB";
+        mensaje += " pero se suma un 10% de impuesto de IIBB";
     }
     //muestro
     alert(mensaje);

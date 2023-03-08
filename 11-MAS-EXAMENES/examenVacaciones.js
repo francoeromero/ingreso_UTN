@@ -134,10 +134,13 @@ function comenzar()
         {
             contadorBaja++;
         }
+        // //D- CORRECCION
+        // let acumuladorGeneralImportes=0;
+        // acumuladorGeneralImportes += importe ;
         //B
         if(lugarDestino=="villa gessel")
         {
-            acumuladorPesoVillaGessel += pesoPasajero;
+            acumuladorPesoVillaGessel += pesoPasajero;//B
             acumuladorVillaGessel+=cantidadDias; //C
             acumuladorImporteVillaGessel+=importe;//D
             contadorPasajerosGessel++;//J
@@ -155,15 +158,95 @@ function comenzar()
                 acumuladorPuertoMadryn+=cantidadDias;//C
                 acumuladorImporteMadryn+=importe;//D
                 contadorPasajerosMadryn++;//J
-                
             }
         }
+        //E - CORRECCION
+        // if(flagPeso==0)
+        // {
+        //     maxPeso = pesoPasajero;
+        //     nombrePasajeroMasPesado = nombreTitular;
+        //     minPeso=pesoPasajero;
+        //     nombrePasajeroMasLiviano = nombreTitular;
+        //     flagPeso=1;
+        // }
+        // else
+        // {
+        //     if(pesoPasajero > maxPeso)
+        //     {
+        //         maxPeso = pesoPasajero;
+        //         nombrePasajeroMasPesado = nombreTitular;
+        //     }
+        //     if(pesoPasajero < minPeso)
+        //     {
+        //         minPeso=pesoPasajero;
+        //         nombrePasajeroMasLiviano = nombreTitular;
+        //     }
+        // }
+
+
+        if(flag==0)
+        {
+            //E
+            maxPeso = pesoPasajero;
+            nombrePasajeroMasPesado = nombreTitular;
+            //E
+            minPeso=pesoPasajero;
+            nombrePasajeroMasLiviano = nombreTitular;
+            //F
+            mayorImporte = importe;
+            lugarConMayorImporte = lugarDestino;
+            //G
+            maximaAltura = alturaPasajero;
+            nombreMujerMasAlta = nombreTitular;
+            flag=1;
+        }
+        else
+        {
+            if(pesoPasajero > maxPeso )
+            {
+                maxPeso = pesoPasajero;
+                nombrePasajeroMasPesado = nombreTitular;
+            }
+            if(pesoPasajero < minPeso)
+            {
+                minPeso=pesoPasajero;
+                nombrePasajeroMasLiviano = nombreTitular;
+            }
+            if(importe > mayorImporte)
+            {
+                mayorImporte = importe;
+                lugarConMayorImporte = lugarDestino;
+            }
+            if(sexoPasajero =="f")
+            {
+                contadorPasajerasMujeres++;
+                if(alturaPasajero > maximaAltura)
+                {
+                    maximaAltura = alturaPasajero;
+                    nombreMujerMasAlta = nombreTitular;
+                }
+            }
+            
+        }
+
+
+
+
+
+
+
+
+
         //E
-        
-        if(flagPeso == 0 || pesoPasajero > maxPeso)
+        if(flagPeso == 0 || pesoPasajero > maxPeso )
         {
             maxPeso = pesoPasajero;
             nombrePasajeroMasPesado = nombreTitular;
+        }
+        if(flagPeso==0 || pesoPasajero < minPeso)
+        {
+            minPeso=pesoPasajero;
+            nombrePasajeroMasLiviano = nombreTitular;
             flagPeso = 1;
         }
         //F   
@@ -209,10 +292,7 @@ function comenzar()
         {
             contadorEquipajeMano++;
         }
-        else
-        {
-            contadorNOEquipajeMano++;
-        }
+       
         contadorGeneralPasajerosIngresados++;
         
             

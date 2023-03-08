@@ -171,7 +171,6 @@ function comenzar()
     {
         pocentajeDisponibleLanus=0;
     }
-
 	//muestro
 	mensaje = "\n A- nombre Producto Con Mas Peso " + nombreProductoConMasPeso;
 	mensaje += "\n B- la Bodega Con Mas Ingresos " + laBodegaConMasIngresos;

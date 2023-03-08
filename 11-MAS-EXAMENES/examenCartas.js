@@ -50,7 +50,7 @@ function comenzar()
     let precioGeneralVentaMasCara;
     let tipoCartaGeneralVentaMasCara;
     let rarezaGeneralVentaMasCara;
-    
+    let precioComunMasBarata;
 	
 	
 	do
@@ -146,7 +146,6 @@ function comenzar()
                 rarezaGeneralVentaMasCara=rarezaCarta;//e
             }
         }
-
 		continua = confirm("Quieres continuar?");
 	}while(continua);
 	//****************FIN DE ITERACIÓN************************ */

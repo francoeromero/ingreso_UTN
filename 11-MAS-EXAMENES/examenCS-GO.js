@@ -104,7 +104,14 @@ function comenzar ()
 	}
 	//****************FIN DE ITERACIÓN************************ */
     ///D
-    promedioBajas = acumuladorDeBajas / i;
+    if(acumuladorDeBajas!=0)
+    {
+        promedioBajas = acumuladorDeBajas / i;
+    }
+    else
+    {
+        promedioBajas=0;
+    }
 	//muestro
 	mensaje = "\n A) Nombre del jugador más joven. " + nombreJugadorMasJoven;
 	mensaje += "\n B) El jugador que más bajas tuvo." + nombreJugadorMasBajas;

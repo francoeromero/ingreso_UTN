@@ -1,13 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title>Hamburguesas</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		input {
+			margin: 10px;
+			padding: 5px;
+			width: 200px;
+			border-radius: 5px;
+			border: 1px solid black;
+		}
+		button {
+			margin-top: 20px;
+			padding: 10px;
+			background-color: blue;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		#resultado {
+			margin-top: 50px;
+			padding: 20px;
+			background-color: lightgray;
+			border-radius: 5px;
+			display: none;
+		}
+	</style>
 </head>
-<body onload="comenzar()">
-   
-    <script src="/11-MAS-EXAMENES/examenA1.js"></script>
-</body>
-</html>
+<body>
+	<h1>Hamburguesas</h1>
+	<form>
+		<label>Nombre:</label>
+		<input type="text" id="nombre">
+		<label>Apellido:</label>
+		<input type="text" id="apellido">
+		<label>Edad:</label>
+		<input type="number" id="edad">
+		<label>Tipo de hamburguesa:</label>
+		<select id="tipo">
+			<option value="simple">Simple</option>
+			<option value="doble">Doble</option>
+			<option value="veggie">Veggie</option>
+		</select>
+		<label>Cantidad:</label>
+		<input type="number" id="cantidad">
+		<button type="button" onclick="calcular()">Agregar</button>
+	</form>
+	<div id="resultado"></div>
+	<script>
+		let clientes = [];
+		function calcular() {
+			let nombre = document.getElementById("nombre").value;
+			let apellido = document.getElementById("apellido").value;
+			let edad = document.getElementById("edad").value;
+			let tipo = document.getElementById("tipo").value;
+			let cantidad = document.getElementById("cantidad").value;
+
+			let precio;
+			switch (tipo) {
+				case "doble":
+					precio = 185;
+					break;
+				case "simple":
+					precio = 125;
+					break;
+				default:
+					precio = 145;
+					break;
+			}
+			let precioTotal = precio * cantidad;
+
+			let cliente = {nombre: nombre, apellido: apellido, edad: edad, tipo: tipo, cantidad: cantidad, precioTotal: precioTotal};
+			clientes.push(cliente);
+
+			let resultado = document.getElementById("resultado");
+        }
+
+
+

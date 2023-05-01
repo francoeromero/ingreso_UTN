@@ -177,8 +177,6 @@ function comenzar()
     // acumulador(kg)_________x%(porcentajeAcumulado)
     //porcentajeDisponible = 100 - porcentajeAcumulado 
 
-
-    
     // PROFE:
     //PORCENTAJE RESTO
     // acumulador(kg)_______100%
